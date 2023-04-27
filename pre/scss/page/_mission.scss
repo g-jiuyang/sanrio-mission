@@ -1,0 +1,1940 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
+$missionbgsize-1: calc(6.25 * var(--font-size));
+$missionbgsize-2: calc(54 * var(--font-size));
+$missionbgsize-3: calc(64 * var(--font-size));
+$missionbg-1: radial-gradient(circle, rgba(57, 91, 208, 1) 67.5%, rgba(57, 91, 208, 0) 67.5%, transparent 100%);
+$missionbg-2: radial-gradient(circle, rgba(57, 91, 214, 0.3) 20%, rgba(57, 91, 214, 0) 20%, transparent 100%);
+$missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91, 214, 0) 17.7%, transparent 100%);
+
+@mixin missionFontFamily {
+    font-family: "Abel", "PingFangTC", "Microsoft JhengHei";
+}
+
+.line {
+    position: fixed;
+    width: 1px;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: red;
+}
+
+.mission,
+.mission-history,
+.mission-blackhole {
+    @include missionFontFamily;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.mission {
+    background-image: url("./../img/mission/page-title-wrap-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    // background-image: $missionbg-1, $missionbg-2, $missionbg-3;
+    // background-color: #182035;
+    // background-size: $missionbgsize-1 $missionbgsize-1, $missionbgsize-2 $missionbgsize-2,
+    //     $missionbgsize-3 $missionbgsize-3;
+    // background-repeat: no-repeat, repeat-y, repeat-y;
+    // background-position: calc(-2.81 * var(--font-size)) calc(-2 * var(--font-size)),
+    //     top calc(0 * var(--font-size)) right calc(-28 * 0.9 * var(--font-size)),
+    //     top calc(22.3125 * var(--font-size)) left calc(-32 * 0.95 * var(--font-size));
+    .error-message {
+        display: flex;
+        width: calc(100% - calc(1.5 * var(--font-size)));
+        overflow: hidden;
+        margin: 0 auto;
+        padding: calc(0.7 * var(--font-size));
+        box-sizing: border-box;
+        background-color: $bg;
+        border-left: calc(0.6 * var(--font-size)) $bfSecondaryA solid;
+        border-radius: calc(0.7 * var(--font-size));
+        box-shadow: 0px 4px 20px rgba(158, 158, 158, 0.15);
+        position: fixed;
+        top: calc(1 * var(--font-size));
+        left: 0;
+        right: 0;
+        z-index: 99999;
+
+        .icon {
+            width: calc(1.5 * var(--font-size));
+            margin-top: calc(0.1 * var(--font-size));
+            margin-right: calc(0.2 * var(--font-size));
+
+            img {
+                display: block;
+            }
+        }
+
+        p {
+            width: calc(100% - calc(2.3 * var(--font-size)));
+            font-size: calc(0.8 * var(--font-size));
+            font-weight: 500;
+            color: $bfDark;
+            line-height: normal;
+        }
+
+        .error-hide {
+            width: calc(0.8 * var(--font-size));
+        }
+    }
+}
+
+.mission-history,
+.mission-blackhole {
+    background-image: unset;
+    flex-grow: 1;
+
+    h2 {
+        color: $bfDark;
+        font-weight: 500;
+        text-align: center;
+        flex-grow: 1;
+        padding: calc(1 * var(--font-size)) 0;
+        // margin-left: calc(-2.5 * var(--font-size));
+    }
+}
+
+.mission-history,
+.mission-blackhole {
+    .page-title-wrap {
+        padding-top: calc(0.3 * var(--font-size));
+        padding-bottom: calc(0.3 * var(--font-size));
+        margin-bottom: 0;
+    }
+
+    .mission-box {
+        padding: 0;
+    }
+}
+
+.page-title-wrap {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: calc(1.9 * var(--font-size)) calc(1.25 * var(--font-size)) calc(1.9 * var(--font-size));
+
+    .history-link,
+    .previous-link {
+        position: absolute;
+        right: calc(0.25 * var(--font-size));
+        top: calc(0.5 * var(--font-size));
+        display: inline-block;
+        width: calc(3 * var(--font-size));
+        height: calc(3 * var(--font-size));
+        line-height: 1.5;
+        vertical-align: middle;
+        background-image: url("./../img/icon/ic-history-dark.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: calc(1.5625 * var(--font-size));
+    }
+
+    .previous-link {
+        position: relative;
+        z-index: 1;
+        top: calc(0.125 * var(--font-size));
+        margin-left: calc(-0.5 * var(--font-size));
+        background-image: url("./../img/icon/ic_arrow-down_white.svg");
+
+        &[data-color="dark"] {
+            background-image: url("./../img/icon/ic_arrow-down_dark.svg");
+        }
+
+        &[data-color="white"] {
+            background-image: url("./../img/icon/ic_arrow-down_white.svg");
+        }
+    }
+}
+
+// .page-title-wrap::after{
+//     content: "";
+//     position: absolute;
+//     display: block;
+//     width: 100%;
+//     height: calc(1.5 * var(--font-size));;
+//     bottom: 0;
+//     right: 0;
+//     background-image: url("./../img/mission/mission-box_bg.svg");
+//     background-position: top;
+//     background-repeat: no-repeat;
+//     background-size: 100% auto;
+//     z-index: 1;
+// }
+.mission-greeting {
+    padding-top: calc(.7 * var(--font-size));
+    padding-bottom: calc(.7 * var(--font-size));
+    padding-right: calc(4.5 * var(--font-size));
+    padding-left: calc(.5 * var(--font-size));
+    color: $bfDark;
+    font-weight: normal;
+    flex-grow: 0;
+    font-size: calc(1.25 * var(--font-size));
+    font-weight: 500;
+    background-image: url("./../img/mission/theme-bg-deco.svg");
+    background-position: right calc(0 * var(--font-size)) bottom calc(0 * var(--font-size));
+    background-repeat: no-repeat;
+    background-size: calc(3.4 * var(--font-size));
+
+    span,
+    p {
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        display: block;
+        line-height: 1.25;
+        margin-bottom: calc(0.6875 * var(--font-size));
+    }
+
+    .mission-greeting-star {
+        display: inline-block;
+        // padding-top: calc(0.25 * var(--font-size));
+        // padding-right: calc(1.5 * var(--font-size));
+        // background-image: url("./../img/mission/spark.svg");
+        // background-position: right top;
+        // background-repeat: no-repeat;
+        // background-size: calc(0.9375 * var(--font-size));
+    }
+}
+
+.mission-box {
+    padding-top: calc(1 * var(--font-size));
+    background-color: $bfWhite;
+
+    .mission-tabs {
+        padding: 0 calc(.85 * var(--font-size));
+        margin-bottom: calc(1.25 * var(--font-size));
+        border-bottom: 2px $bfSoftWhite solid;
+
+        .mission-tab-item {
+            display: inline-block;
+            padding: calc(0.25 * var(--font-size)) calc(0.5 * var(--font-size)) calc(0.5 * var(--font-size));
+            font-size: calc(1 * var(--font-size));
+            color: $bfGray;
+            position: relative;
+            bottom: -2px;
+            cursor: pointer;
+        }
+
+        .active {
+            color: $bfSecondaryB;
+            font-weight: 500;
+            border-bottom: 2px $bfSecondaryB solid;
+        }
+    }
+}
+
+.mission-area {
+    padding: 0 calc(0.85 * var(--font-size)) calc(2 * var(--font-size));
+    min-height: 75vh;
+
+    p.mission-txt {
+        // padding: 0 calc(0.5 * var(--font-size));
+        margin-bottom: calc(1.7 * var(--font-size));
+        font-size: calc(0.8 * var(--font-size));
+        color: $bfDarkGray;
+
+        span {
+            padding-left: calc(0.2 * var(--font-size));
+            font-size: calc(0.8 * var(--font-size));
+            font-weight: bold;
+            color: $bfPrimary;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    .btn-primary {
+        width: 60%;
+        margin: calc(2 * var(--font-size)) auto 0;
+    }
+}
+
+.dialog-scroll.sanrio {
+    position: relative;
+}
+
+.nothing-board {
+    width: 100%;
+    margin-top: 20vh;
+    text-align: center;
+
+    &.ic-popup {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0;
+        transform: translateY(-50%);
+
+        img {
+            width: calc(6 * var(--font-size));
+        }
+    }
+
+    img {
+        width: calc(4 * var(--font-size));
+        height: auto;
+        margin-bottom: calc(.7 * var(--font-size));
+    }
+
+    p {
+        font-size: calc(0.8 * var(--font-size));
+        color: $bfDarkGray;
+    }
+}
+
+.task-tabs {
+    display: block;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-bottom: calc(0.6 * var(--font-size));
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    ul {
+        white-space: nowrap;
+
+        .chip-tab-item {
+            display: inline-block;
+            max-width: 130px;
+            overflow: hidden;
+            box-sizing: border-box;
+            padding: calc(0.1 * var(--font-size)) calc(0.4 * var(--font-size));
+            margin: 0 calc(0.4 * var(--font-size)) 0 0;
+            font-size: calc(0.8 * var(--font-size));
+            color: $bfDarkGray;
+            text-overflow: ellipsis;
+            border: 1px $bfSlightlyGray solid;
+            border-radius: calc(0.4 * var(--font-size));
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.active {
+                color: $bfPrimary;
+                border-color: $bfLightPrimary;
+                background-color: #E6FAF4;
+
+            }
+        }
+    }
+}
+
+.mission-wrap {
+    padding: calc(1.1 * var(--font-size));
+    background: $slightlyLightGray;
+    border-radius: calc(.66 * var(--font-size));
+    margin-bottom: calc(0.75 * var(--font-size));
+    position: relative;
+
+    .tags {
+        padding: calc(0.15 * var(--font-size)) calc(0.65 * var(--font-size)) calc(0.15 * var(--font-size)) calc(1.2 * var(--font-size));
+        font-size: calc(0.65 * var(--font-size));
+        color: $bfDarkGray;
+        font-weight: 500;
+        background-image: url("./../img/icon/ic-undone-dark.svg");
+        background-color: $bfSoftWhite;
+        background-size: calc(.55 * var(--font-size)) auto;
+        border-radius: calc(5 * var(--font-size));
+        background-repeat: no-repeat;
+        background-position: center left calc(0.5 * var(--font-size));
+        position: absolute;
+        top: calc(0.75 * var(--font-size));
+        right: calc(0.75 * var(--font-size));
+
+        &.finish {
+            color: $bfPrimary;
+            background-color: #E6FAF4;
+            background-image: url("./../img/icon/ic-finish-primary.svg");
+        }
+    }
+
+    .mission-category {
+        margin-bottom: calc(0.725 * var(--font-size));
+        font-size: calc(0.725 * var(--font-size));
+        color: $bfMediumGray;
+    }
+
+    .mission-title {
+        margin-bottom: calc(1 * var(--font-size));
+        font-size: calc(0.95 * var(--font-size));
+    }
+
+    .mission-info {
+        display: flex;
+        margin-bottom: calc(1 * var(--font-size));
+        justify-content: space-between;
+
+        .mission-info-desc {
+            width: 65%;
+            text-align: justify;
+            color: $bfDarkGray;
+            font-size: calc(0.75 * var(--font-size));
+            line-height: 1.66667;
+        }
+
+        .mission-info-img {
+            width: 30%;
+            height: 0;
+            padding-top: 30%;
+            overflow: hidden;
+            background: $bfMediumGray;
+            border-radius: calc(0.75 * var(--font-size));
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100% !important;
+                height: auto;
+            }
+
+        }
+    }
+
+    .mission-get {
+        display: inline-block;
+        margin-bottom: calc(0.75 * var(--font-size));
+        font-size: calc(0.75 * var(--font-size));
+        font-weight: bold;
+        color: $bfPrimary !important;
+        text-decoration: underline;
+    }
+
+    .text-secondaryb {
+        margin-bottom: calc(0.5 * var(--font-size));
+        font-size: calc(0.75 * var(--font-size));
+        font-weight: bold;
+        color: $bfSecondaryB;
+    }
+
+    .mission-other {
+        display: flex;
+        justify-content: space-between;
+
+        // margin-bottom: calc(1 * var(--font-size));
+        .mission-date {
+            font-size: calc(0.75 * var(--font-size));
+            color: $bfDarkGray;
+        }
+
+        .open {
+            padding-right: calc(1 * var(--font-size));
+            font-size: calc(0.75 * var(--font-size));
+            color: $bfDark;
+            display: flex;
+            align-items: center;
+            background-image: url("./../img/icon/ic_arrow-downdown_dark.svg");
+            background-size: calc(0.5 * var(--font-size)) auto;
+            background-repeat: no-repeat;
+            background-position: top calc(0.6 * var(--font-size)) right;
+            cursor: pointer;
+
+            img {
+                padding-left: calc(0.5 * var(--font-size));
+            }
+
+            &.expand {
+                background-image: url("./../img/icon/ic_arrow-upup_dark.svg");
+            }
+        }
+    }
+
+    .mission-collection {
+        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(1* var(--font-size));
+
+        .mission-collection-item {
+            width: calc(100% / 4 - calc(0.495 * var(--font-size)));
+            margin-right: calc(.66 * var(--font-size));
+            margin-bottom: calc(1 * var(--font-size));
+            box-sizing: border-box;
+            position: relative;
+
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+
+            &:last-child {
+                .mci-img {
+                    background: transparent;
+                }
+            }
+
+            .mci-img {
+                width: 100%;
+                height: 0;
+                overflow: hidden;
+                padding-top: 100%;
+                background: $bfMediumGray;
+                border-radius: calc(0.75 * var(--font-size));
+                position: relative;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100% !important;
+                    height: auto;
+                    border: none !important;
+                }
+
+                .empty,
+                .add {
+                    position: absolute;
+                    background: rgba(0, 0, 0, 0.6);
+                    top: 0;
+                    bottom: 0;
+                    left: 0rem;
+                    right: 0;
+                    margin: auto;
+                    z-index: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                }
+
+                .empty {
+                    font-size: calc(0.7 * var(--font-size));
+                }
+
+                .add {
+                    font-size: calc(2.4 * var(--font-size));
+                }
+            }
+
+            .mci-count {
+                display: table;
+                margin: 0 auto;
+                font-size: calc(0.8 * var(--font-size));
+                text-align: center;
+            }
+        }
+    }
+
+    //mission-collection
+    .btn-join {
+        display: block;
+        width: 100%;
+        padding: calc(0.5 * var(--font-size)) 0;
+        margin-top: calc(1.1 * var(--font-size));
+        box-sizing: border-box;
+        font-size: calc(0.85 * var(--font-size));
+        color: $bg !important;
+        text-align: center;
+        background-color: $bfPrimary;
+        border-radius: calc(0.4 * var(--font-size));
+
+    }
+}
+
+//mission-wrap
+
+.blackhole-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .blackhole-wrap {
+        width: calc(100% / 2 - calc(0.33 * var(--font-size)));
+        margin-bottom: calc(1.25 * var(--font-size));
+        box-sizing: border-box;
+        margin-right: calc(0.66 * var(--font-size));
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        .mci-img {
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            padding-top: 100%;
+            margin-bottom: calc(0.5 * var(--font-size));
+            background: $bfMediumGray;
+            border-radius: calc(0.75 * var(--font-size));
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100% !important;
+                height: auto;
+                border: none !important;
+            }
+
+            .exchange {
+                padding: calc(0.1 * var(--font-size)) calc(0.7 * var(--font-size));
+                font-size: calc(0.65 * var(--font-size));
+                font-weight: 500;
+                color: $bfWhite;
+                border-radius: calc(3 * var(--font-size));
+                background-color: $bfPrimary;
+                position: absolute;
+                bottom: calc(0.6 * var(--font-size));
+                left: calc(0.5 * var(--font-size));
+            }
+
+            .blackhole-finish {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.4);
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                p {
+                    font-size: calc(.8 * var(--font-size));
+                    font-weight: 500;
+                    color: $bg;
+                }
+            }
+        }
+
+        .blackhole-title {
+            font-size: calc(0.75 * var(--font-size));
+            color: $bfDark;
+            text-align: center;
+        }
+
+        .blackhole-dateline {
+            font-size: calc(0.6 * var(--font-size));
+            color: $bfDarkGray;
+            text-align: center;
+        }
+
+    }
+
+    .btn-primary {
+        margin: calc(1 * var(--font-size)) auto 0;
+    }
+}
+
+//blackhole-list
+
+
+
+
+
+
+
+.mission-history {
+    .blackhole-area {
+        display: block;
+    }
+
+    .history-wrap {
+
+        // padding: 0 calc(0.3 * var(--font-size)) 0;
+        .history-status {
+            margin-bottom: calc(1 * var(--font-size));
+
+            .history-status-list {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                // align-items: center;
+                position: relative;
+
+                .mci-img {
+                    width: 25%;
+                    height: 0;
+                    overflow: hidden;
+                    padding-top: 25%;
+                    background-color: $bfMediumGray;
+                    border-radius: calc(0.75 * var(--font-size));
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100% !important;
+                        height: auto;
+                        border: none !important;
+                    }
+                }
+
+                .mci-info {
+                    width: 72%;
+                    margin-left: 3%;
+
+                    &.mci-mission {
+                        width: 60%;
+                    }
+
+                    .mission-title {
+                        display: -webkit-box;
+                        width: 100%;
+                        overflow: hidden;
+                        margin-bottom: calc(0.5 * var(--font-size));
+                        font-size: calc(0.8 * var(--font-size));
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                    }
+
+                    .mci-date {
+                        font-size: calc(0.725 * var(--font-size));
+                        color: $bfMediumGray;
+                    }
+                }
+
+                .status {
+                    padding: calc(0.1 * var(--font-size)) calc(0.5 * var(--font-size));
+                    font-size: calc(0.65 * var(--font-size));
+                    font-weight: 500;
+                    color: $bfWhite;
+                    background-color: $bfGray;
+                    border-radius: calc(3 * var(--font-size));
+                    position: absolute;
+                    bottom: 5px;
+                    right: 0;
+                }
+
+                .ic-detail {
+                    display: inline-block;
+                    width: calc(1.4 * var(--font-size));
+                    height: calc(1.4 * var(--font-size));
+                    background-image: url("./../img/icon/ic-detail.svg");
+                    background-repeat: no-repeat;
+                    background-size: calc(1 * var(--font-size)) auto;
+                    background-position: center;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
+
+            .open {
+                padding-right: calc(0.7 * var(--font-size));
+                font-size: calc(0.725 * var(--font-size));
+                font-weight: 500;
+                color: $bfPrimary;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                display: flex;
+                align-items: center;
+                background-image: url("./../img/icon/ic_arrow-downdown_primary.svg");
+                background-size: calc(0.5 * var(--font-size)) auto;
+                background-repeat: no-repeat;
+                background-position: center right;
+                cursor: pointer;
+
+                img {
+                    margin-left: calc(0.2 * var(--font-size));
+                }
+
+                &.expand {
+                    background-image: url("./../img/icon/ic_arrow-upup_primary.svg");
+
+                }
+            }
+        }
+
+        .blackhole-collection {
+            width: 73%;
+            margin-left: 27%;
+            margin-top: calc(1 * var(--font-size));
+            margin-bottom: calc(1.25 * var(--font-size));
+            display: flex;
+            flex-wrap: wrap;
+
+            .mci-card {
+                width: calc(100% / 4 - calc(0.4 * var(--font-size)));
+                height: 0;
+                padding-top: calc(100% / 4 - calc(0.4 * var(--font-size)));
+                margin: 0 calc(0.2 * var(--font-size)) calc(0.4 * var(--font-size));
+                overflow: hidden;
+                background-color: $bfMediumGray;
+                border-radius: calc(0.75 * var(--font-size));
+                position: relative;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100% !important;
+                    height: auto;
+                }
+            }
+        }
+
+        //blackhole-collection
+    }
+
+    //history-wrap
+}
+
+//mission-history
+
+
+
+
+
+
+
+.mission-blackhole {
+    .blackhole-box {
+        padding: 0 calc(0.75 * var(--font-size)) calc(6 * var(--font-size));
+    }
+
+    .mission-info-img {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 35%;
+        height: 0;
+        overflow: hidden;
+        padding-top: 35%;
+        border-radius: calc(0.75 * var(--font-size));
+        background: $bfMediumGray;
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: auto;
+        }
+    }
+
+    .Body4 {
+        margin: calc(0.75 * var(--font-size)) 0;
+        color: $bfDark;
+    }
+
+    .txt {
+        font-size: calc(0.9 * var(--font-size));
+        font-weight: 500;
+        color: $bfDark;
+    }
+
+    .note {
+        padding: calc(0.75 * var(--font-size)) calc(2 * var(--font-size)) calc(1 * var(--font-size));
+        font-size: calc(0.75 * var(--font-size));
+        color: $bfDanger;
+        text-align: center;
+        line-height: calc(1.2 * var(--font-size));
+    }
+
+    .mission-collection {
+        display: flex;
+        flex-wrap: wrap;
+
+        .mission-collection-item {
+            width: calc(100% / 4 - calc(0.495 * var(--font-size)));
+            margin: 0 calc(0.66 * var(--font-size)) calc(1 * var(--font-size)) 0;
+
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+
+            .mci-img {
+                width: 100%;
+                height: 0;
+                overflow: hidden;
+                padding-top: 100%;
+                margin-bottom: calc(0.5 * var(--font-size));
+                background-color: $bfSoftWhite;
+                background-image: url("./../img/icon/ic-add-gray.svg");
+                background-size: calc(.8 * var(--font-size));
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: calc(0.75 * var(--font-size));
+                position: relative;
+
+                &.history-unselected {
+                    background-image: none;
+
+                    p {
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        font-size: calc(0.6 * var(--font-size));
+                        color: $bfMediumGray;
+                        text-align: center;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100% !important;
+                    height: auto;
+                    border: none !important;
+                }
+
+                .ic-fresh {
+                    width: calc(1.5 * var(--font-size));
+                    height: calc(1.5 * var(--font-size));
+                    background-image: url("./../img/icon/ic-fresh-c-primary.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: calc(1.5 * var(--font-size));
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+
+                .empty {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    font-size: calc(0.8 * var(--font-size));
+                    font-weight: 500;
+                    color: white;
+                    background: rgba(0, 0, 0, 0.6);
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    z-index: 1;
+                }
+            }
+
+            .mci-name {
+                font-size: calc(0.75 * var(--font-size));
+            }
+        }
+    }
+
+    .checkbox {
+        display: table;
+        margin: calc(0.75 * var(--font-size)) auto;
+
+        label {
+            padding: 0;
+            background: none;
+        }
+
+        span {
+            font-size: calc(0.75 * var(--font-size));
+            font-weight: bold;
+            color: $bfPrimary;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    .flex-btn {
+        width: 100%;
+        padding: calc(1 * var(--font-size)) 0 calc(1.5 * var(--font-size));
+        background-color: $bfWhite;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        box-shadow: 0px 4px 20px rgba(158, 158, 158, 0.15);
+        z-index: 1;
+
+        .btn-primary {
+            width: 80%;
+            margin: calc(1* var(--font-size)) auto;
+        }
+    }
+
+    .error-message {
+        display: flex;
+        width: calc(100% - calc(1.5 * var(--font-size)));
+        overflow: hidden;
+        margin: 0 auto;
+        padding: calc(0.7 * var(--font-size));
+        box-sizing: border-box;
+        background-color: $bg;
+        border-left: calc(0.6 * var(--font-size)) $bfSecondaryA solid;
+        border-radius: calc(0.7 * var(--font-size));
+        box-shadow: 0px 4px 20px rgba(158, 158, 158, 0.15);
+        position: fixed;
+        top: calc(1 * var(--font-size));
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+        .icon {
+            width: calc(1.5 * var(--font-size));
+            margin-top: calc(0.1 * var(--font-size));
+            margin-right: calc(0.2 * var(--font-size));
+
+            img {
+                display: block;
+            }
+        }
+
+        p {
+            width: calc(100% - calc(2.3 * var(--font-size)));
+            font-size: calc(0.8 * var(--font-size));
+            font-weight: 500;
+            color: $bfDark;
+            line-height: normal;
+        }
+
+        .error-hide {
+            width: calc(0.8 * var(--font-size));
+        }
+    }
+
+    .success-message {
+        display: flex;
+        align-items: center;
+        width: calc(100% - calc(1.5 * var(--font-size)));
+        overflow: hidden;
+        margin: 0 auto;
+        padding: calc(0.7 * var(--font-size));
+        box-sizing: border-box;
+        background-color: $bg;
+        border-left: calc(0.6 * var(--font-size)) $bfPrimary solid;
+        border-radius: calc(0.7 * var(--font-size));
+        box-shadow: 0px 4px 20px rgba(158, 158, 158, 0.15);
+        position: fixed;
+        top: calc(1 * var(--font-size));
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+        .icon {
+            width: calc(1.5 * var(--font-size));
+            margin-right: calc(0.2 * var(--font-size));
+
+            img {
+                display: block;
+            }
+        }
+
+        p {
+            width: calc(100% - calc(2.3 * var(--font-size)));
+            font-size: calc(0.8 * var(--font-size));
+            font-weight: 500;
+            color: $bfDark;
+            line-height: normal;
+        }
+
+        .success-hide {
+            width: calc(0.8 * var(--font-size));
+        }
+    }
+}
+
+//mission-blackhole
+
+
+
+
+
+
+
+
+.mission-content {
+    .mission-content-img {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding-top: 56%;
+        margin-bottom: calc(1.3 * var(--font-size));
+        position: relative;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .mission-content-status {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: calc(0.4 * var(--font-size));
+
+        .tags {
+            display: inline-block;
+            // width: 70px;
+            padding: calc(0.15 * var(--font-size)) calc(0.65 * var(--font-size)) calc(0.15 * var(--font-size)) calc(1.2 * var(--font-size));
+            margin-right: calc(0.5 * var(--font-size));
+            box-sizing: border-box;
+            font-size: calc(0.65 * var(--font-size));
+            color: $bfDarkGray;
+            font-weight: 500;
+            background-image: url("./../img/icon/ic-undone-dark.svg");
+            background-color: $bfSoftWhite;
+            background-size: calc(.55 * var(--font-size)) auto;
+            border-radius: calc(5 * var(--font-size));
+            background-repeat: no-repeat;
+            background-position: center left calc(0.5 * var(--font-size));
+
+            &.finish {
+                color: $bfPrimary;
+                background-color: #E6FAF4;
+                background-image: url("./../img/icon/ic-finish-primary.svg");
+            }
+        }
+
+        p {
+            font-size: calc(0.66 * var(--font-size));
+            color: $bfDarkGray;
+        }
+    }
+
+    .mission-content-info {
+        margin-bottom: calc(2.2 * var(--font-size));
+        font-size: calc(0.8 * var(--font-size));
+        color: $bfDark;
+
+        span {
+            display: table;
+            margin-top: calc(0.4 * var(--font-size));
+            font-size: calc(0.8 * var(--font-size));
+            font-weight: bold;
+            color: $bfPrimary;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    .mission-step-title {
+        margin-bottom: calc(0.8 * var(--font-size));
+        font-size: calc(0.8 * var(--font-size));
+        font-weight: bold;
+        color: $bfDark;
+
+        span {
+            margin-right: calc(0.4 * var(--font-size));
+            font-size: calc(0.8 * var(--font-size));
+        }
+    }
+
+    .mission-collection {
+        margin-bottom: calc(1.2 * var(--font-size));
+
+        .mission-collection-item {
+
+            &.row-3,
+            &.row-4 {
+                .mci-img {
+                    padding-top: 100%;
+                    margin-bottom: 0;
+                }
+            }
+
+            &.row-3 {
+                width: calc(100% / 3 - calc(0.44 * var(--font-size)));
+
+                &:nth-child(4n) {
+                    margin-right: calc(0.66 * var(--font-size));
+                }
+
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+            }
+
+            &.row-4 {
+                &:nth-child(4n) {
+                    margin-right: 0;
+                }
+
+                .mci-tags {
+                    padding: calc(.1 * var(--font-size)) 0;
+                    margin-bottom: calc(.2 * var(--font-size));
+                    font-size: calc(.6 * var(--font-size));
+                    font-weight: 500;
+                    color: $bfDarkGray;
+                    text-align: center;
+                    background-color: $bfSoftWhite;
+                    border-radius: calc(.3 * var(--font-size));
+                }
+            }
+        }
+    }
+}
+
+//mission-content
+
+
+
+
+
+
+
+
+.mission-area {
+    .btn-more {
+        display: block;
+        margin: 0 auto;
+        color: $bfDarkGray;
+        background: none;
+        border: none;
+
+        span {
+            display: block;
+            padding: calc(.5 * var(--font-size)) 0 calc(1 * var(--font-size));
+            font-size: calc(0.8 * var(--font-size));
+            background-image: url("./../img/icon/ic_arrow-downdown_gray.svg");
+            background-size: calc(0.6 * var(--font-size)) auto;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mci-name {
+    display: block;
+    width: 100%;
+    height: calc(1.05 * var(--font-size));
+    padding: 0 calc(0.25 * var(--font-size));
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    font-size: calc(0.75 * var(--font-size));
+    color: $bfMediumGray;
+    line-height: 1.5;
+}
+
+// 任務用的注意事項按鈕
+.mission-btn-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(0.75 * var(--font-size));
+    color: $bfSecondaryB;
+    background: transparentize($bfSecondaryB, 0.9);
+    padding: calc(0.325 * var(--font-size));
+    margin-bottom: calc(0.3125 * var(--font-size));
+    border-radius: calc(0.3125 * var(--font-size));
+    border: unset;
+    outline: unset;
+
+    img {
+        width: calc(1 * var(--font-size));
+        margin-right: calc(0.25 * var(--font-size));
+    }
+}
+
+// loading畫面
+.page-loading {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(#2B3843, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn-loading {
+        transform: scale(4);
+    }
+}
+
+// popup 用
+.notice-dialog {
+    &.dialog {
+        display: flex;
+        flex-direction: column;
+        max-height: calc(532 / 16 * var(--font-size));
+        height: 100%;
+
+        &.fancybox-content {
+            padding: calc(1.25 * var(--font-size)) calc(0.5 * var(--font-size)) calc(1 * var(--font-size));
+        }
+
+        .notice-dialog-title {
+            padding-bottom: calc(1.2 * var(--font-size));
+            line-height: 1.6;
+            font-size: calc(0.9375 * var(--font-size));
+        }
+
+        .dialog-content-wrap {
+            display: flex;
+            flex-direction: column;
+            height: 90%;
+            align-items: center;
+            // padding: calc(1 * var(--font-size)) 0;
+            padding: 0;
+        }
+
+        .dialog-scroll {
+            // max-height: calc( 100vh -  (  7.5 * var(--font-size)) );
+            -webkit-overflow-scrolling: auto;
+            flex-grow: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            padding: 0 calc(.5 * var(--font-size));
+            font-size: calc(0.825 * var(--font-size));
+            display: flex;
+            flex-wrap: wrap;
+
+            &,
+            * {
+                font-size: calc(0.825 * var(--font-size));
+                @include missionFontFamily;
+            }
+
+            &+.dialog-button {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 1px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    display: block;
+                    height: calc(3 * var(--font-size));
+                    margin-top: calc(-3 * var(--font-size));
+                    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 100%);
+                }
+            }
+
+            img.notice-img {
+                display: block;
+                width: 100%;
+                height: auto;
+                margin-bottom: calc(1.2 * var(--font-size));
+            }
+        }
+
+        .dialog-button {
+            display: block;
+            width: 100%;
+            padding: calc(1.2 * var(--font-size)) calc(0.5 * var(--font-size)) 0;
+            // margin-top: calc(0.25 * var(--font-size));
+            background: unset;
+            outline: unset;
+            border: unset;
+            color: $bfPrimary;
+            font-size: calc(0.9375 * var(--font-size));
+
+            &:active,
+            &:focus,
+            &:hover {
+                outline: inherit;
+                border: inherit;
+            }
+
+            &[disabled="disabled"] {
+                color: $bfLightGray !important;
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+.point-dialog {
+    &.dialog {
+        font-family: 'PingFang TC', 'Noto Sans TC', sans-serif;
+        display: flex;
+        flex-direction: column;
+        max-height: calc(532 / 16 * var(--font-size));
+        padding: calc(0.7778 * var(--font-size)) calc(1.3333 * var(--font-size)) calc(1.1111 * var(--font-size));
+
+        .dialog-content-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // padding: calc(1 * var(--font-size)) 0;
+
+            .dialog-scroll {
+                width: 100%;
+            }
+        }
+
+        .point-dialog-title {
+            margin-bottom: calc(2 * var(--font-size));
+            line-height: calc(1.3333 * var(--font-size));
+            font-size: calc(0.8333 * var(--font-size));
+            font-weight: 500;
+        }
+
+        .point-dialog-desc {
+            font-size: calc(0.8333 * var(--font-size));
+            line-height: calc(1.1111 * var(--font-size));
+            color: $bfDarkGray;
+            text-align: left;
+        }
+
+        h2 {
+            font-family: 'PingFang TC', 'Noto Sans TC', sans-serif;
+            text-align: center;
+            font-size: calc(1.8889 * var(--font-size));
+            line-height: calc(2.6667 * var(--font-size));
+            color: $bfSecondaryA;
+            margin: calc(1.3333 * var(--font-size)) auto;
+        }
+
+        h6 {
+            font-family: 'PingFang TC', 'Noto Sans TC', sans-serif;
+            font-size: calc(0.7778 * var(--font-size));
+            line-height: calc(1.1111 * var(--font-size));
+            color: $bfDarkGray;
+
+            span {
+                color: $bfSecondaryA;
+            }
+        }
+
+        .point-dialog-notice {
+            border-radius: calc(0.6667 * var(--font-size));
+            padding: calc(0.6667 * var(--font-size));
+            font-size: calc(0.7778 * var(--font-size));
+            margin: calc(1.3333 * var(--font-size)) 0 calc(0.6667 * var(--font-size));
+
+            &.notice-collection {
+                background-color: rgba($bfPrimary, 0.15);
+                color: $bfDarkPrimary;
+            }
+
+            &.notice-point {
+                background-color: rgba($bfSecondaryA, 0.15);
+                color: #DB8307;
+            }
+
+            &.notice-warning {
+                padding: 0;
+                margin: calc(1.3333 * var(--font-size)) 0;
+                color: $bfSecondaryB;
+                font-weight: 700;
+            }
+
+            &.notice-record {
+                background-color: $bfSoftWhite;
+                color: $bfDarkGray;
+
+                dl {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: calc(0.5556 * var(--font-size));
+
+                    dt {
+                        flex: 100%;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        .checkbox {
+            display: table;
+            margin: calc(0.75 * var(--font-size)) auto;
+
+            label {
+                padding: 0;
+                background: none;
+            }
+
+            span {
+                font-size: calc(0.75 * var(--font-size));
+                font-weight: bold;
+                color: $bfPrimary;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        .dialog-button {
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin-top: calc(1.3333 * var(--font-size));
+            background: unset;
+            outline: unset;
+            border: unset;
+            color: $bfPrimary;
+            font-size: calc(0.8333 * var(--font-size));
+            line-height: calc(1.3333 * var(--font-size));
+
+            &.submit,
+            &.cancel {
+                border-radius: calc(0.4444 * var(--font-size));
+                font-size: calc(0.8889 * var(--font-size));
+                padding: calc(0.5556 * var(--font-size));
+                margin-top: calc(0.6667 * var(--font-size));
+                line-height: calc(1.2222 * var(--font-size));
+            }
+
+            &.submit {
+                background-color: $bfPrimary;
+                color: $bfWhite;
+
+                &[disabled="disabled"] {
+                    background-color: $bfLightGray !important;
+                    color: $bfWhite !important;
+                    cursor: not-allowed;
+                }
+            }
+
+            &.cancel {
+                border: 1px solid $bfPrimary;
+            }
+
+            .btn-loading {
+                height: calc(1.2 * var(--font-size));
+            }
+        }
+    }
+}
+
+// 黑洞任務
+.black-hole {
+    padding: 0 calc(1.875 * var(--font-size));
+    padding-bottom: calc(7.5 * var(--font-size));
+    align-items: center;
+
+    .mission-collection-item {
+        padding-bottom: calc(1.25 * var(--font-size));
+    }
+
+    .mci-img {
+        border-radius: calc(1 * var(--font-size));
+    }
+
+    .page-title-wrap {
+        padding: 0;
+        padding-top: calc(0.5 * var(--font-size));
+        position: relative;
+
+        h2 {
+            text-align: center;
+            flex-grow: 1;
+            padding: calc(1 * var(--font-size)) 0;
+            margin-left: calc(-2.5 * var(--font-size));
+        }
+    }
+}
+
+// 警語
+.hint {
+    font-size: calc(0.75 * var(--font-size));
+
+    &[data-type="danger"] {
+        color: $bfDanger;
+        padding-left: calc(1.25 * var(--font-size));
+        background-image: url("./../img/icon/ic-info-s-danger.svg");
+        background-repeat: no-repeat;
+        background-size: calc(1 * var(--font-size));
+        background-position: top calc(0.35 * var(--font-size)) left 0;
+    }
+}
+
+.fixed-btn-wrap {
+    box-shadow: 0px 4px 20px rgba(158, 158, 158, 0.15);
+    z-index: 2;
+}
+
+// 黑洞任務 更換小卡
+.change-card {
+    width: calc(100% / 2);
+    padding: 0 calc(0.3 * var(--font-size));
+    margin-bottom: calc(1 * var(--font-size));
+    box-sizing: border-box;
+
+    label.change-box {
+        // border-radius: calc(1 * var(--font-size));
+        // border-style: solid;
+        // border-width: calc(0.0625 * var(--font-size));
+        // border-color: $bfSoftWhite;
+        margin-bottom: calc(0.5 * var(--font-size));
+        padding: 0;
+    }
+
+    input {
+        display: none;
+    }
+
+    .mci-img {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        padding-top: 100%;
+        margin: 0 0 calc(0.5 * var(--font-size));
+        background-color: $bfSoftWhite;
+        border-radius: calc(0.75 * var(--font-size));
+        position: relative;
+
+        &.square {
+            padding-top: 100%;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: auto;
+            border: none !important;
+        }
+
+        .ic-checked {
+            width: calc(1.5 * var(--font-size));
+            height: calc(1.5 * var(--font-size));
+            display: block;
+            border-radius: calc(3 * var(--font-size));
+            background-color: $bfSoftWhite;
+            position: absolute;
+            bottom: calc(0.5 * var(--font-size));
+            left: calc(0.5 * var(--font-size));
+            opacity: 0;
+
+            &.selection {
+                opacity: 1;
+            }
+
+            &.used {
+                width: calc(3.2 * var(--font-size));
+                height: calc(1.5 * var(--font-size));
+                text-align: center;
+                color: $bg;
+                background-color: $bfPrimary;
+                background-image: url("./../img/icon/ic-used.svg");
+                background-size: calc(1.8 * var(--font-size)) auto;
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 1;
+            }
+        }
+    }
+
+    .Subhead2 {
+        display: block;
+        width: 100%;
+        max-height: calc(2 * var(--font-size));
+        overflow: hidden;
+        padding: 0 calc(0.25 * var(--font-size));
+        margin: 0 auto;
+        box-sizing: border-box;
+        font-size: calc(0.8 * var(--font-size));
+        font-weight: bold;
+        color: $bfDark;
+    }
+
+    .Subhead {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        padding: 0 calc(0.25 * var(--font-size));
+        margin: 0 auto;
+        box-sizing: border-box;
+        font-size: calc(0.8 * var(--font-size));
+        font-weight: bold;
+        color: $bfDark;
+    }
+
+    input:checked {
+        &+label {
+            .mci-img img {
+                filter: brightness(.5);
+            }
+
+            .ic-checked {
+                opacity: 1;
+                background-image: url("./../img/icon/ic-checked-c-primary.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: calc(1.5 * var(--font-size));
+            }
+
+            .Subhead2,
+            .Subhead {
+                color: $bfPrimary;
+            }
+        }
+    }
+
+    .selection {
+        display: block;
+        width: calc(1.5 * var(--font-size));
+        height: calc(1.5 * var(--font-size));
+        border-radius: calc(1.25 * var(--font-size));
+        position: absolute;
+        bottom: calc(0.5 * var(--font-size));
+        left: calc(0.5 * var(--font-size));
+        background-image: url("./../img/icon/ic-checked-c-primary.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: calc(1.5 * var(--font-size));
+    }
+}
+
+.success-bg-wrap {
+    margin: 0 calc(-1.5 * var(--font-size));
+}
+
+.mission-prize-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 0;
+    overflow: hidden;
+    padding-top: 94.4%;
+    margin: 0 auto;
+    margin-bottom: calc(0.875 * var(--font-size));
+    background: $bfLightGray;
+    border-radius: calc(0.75 * var(--font-size));
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        object-fit: cover;
+    }
+}
+
+.mission-tab-item div {
+    color: $bfGray;
+}
+
+.active div {
+    color: $bfSecondaryB;
+}
+
+
+
+
+
+// ==== 先隱藏任務一的內容 ====
+// .mission-wrap {
+//     .text-dark.caption2-M {
+//         line-height: 1.25;
+//     }
+// }
+// .mission-expand {
+//     display: flex;
+//     align-items: flex-start;
+//     span {
+//         margin-right: calc(0.25 * var(--font-size));
+//         line-height: 1.3;
+//     }
+//     img {
+//         width: calc(1.1 * var(--font-size));
+//         transition: .15s;
+//         transform: rotate(0);
+//     }
+//     &[data-expand] {
+//         img {
+//             transform: rotate(180deg);
+//         }
+//     }
+// }
+// // 進度條 (目前沒用到)
+// .progress {
+//     position: relative;
+//     padding-left: calc(0.25 * var(--font-size));
+//     padding-right: calc(0.25 * var(--font-size));
+//     padding-bottom: calc(1.5 * var(--font-size));
+//     margin-bottom: calc(1.5 * var(--font-size));
+//     .bar {
+//         width: 100%;
+//         background: $barColor;
+//         height: calc(0.5 * var(--font-size));
+//         border-radius: calc(1 * var(--font-size));
+//         overflow: hidden;
+//         position: relative;
+//         &::after {
+//             content: "";
+//             display: block;
+//             top: 0;
+//             left: 0;
+//             bottom: 0;
+//             height: 100%;
+//             border-radius: calc(1 * var(--font-size));
+//             background: $bfPrimary;
+//             z-index: 1;
+//         }
+//     }
+//     .milestone {
+//         position: absolute;
+//         top: calc(-0.3 * var(--font-size));
+//         display: flex;
+//         flex-direction: column;
+//         margin-left: calc(-0.25 * var(--font-size));
+//         transition: 0.2s;
+//         .milestone-circle {
+//             left: 0;
+//             height: calc(0.5 * var(--font-size));
+//             background: $barColor;
+//             width: calc(0.5 * var(--font-size));
+//             border-radius: calc(1 * var(--font-size));
+//             border-width: calc(0.3 * var(--font-size));
+//             border-style: solid;
+//             border-color: $bfGray;
+//         }
+//         .milestone-text {
+//             position: absolute;
+//             left: calc(-1 * var(--font-size));
+//             right: calc(-1 * var(--font-size));
+//             text-align: center;
+//             bottom: calc((-0.8 - 0.75) * var(--font-size));
+//             font-size: calc(0.8 * var(--font-size));
+//             white-space: nowrap;
+//         }
+//         &[data-status="done"] {
+//             .milestone-circle {
+//                 height: calc(1.5 * var(--font-size));
+//                 width: calc(1.5 * var(--font-size));
+//                 background-color: $bfPrimary;
+//                 background-image: url("./../img/icon/ic-check-white.png");
+//                 background-position: center;
+//                 background-size: calc(1 * var(--font-size));
+//                 background-repeat: no-repeat;
+//                 border-width: 0;
+//                 box-shadow: 0 0 0 calc(0.25 * var(--font-size)) transparentize($bfPrimary, 0.85);
+//                 margin-top: calc(-0.2 * var(--font-size));
+//             }
+//         }
+//     }
+
+//     @for $i from 1 to 21 {
+//         .milestone[data-pos="#{$i*5}"] {
+//             left: ($i - 1) * 5%;
+//         }
+//         .bar[data-current="#{$i*5}"]::after {
+//             width: $i * 5%;
+//         }
+//     }
+//     &[data-status="history"] {
+//         .bar {
+//             &::after {
+//                 background: $bfMediumGray;
+//             }
+//         }
+//         .milestone {
+//             &[data-status="done"] {
+//                 .milestone-circle {
+//                     background-color: $bfMediumGray;
+//                     box-shadow: 0 0 0 calc(0.25 * var(--font-size)) transparentize($bfMediumGray, 0.85);
+//                 }
+//             }
+//         }
+//     }
+// }
+// .mission-detail-wrap {
+//     max-height: 0;
+//     padding-top: calc(0 * var(--font-size));
+//     transition: .5s ease;
+//     overflow: hidden;
+//     &[data-expand="true"] {
+//         padding-top: calc(1.75 * var(--font-size));
+//         max-height: calc(682 * var(--font-size));
+//     }
+// }
+// .mission-detail {
+//     display: flex;
+//     margin-bottom: calc(.75 * var(--font-size));
+// }
+// .mission-detail-img {
+//     position: relative;
+//     width: calc(3.5 * var(--font-size));
+//     height: calc(3.5 * var(--font-size));
+//     background: $bfMediumGray;
+//     flex-shrink: 0;
+//     border-radius: calc(0.375 * var(--font-size));
+//     margin-right: calc(0.5 * var(--font-size));
+//     overflow: hidden;
+//     img {
+//         position: absolute;
+//         top: 0;
+//         bottom: 0;
+//         left: 0;
+//         right: 0;
+//         margin: auto;
+//         object-fit: cover;
+//     }
+// }
+// .mission-detail-info {
+//     .title {
+//         font-size: calc(0.825 * var(--font-size));
+//         font-weight: bold;
+//         color: $bfDark;
+//     }
+//     .desc {
+//         font-size: calc(0.75 * var(--font-size));
+//         color: $bfMediumGray;
+//     }
+// }
+// .mission-detail-status {
+//     display: flex;
+//     justify-content: space-between;
+//     span {
+//         font-size: calc(0.625 * var(--font-size));
+//     }
+//     .completed {
+//         color: $bfPrimary;
+//         font-size: calc(0.75 * var(--font-size));
+//         margin-right: calc(.5 * var(--font-size));
+//         vertical-align: top;
+//         @include missionFontFamily;
+//         &:before {
+//             content: '';
+//             width: calc(0.9375 * var(--font-size));
+//             height: calc(0.9375 * var(--font-size));
+//             border-radius: calc(0.9375 * var(--font-size));
+//             box-shadow: 0 0 0 calc(0.125 * var(--font-size)) transparentize($bfMediumGray, 0.85);
+//             margin-right: calc(0.25 * var(--font-size));
+//             margin-bottom: calc(-0.125 * var(--font-size));
+//             display: inline-block;
+//             background-color: $bfPrimary;
+//             background-image: url("./../img/icon/ic-check-white.png");
+//             background-position: center;
+//             background-repeat: no-repeat;
+//             background-size: calc(0.75 * var(--font-size));
+//         }
+//     }
+// }
