@@ -2498,7 +2498,7 @@
 .anytix .mission-wrap .mission-collection .mission-collection-item .mci-img .empty,
 .anytix .mission-wrap .mission-collection .mission-collection-item .mci-img .add {
   position: absolute;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(51, 51, 51, 0.8);
   top: 0;
   bottom: 0;
   left: 0rem;
@@ -2514,9 +2514,10 @@
   font-size: calc(0.7 * var(--font-size));
 }
 .anytix .mission-wrap .mission-collection .mission-collection-item .mci-img .add {
-  font-size: calc(2.4 * var(--font-size));
+  font-size: calc(1.3333 * var(--font-size));
 }
 .anytix .mission-wrap .mission-collection .mission-collection-item .mci-count {
+  color: #333;
   display: table;
   margin: 0 auto;
   font-size: calc(0.8 * var(--font-size));
@@ -2771,6 +2772,7 @@
 .anytix .mission-blackhole .mission-collection .mission-collection-item {
   width: calc(25% - 0.495 * var(--font-size));
   margin: 0 calc(0.66 * var(--font-size)) calc(1 * var(--font-size)) 0;
+  text-align: center;
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item:nth-child(4n) {
   margin-right: 0;
@@ -2823,16 +2825,16 @@
   left: 0;
   z-index: 1;
 }
-.anytix .mission-blackhole .mission-collection .mission-collection-item .mci-img .empty {
+.anytix .mission-blackhole .mission-collection .mission-collection-item .mci-img .empty,
+.anytix .mission-blackhole .mission-collection .mission-collection-item .mci-img .add {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
-  font-size: calc(0.8 * var(--font-size));
   font-weight: 500;
   color: white;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(51, 51, 51, 0.8);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2840,6 +2842,17 @@
   right: 0;
   margin: auto;
   z-index: 1;
+}
+.anytix .mission-blackhole .mission-collection .mission-collection-item .mci-img .empty {
+  font-size: calc(0.8 * var(--font-size));
+}
+.anytix .mission-blackhole .mission-collection .mission-collection-item .mci-img .add {
+  font-size: calc(1.3333 * var(--font-size));
+}
+.anytix .mission-blackhole .mission-collection .mission-collection-item .mci-count {
+  color: #333;
+  font-size: calc(0.8 * var(--font-size));
+  font-weight: 500;
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item .mci-name {
   font-size: calc(0.75 * var(--font-size));
@@ -3061,14 +3074,15 @@
   background-position: bottom center;
 }
 .anytix .mci-name {
-  display: block;
+  display: -webkit-box;
   width: 100%;
-  height: calc(1.05 * var(--font-size));
   padding: 0 calc(0.25 * var(--font-size));
   box-sizing: border-box;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: pre-wrap;
   text-align: center;
   font-size: calc(0.75 * var(--font-size));
   color: #999;
@@ -3301,11 +3315,18 @@
   color: #FFF !important;
   cursor: not-allowed;
 }
+.anytix .point-dialog.dialog .dialog-button.submit:focus {
+  background-color: #00923e;
+}
 .anytix .point-dialog.dialog .dialog-button.cancel {
   border: 1px solid #26d07c;
 }
 .anytix .point-dialog.dialog .dialog-button .btn-loading {
   height: calc(1.2 * var(--font-size));
+  transform: scale(1.6) translateY(1px);
+}
+.anytix .point-dialog.dialog-blackhole-point h6 {
+  margin-bottom: calc(0.6667 * var(--font-size));
 }
 .anytix .black-hole {
   padding: 0 calc(1.875 * var(--font-size));

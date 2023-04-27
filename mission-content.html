@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>黑洞任務</title>
+    <title>格子任務</title>
     <link rel="icon" type="image/png" href="./img/favicon.png">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/jquery.fancybox.min.css" rel="stylesheet">
     <link href="./css/reset.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
     <link href="./css/gash.css" rel="stylesheet">
-    <link href="./css/mission.min.css" rel="stylesheet">
+    <link href="./css/mission.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="anytix">
         <div class="main-content" id="app">
             <div class="mission-blackhole mission-content animated fadeIn">
                 <div class="mission-content-img">
-                    <img src="./img/mission/sanrio-main.jpg" alt="">
+                    <img src="./img/mission/sanrio-main.jpg">
                 </div>
                 <div class="mission-area">
                     <div class="mission-content-status">
@@ -30,7 +32,8 @@
                         </template>
                         <p>活動日期結束前都可變更選擇</p>
                     </div>
-                    <p class="mission-content-info">{{missionInfo}}<span data-fancybox data-src="#notice">活動說明及注意事項</span></p>
+                    <p class="mission-content-info">{{missionInfo}}<span data-fancybox
+                            data-src="#notice">活動說明及注意事項</span></p>
                     <!-- 無tag樣式 -->
                     <template>
                         <p class="mission-step-title"><span>Step1</span>選擇風格</p>
@@ -38,7 +41,7 @@
                             <template v-for="item in missionCollection">
                                 <div class="mission-collection-item row-3" data-fancybox data-src="#exchangeList">
                                     <div class="mci-img">
-                                        <img :src="item.img" alt="">
+                                        <img :src="item.img">
                                         <template v-if="item.state === 'join'" key="havecard">
                                             <div class="ic-fresh"></div>
                                         </template>
@@ -55,7 +58,7 @@
                                 <div class="mission-collection-item row-4" data-fancybox data-src="#exchangeList">
                                     <div class="mci-tags">{{title}} {{item.number}}</div>
                                     <div class="mci-img">
-                                        <img :src="item.img" alt="">
+                                        <img :src="item.img">
                                         <template v-if="item.state === 'join'" key="havecard">
                                             <div class="ic-fresh"></div>
                                         </template>
@@ -64,7 +67,49 @@
                             </template>
                         </div>
                     </template>
-<!------------ 更換小卡 popup ------------>
+                    <p class="mission-step-title"><span>Step3</span>GASH點數</p>
+                    <div class="mission-collection">
+                        <div class="mission-collection-item row-4">
+                            <div class="mci-img" data-fancybox data-src="#point1">
+                                <div class="add">+</div>
+                                <img src="img/mission/gashpoint.png">
+                            </div>
+                            <span class="mci-count">GASH點數</span>
+                            <span class="mci-name">50點<br>(收N/餘N)</span>
+                        </div>
+                        <div class="mission-collection-item row-4">
+                            <div class="mci-img" data-fancybox data-src="#point2">
+                                <div class="add">+</div>
+                                <img src="img/mission/gashpoint.png">
+                            </div>
+                            <span class="mci-count">GASH點數</span>
+                            <span class="mci-name">50點<br>(收Y/餘N)</span>
+                        </div>
+                        <div class="mission-collection-item row-4">
+                            <div class="mci-img" data-fancybox data-src="#point3">
+                                <div class="add">+</div>
+                                <img src="img/mission/gashpoint.png">
+                            </div>
+                            <span class="mci-count">GASH點數</span>
+                            <span class="mci-name">50點<br>(收N/餘Y)</span>
+                        </div>
+                        <div class="mission-collection-item row-4">
+                            <div class="mci-img" data-fancybox data-src="#point4">
+                                <div class="add">+</div>
+                                <img src="img/mission/gashpoint.png">
+                            </div>
+                            <span class="mci-count">GASH點數</span>
+                            <span class="mci-name">50點<br>(收Y/餘Y)</span>
+                        </div>
+                        <div class="mission-collection-item row-4">
+                            <div class="mci-img" data-fancybox data-src="#point5">
+                                <img src="img/mission/gashpoint.png">
+                            </div>
+                            <span class="mci-count">GASH點數</span>
+                            <span class="mci-name">50點<br>(已扣點)</span>
+                        </div>
+                    </div>
+                    <!------------ 更換小卡 popup ------------>
                     <div class="dialog notice-dialog no-close" id="exchangeList" style="display: none;">
                         <div class="dialog-content-wrap">
                             <div class="notice-dialog-title">選擇收藏品</div>
@@ -72,7 +117,7 @@
                                 <!-- 空版 -->
                                 <template v-if="popupStatus === 0" key="notOwned">
                                     <div class="nothing-board ic-popup">
-                                        <img src="./img/icon/ic_nothing-board-popup.svg" alt="">
+                                        <img src="./img/icon/ic_nothing-board-popup.svg">
                                         <p>目前無符合條件的收藏品</p>
                                     </div>
                                 </template>
@@ -83,13 +128,13 @@
                                             <input type="radio" :id="item.inputId" value="" name="exchangeCard">
                                             <label class="change-box" :for="item.inputId">
                                                 <div class="mci-img square" data-ratio="1" data-size="blackhole-list">
-                                                    <img :src="item.img" alt="">
+                                                    <img :src="item.img">
                                                     <template v-if="item.state === 0" key="uncheck">
                                                         <div class="ic-checked"></div>
                                                     </template>
                                                     <template v-if="item.state === 1" key="checked">
                                                         <div class="ic-checked used"></div>
-                                                    </template> 
+                                                    </template>
                                                 </div>
                                                 <span class="Subhead">{{item.name}}</span>
                                             </label>
@@ -100,24 +145,24 @@
                         </div>
                         <button class="dialog-button text-primary" onclick="$.fancybox.close();">確定變更</button>
                     </div><!-- /dialog notice-dialog no-close -->
-<!------------ toast 訊息  ------------>
+                    <!------------ toast 訊息  ------------>
                     <div class="error-message" id="error-message" style="display: none;">
-                        <span class="icon"><img src="./img/icon/ic-info-s-secb_o.svg" alt=""></span>
+                        <span class="icon"><img src="./img/icon/ic-info-s-secb_o.svg"></span>
                         <p>儲存失敗，請稍後再試或洽客服詢問。<br>錯誤代碼：2sdsw</p>
-                        <span class="error-hide" id="error-hide"><img src="./img/icon/ic-close-s-dark.png" alt=""></span>
+                        <span class="error-hide" id="error-hide"><img src="./img/icon/ic-close-s-dark.png"></span>
                     </div>
                     <div class="success-message" id="success-message">
-                        <span class="icon"><img src="./img/icon/ic-info-s-secb_g.svg" alt=""></span>
+                        <span class="icon"><img src="./img/icon/ic-info-s-secb_g.svg"></span>
                         <p>儲存成功</p>
-                        <span class="success-hide" id="success-hide"><img src="./img/icon/ic-close-s-dark.png" alt=""></span>
+                        <span class="success-hide" id="success-hide"><img src="./img/icon/ic-close-s-dark.png"></span>
                     </div>
-<!------------ 活動說明及注意事項 popup ------------>
+                    <!------------ 活動說明及注意事項 popup ------------>
                     <div class="dialog notice-dialog no-close" id="notice" style="display: none;">
                         <div class="dialog-content-wrap">
                             <div class="notice-dialog-title">活動說明及注意事項</div>
                             <div class="dialog-scroll">
-                                <img src="./img/mission/notice-img.jpg" alt="" class="notice-img">
-                                <ol> 
+                                <img src="./img/mission/notice-img.jpg" class="notice-img">
+                                <ol>
                                     <li>其他未盡事宜，悉依中華民國相關法令辦理。樂點股份有限公司保留隨時修改、變更、終止本活動與替換其他等值贈品之權利。</li>
                                     <li>其他未盡事宜，悉依中華民國相關法令辦理。樂點股份有限公司保留隨時修改、變更、終止本活動與替換其他等值贈品之權利。</li>
                                     <li>其他未盡事宜，悉依中華民國相關法令辦理。樂點股份有限公司保留隨時修改、變更、終止本活動與替換其他等值贈品之權利。</li>
@@ -127,7 +172,9 @@
                                     <li>其他未盡事宜，悉依中華民國相關法令辦理。樂點股份有限公司保留隨時修改、變更、終止本活動與替換其他等值贈品之權利。</li>
                                     <li>其他未盡事宜，悉依中華民國相關法令辦理。</li>
                                 </ol>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, consequatur! Consequuntur vero dolor nostrum, nemo suscipit voluptatum quae numquam, tenetur optio expedita earum modi, laborum rerum sapiente voluptates enim dicta.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, consequatur!
+                                    Consequuntur vero dolor nostrum, nemo suscipit voluptatum quae numquam, tenetur
+                                    optio expedita earum modi, laborum rerum sapiente voluptates enim dicta.</p>
                             </div>
                         </div>
                         <button class="dialog-button" onclick="$.fancybox.close();">我知道了</button>
@@ -142,7 +189,7 @@
     <script src="js/custom.js"></script>
     <script src="./js/lottie.min.js"></script>
     <script>
-        var jQfn = function (){
+        var jQfn = function () {
             var animation = bodymovin.loadAnimation({
                 container: document.getElementById('dot-loading'),
                 // chrome 禁止直接讀取 local json，這邊要用 local server 才看的到
@@ -159,7 +206,7 @@
                 return {
                     status: 1,
                     missionInfo: '透過原子少年盲盒，抽中 浦俊素 10 個即可換得大獎，並有機會抽中超級好禮。透過原子少年盲盒，抽中透過原子少年盲盒，抽中 浦俊素 10 個即可換得大獎，並有機會抽中超級好禮。透過原子透過原子透過原子哈',
-                    title:'位置',
+                    title: '位置',
                     popupStatus: 1,
 
                     missionCollection: [
@@ -167,19 +214,19 @@
                             number: 1,
                             state: '',
                             img: '',
-                        },{
+                        }, {
                             number: 2,
                             state: 'join',
                             img: './img/mission/sanrio-2.jpg',
-                        },{
+                        }, {
                             number: 3,
                             state: 'join',
                             img: './img/mission/sanrio-2.jpg',
-                        },{
+                        }, {
                             number: 4,
                             state: 'join',
                             img: './img/mission/sanrio-2.jpg',
-                        },{
+                        }, {
                             number: 5,
                             state: 'join',
                             img: './img/mission/sanrio-2.jpg',
@@ -191,32 +238,32 @@
                             inputId: 'exchange1',
                             img: './img/mission/sanrio-1.jpg',
                             name: '這是收藏品的名稱這是收藏品的名稱這是收藏這是收藏品的名稱這是收藏品的名稱這是收藏的名稱的名稱的名稱的',
-                        },{
+                        }, {
                             state: 0,
                             inputId: 'exchange2',
                             img: './img/mission/sanrio-5.jpg',
                             name: 'NameNameNameN',
-                        },{
+                        }, {
                             state: 0,
                             inputId: 'exchange3',
                             img: './img/mission/sanrio-4.jpg',
                             name: 'NameNameNameN',
-                        },{
+                        }, {
                             state: 0,
                             inputId: 'exchange4',
                             img: './img/mission/sanrio-5.jpg',
                             name: 'NameNameNameN',
-                        },{
+                        }, {
                             state: 0,
                             inputId: 'exchange5',
                             img: './img/mission/sanrio-6.jpg',
                             name: 'NameNameNameN',
-                        },{
+                        }, {
                             state: 0,
                             inputId: 'exchange6',
                             img: './img/mission/sanrio-1.jpg',
                             name: 'NameNameNameN',
-                        },{
+                        }, {
                             state: 0,
                             inputId: 'exchange7',
                             img: './img/mission/sanrio-2.jpg',
@@ -234,28 +281,29 @@
                     jQfn()
                 })
                 // setTimeout(() => {
-				// 	document.getElementById("error-message").style.display="none";
+                // 	document.getElementById("error-message").style.display="none";
                 //     document.getElementById("success-message").style.display="none";
-				// }, 4000);
+                // }, 4000);
             },
             methods: {
             }
         })
-// 領取失敗訊息
-        $(function(){
-            $(".mission-info-img").click(function() {
+        // 領取失敗訊息
+        $(function () {
+            $(".mission-info-img").click(function () {
                 $("#error-message").slideDown();
             });
-            $("#error-hide").click(function() {
+            $("#error-hide").click(function () {
                 $("#error-message").hide();
             });
-            $(".mission-info-img").click(function() {
+            $(".mission-info-img").click(function () {
                 $("#success-message").slideDown();
             });
-            $("#success-hide").click(function() {
+            $("#success-hide").click(function () {
                 $("#success-message").hide();
             });
         });
-      </script>
-  </body>
+    </script>
+</body>
+
 </html>
