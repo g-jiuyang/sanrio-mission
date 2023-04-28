@@ -3119,6 +3119,35 @@
 .anytix .page-loading .btn-loading {
   transform: scale(4);
 }
+.anytix .page-loading ul {
+  text-align: center;
+  padding-bottom: 20px;
+  display: flex;
+  gap: 7px;
+}
+.anytix .page-loading ul li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #26d07c;
+  animation: loading 1.5s ease-in-out infinite;
+  margin-right: 0;
+}
+.anytix .page-loading ul li:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.anytix .page-loading ul li:last-child {
+  animation-delay: 0.6s;
+}
+@keyframes loading {
+  15% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1);
+  }
+}
 .anytix .notice-dialog.dialog {
   display: flex;
   flex-direction: column;

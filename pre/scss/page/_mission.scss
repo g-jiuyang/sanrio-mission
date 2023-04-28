@@ -1289,6 +1289,43 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
     .btn-loading {
         transform: scale(4);
     }
+
+    ul {
+        text-align: center;
+        padding-bottom: 20px;
+        display: flex;
+        gap: 7px;
+
+        li {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $bfPrimary;
+            animation: loading 1.5s ease-in-out infinite;
+            margin-right: 0;
+
+            &:nth-child(2) {
+                animation-delay: .3s;
+            }
+
+            &:last-child {
+                animation-delay: .6s;
+            }
+        }
+
+        @keyframes loading {
+            0% {}
+
+            15% {
+                transform: scale(0);
+            }
+
+            30% {
+                transform: scale(1);
+            }
+        }
+    }
 }
 
 // popup 用
