@@ -78,6 +78,11 @@
                             <span>兌換獎勵</span>
                             <!-- chrome 禁止直接讀取 local json，這邊要用 local server 才看的到-->
                         </button>
+                        <button class="btn-primary mt-none mb-xxs block" data-fancybox data-src="#ing-dialog"
+                            :disabled="!agree">
+                            <span>兌換獎勵 (扣點進行中)</span>
+                            <!-- chrome 禁止直接讀取 local json，這邊要用 local server 才看的到-->
+                        </button>
                     </div>
                     <!------------ 更換小卡 popup ------------>
                     <div class="dialog notice-dialog no-close" id="exchangeList" style="display: none;">
@@ -229,6 +234,25 @@
                         </button>
                         <button class="dialog-button cancel" @click="cancelclose">取消</button>
                     </div>
+                    <!-- ↓扣點進行中 -->
+                    <div class="dialog point-dialog no-close" id="ing-dialog" style="display: none;">
+                        <div class="dialog-content-wrap">
+                            <div class="point-dialog-title">點數錢包扣除</div>
+                            <div class="dialog-scroll">
+                                <p class="point-dialog-desc">參與此項任務，將在點擊「兌換獎勵」後扣除GASH點數</p>
+                                <h2>50點</h2>
+                                <div class="point-dialog-notice notice-record">
+                                    <dl>
+                                        <dt>訂單編號</dt>
+                                        <dd>2023041721009399888399</dd>
+                                        <dt>訂單成立時間</dt>
+                                        <dd>扣點進行中，請於10分鐘後再次確認</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="dialog-button" @click="cancelclose">我知道了</button>
+                    </div>
                     <!-- /dialog notice-dialog no-close -->
                     <!------------ 領取失敗訊息 / 有3種文字訊息  ------------>
                     <div class="error-message" id="error-message" style="display: none;">
@@ -334,6 +358,7 @@
                     }, 3200);
                 },
                 cancelclose: function () {
+                    vm.agree = false;
                     vm.agreededuct = false;
                     $.fancybox.close();
                 }

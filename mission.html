@@ -127,6 +127,14 @@
                                                 <span class="mci-count">GASH點數</span>
                                                 <span class="mci-name">50點<br>(已扣點)</span>
                                             </div>
+                                            <div class="mission-collection-item">
+                                                <div class="mci-img" data-fancybox data-src="#point6">
+                                                    <div class="add">+</div>
+                                                    <img src="img/mission/gashpoint.png">
+                                                </div>
+                                                <span class="mci-count">GASH點數</span>
+                                                <span class="mci-name">50點<br>(進行中)</span>
+                                            </div>
                                         </div>
                                         <a href="mission-content.html" class="btn-join"
                                             v-if="item.ip === 'sanrio'">參加任務</a>
@@ -279,6 +287,25 @@
                                     <dd>2023041721009399888399</dd>
                                     <dt>訂單成立時間</dt>
                                     <dd>2023/04/01 23:34:56</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="dialog-button" onclick="$.fancybox.close();">我知道了</button>
+                </div>
+                <!-- ↓第六種：扣點進行中 -->
+                <div class="dialog point-dialog no-close" id="point6" style="display: none;">
+                    <div class="dialog-content-wrap">
+                        <div class="point-dialog-title">點數錢包扣除</div>
+                        <div class="dialog-scroll">
+                            <p class="point-dialog-desc">參與此項任務，您已扣除GASH點數</p>
+                            <h2>50點</h2>
+                            <div class="point-dialog-notice notice-record">
+                                <dl>
+                                    <dt>訂單編號</dt>
+                                    <dd>2023041721009399888399</dd>
+                                    <dt>訂單成立時間</dt>
+                                    <dd>扣點進行中，請於10分鐘後再次確認</dd>
                                 </dl>
                             </div>
                         </div>
@@ -483,9 +510,6 @@
                 exchange: function () {
                     this.btnloading = true;
                     window.setTimeout(function () {
-                        // $.fancybox.open( $('#exchangeSuccess'), {
-                        //     touch: false
-                        // });
                         vm.btnloading = false;
                     }, 3000);
                 },

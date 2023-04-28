@@ -108,6 +108,14 @@
                             <span class="mci-count">GASH點數</span>
                             <span class="mci-name">50點<br>(已扣點)</span>
                         </div>
+                        <div class="mission-collection-item row-4">
+                            <div class="mci-img" data-fancybox data-src="#point6">
+                                <div class="add">+</div>
+                                <img src="img/mission/gashpoint.png">
+                            </div>
+                            <span class="mci-count">GASH點數</span>
+                            <span class="mci-name">50點<br>(進行中)</span>
+                        </div>
                     </div>
                     <!------------ 更換小卡 popup ------------>
                     <div class="dialog notice-dialog no-close" id="exchangeList" style="display: none;">
@@ -223,6 +231,25 @@
                                         <dd>2023041721009399888399</dd>
                                         <dt>訂單成立時間</dt>
                                         <dd>2023/04/01 23:34:56</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="dialog-button" onclick="$.fancybox.close();">我知道了</button>
+                    </div>
+                    <!-- ↓第六種：扣點進行中 -->
+                    <div class="dialog point-dialog no-close" id="point6" style="display: none;">
+                        <div class="dialog-content-wrap">
+                            <div class="point-dialog-title">點數錢包扣除</div>
+                            <div class="dialog-scroll">
+                                <p class="point-dialog-desc">參與此項任務，您已扣除GASH點數</p>
+                                <h2>50點</h2>
+                                <div class="point-dialog-notice notice-record">
+                                    <dl>
+                                        <dt>訂單編號</dt>
+                                        <dd>2023041721009399888399</dd>
+                                        <dt>訂單成立時間</dt>
+                                        <dd>扣點進行中，請於10分鐘後再次確認</dd>
                                     </dl>
                                 </div>
                             </div>
