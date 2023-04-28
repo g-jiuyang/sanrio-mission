@@ -2855,7 +2855,7 @@
   font-weight: 500;
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item .mci-name {
-  font-size: calc(0.75 * var(--font-size));
+  font-size: calc(0.7222 * var(--font-size));
 }
 .anytix .mission-blackhole .checkbox {
   display: table;
@@ -3084,7 +3084,7 @@
   -webkit-box-orient: vertical;
   white-space: pre-wrap;
   text-align: center;
-  font-size: calc(0.75 * var(--font-size));
+  font-size: calc(0.7222 * var(--font-size));
   color: #999;
   line-height: 1.5;
 }
