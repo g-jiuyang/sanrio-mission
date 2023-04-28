@@ -348,6 +348,15 @@
                 $("#error-message").hide();
             });
         });
+
+        // 
+        $(function () {
+            var box = $(".mission-collection");
+            var items = box.children(".mission-collection-item");
+            if (items.length < 4) {
+                box.css("justify-content", "center");
+            }
+        })
     </script>
 </body>
 
