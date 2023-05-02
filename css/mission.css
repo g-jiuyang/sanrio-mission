@@ -2728,7 +2728,7 @@
   height: auto;
 }
 .anytix .mission-blackhole .blackhole-box {
-  padding: 0 calc(0.75 * var(--font-size)) calc(6 * var(--font-size));
+  padding: 0 calc(1.1111 * var(--font-size)) calc(6 * var(--font-size));
 }
 .anytix .mission-blackhole .mission-info-img {
   display: flex;
@@ -2883,7 +2883,7 @@
   z-index: 1;
 }
 .anytix .mission-blackhole .flex-btn .btn-primary {
-  width: 80%;
+  width: calc(100% - 2.2222 * var(--font-size));
   margin: calc(1 * var(--font-size)) auto;
 }
 .anytix .mission-blackhole .error-message {
