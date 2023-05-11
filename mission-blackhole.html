@@ -24,8 +24,8 @@
                     <h2>兌換獎勵</h2>
                 </div>
                 <div class="blackhole-box">
-                    <div class="column ai-center pt-sm">
-                        <div class="mission-info-img"><img src="./img/mission/blackhole-theme-1.jpg"></div>
+                    <div class="column ai-center">
+                        <div class="mission-info-img"><img src="./img/mission/glassescat.jpg"></div>
                         <p class="t-c Body4">原子少年人形公仔限量版一隻 20 字示意</p>
                         <p class="txt">選擇即將兌換的收藏品</p>
                         <p class="note">注意：兌換成功後，你的收藏品將被刪除，一但刪除後，將無法復原，請小心操作。</p>
@@ -53,19 +53,23 @@
                         <!-- 已加入小卡狀態  -->
                         <template v-for="blackhole in missionCollection" ket="nothing">
                             <div class="mission-collection-item" data-fancybox data-src="#exchangeList">
-                                <div class="mci-img"></div>
+                                <div class="mci-img">
+                                    <div class="add">+</div>
+                                </div>
                                 <span class="mci-name">{{blackhole.mciName}}</span>
                             </div>
                         </template>
                         <div class="mission-collection-item" data-fancybox data-src="#gashpointN">
-                            <div class="mci-img"></div>
-                            <span class="mci-name">GASH 50點</span>
+                            <div class="mci-img">
+                                <div class="add">+</div>
+                            </div>
+                            <span class="mci-name">GASH 50點<br>(點數不足時)</span>
                         </div>
                         <div class="mission-collection-item" data-fancybox data-src="#gashpointY">
                             <div class="mci-img">
                                 <img src="img/mission/gashpoint.png">
                             </div>
-                            <span class="mci-name">GASH 50點</span>
+                            <span class="mci-name">GASH 50點<br>(點數足夠時)</span>
                         </div>
                     </div>
                     <div class="checkbox">
@@ -327,8 +331,8 @@
                     agreededuct: false,
                     missionCollection: [
                         {
-                            img: './img/mission/history-collection-1.jpg',
-                            mciName: 'Nelson收收收收收',
+                            img: './img/mission/sanrio-main.jpg',
+                            mciName: '標題最多可顯示兩行超過就會隱藏',
                         }, {
                             img: './img/mission/history-collection-2.jpg',
                             mciName: 'Nelson',

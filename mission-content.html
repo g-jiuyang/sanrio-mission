@@ -39,7 +39,7 @@
                         <p class="mission-step-title"><span>Step1</span>選擇風格</p>
                         <div class="mission-collection">
                             <template v-for="item in missionCollection">
-                                <div class="mission-collection-item row-3" data-fancybox data-src="#exchangeList">
+                                <div class="mission-collection-item row-3 step1" data-fancybox data-src="#exchangeList">
                                     <div class="mci-img">
                                         <img :src="item.img">
                                         <template v-if="item.state === 'join'" key="havecard">
@@ -55,7 +55,7 @@
                         <p class="mission-step-title"><span>Step2</span>選擇{{title}}</p>
                         <div class="mission-collection">
                             <template v-for="item in missionCollection">
-                                <div class="mission-collection-item row-4" data-fancybox data-src="#exchangeList">
+                                <div class="mission-collection-item row-3" data-fancybox data-src="#exchangeList">
                                     <div class="mci-tags">{{title}} {{item.number}}</div>
                                     <div class="mci-img">
                                         <img :src="item.img">
@@ -69,52 +69,46 @@
                     </template>
                     <p class="mission-step-title"><span>Step3</span>GASH點數</p>
                     <div class="mission-collection">
-                        <div class="mission-collection-item row-4">
+                        <div class="mission-collection-item row-3">
                             <div class="mci-img" data-fancybox data-src="#point1">
                                 <div class="add">+</div>
                                 <img src="img/mission/gashpoint.png">
                             </div>
-                            <span class="mci-count">GASH點數</span>
-                            <span class="mci-name">50點<br>(收N/餘N)</span>
+                            <span class="mci-name">GASH 50點<br>(收N/餘N)</span>
                         </div>
-                        <div class="mission-collection-item row-4">
+                        <div class="mission-collection-item row-3">
                             <div class="mci-img" data-fancybox data-src="#point2">
                                 <div class="add">+</div>
                                 <img src="img/mission/gashpoint.png">
                             </div>
-                            <span class="mci-count">GASH點數</span>
-                            <span class="mci-name">50點<br>(收Y/餘N)</span>
+                            <span class="mci-name">GASH 50點<br>(收Y/餘N)</span>
                         </div>
-                        <div class="mission-collection-item row-4">
+                        <div class="mission-collection-item row-3">
                             <div class="mci-img" data-fancybox data-src="#point3">
                                 <div class="add">+</div>
                                 <img src="img/mission/gashpoint.png">
                             </div>
-                            <span class="mci-count">GASH點數</span>
-                            <span class="mci-name">50點<br>(收N/餘Y)</span>
+                            <span class="mci-name">GASH 50點<br>(收N/餘Y)</span>
                         </div>
-                        <div class="mission-collection-item row-4">
+                        <div class="mission-collection-item row-3">
                             <div class="mci-img" data-fancybox data-src="#point4">
                                 <div class="add">+</div>
                                 <img src="img/mission/gashpoint.png">
                             </div>
-                            <span class="mci-count">GASH點數</span>
-                            <span class="mci-name">50點<br>(收Y/餘Y)</span>
+                            <span class="mci-name">GASH 50點<br>(收Y/餘Y)</span>
                         </div>
-                        <div class="mission-collection-item row-4">
+                        <div class="mission-collection-item row-3">
                             <div class="mci-img" data-fancybox data-src="#point5">
                                 <img src="img/mission/gashpoint.png">
                             </div>
-                            <span class="mci-count">GASH點數</span>
-                            <span class="mci-name">50點<br>(已扣點)</span>
+                            <span class="mci-name">GASH 50點<br>(已扣點)</span>
                         </div>
-                        <div class="mission-collection-item row-4">
+                        <div class="mission-collection-item row-3">
                             <div class="mci-img" data-fancybox data-src="#point6">
                                 <div class="add">+</div>
                                 <img src="img/mission/gashpoint.png">
                             </div>
-                            <span class="mci-count">GASH點數</span>
-                            <span class="mci-name">50點<br>(進行中)</span>
+                            <span class="mci-name">GASH 50點<br>(進行中)</span>
                         </div>
                     </div>
                     <!------------ 更換小卡 popup ------------>
@@ -344,11 +338,11 @@
                         }, {
                             number: 3,
                             state: 'join',
-                            img: './img/mission/sanrio-2.jpg',
+                            img: './img/mission/sanrio-main.jpg',
                         }, {
                             number: 4,
                             state: 'join',
-                            img: './img/mission/sanrio-2.jpg',
+                            img: './img/mission/sanrio-1.jpg',
                         }, {
                             number: 5,
                             state: 'join',
