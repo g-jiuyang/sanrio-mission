@@ -1,6 +1,9 @@
 @import "./basic/var";
 @import "./basic/icon";
+
 .anytix {
+    -webkit-tap-highlight-color: transparent;
+
     @import "./basic/typography";
     @import "./basic/mixin";
 

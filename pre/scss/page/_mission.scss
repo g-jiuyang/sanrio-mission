@@ -643,8 +643,8 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
     }
 
     .history-wrap {
-
         // padding: 0 calc(0.3 * var(--font-size)) 0;
+
         .history-status {
             margin-bottom: calc(1 * var(--font-size));
 
@@ -662,17 +662,17 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
                     height: 0;
                     overflow: hidden;
                     padding-top: 25%;
-                    background-color: $bfMediumGray;
-                    border-radius: calc(0.75 * var(--font-size));
+                    border-radius: calc(.667 * var(--font-size));
                     position: relative;
 
                     img {
                         position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100% !important;
-                        height: auto;
-                        border: none !important;
+                        top: 50%;
+                        left: 50%;
+                        max-width: 100%;
+                        max-height: 100%;
+                        border-radius: calc(.667 * var(--font-size));
+                        transform: translateX(-50%) translateY(-50%);
                     }
                 }
 
@@ -803,7 +803,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
     }
 
     .blackhole-box {
-        padding: 0 calc(1.1111 * var(--font-size)) calc(10 * var(--font-size));
+        padding: 0 calc(1.1111 * var(--font-size)) calc(7 * var(--font-size));
     }
 
     .mission-info-img {
@@ -838,10 +838,28 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
         line-height: calc(1.2 * var(--font-size));
     }
 
+    .mission-step-title {
+        font-size: calc(.7778 * var(--font-size));
+        font-weight: 700;
+        color: $bfDark;
+        margin-bottom: calc(.111 * var(--font-size));
+
+        span {
+            float: right;
+            font-size: calc(.7778 * var(--font-size));
+            font-weight: 400;
+            color: $bfDarkGray;
+
+            &.warning {
+                color: $bfDanger;
+            }
+        }
+    }
+
     .mission-collection {
         display: flex;
         flex-wrap: wrap;
-        margin-top: calc(.7778 * var(--font-size));
+        margin: calc(.7778 * var(--font-size)) 0 calc(.8889 * var(--font-size));
 
         .mission-collection-item {
             width: calc((100% - calc(.889 * var(--font-size))) / 3);
@@ -865,7 +883,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
                 background-size: calc(.8 * var(--font-size));
                 background-position: center;
                 background-repeat: no-repeat;
-                border-radius: calc(.222 * var(--font-size));
+                border-radius: calc(.444 * var(--font-size));
                 position: relative;
 
                 &.history-unselected {
@@ -882,6 +900,10 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
                         text-align: center;
                         transform: translateY(-50%);
                     }
+
+                    .add {
+                        font-size: calc(0.722 * var(--font-size));
+                    }
                 }
 
                 img {
@@ -891,7 +913,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
                     transform: translateX(-50%) translateY(-50%);
                     max-width: 100%;
                     max-height: 100%;
-                    border-radius: calc(.222 * var(--font-size));
+                    border-radius: calc(.444 * var(--font-size));
                 }
 
                 .ic-fresh {
@@ -957,6 +979,10 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
         label {
             padding: 0;
             background: none;
+
+            &:before {
+                background-color: transparent;
+            }
         }
 
         span {
@@ -979,9 +1005,29 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
         z-index: 1;
         border-radius: calc(.889 * var(--font-size)) calc(.889 * var(--font-size)) 0 0;
 
+        .gash-info {
+            display: block;
+            margin: 0 auto calc(.444 * var(--font-size));
+            text-align: center;
+            font-size: calc(.778 * var(--font-size));
+            font-weight: 400;
+            color: $bfDarkGray;
+
+            span {
+                font-size: calc(.778 * var(--font-size));
+                font-weight: 400;
+                color: $bfPrimary;
+            }
+        }
+
         .btn-primary {
             width: calc(100% - 2.2222 * var(--font-size));
+            height: calc(2.4444 * var(--font-size));
             margin: calc(1 * var(--font-size)) auto;
+
+            &.disabled {
+                background-color: $bfLightGray;
+            }
         }
     }
 
@@ -1209,10 +1255,10 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
                 width: calc(100% - (1.333 * var(--font-size)));
                 padding-top: calc(100% - (1.333 * var(--font-size)));
 
-                .add {
-                    background-color: rgba($bfDark, .8);
-                    color: $bg;
-                }
+                // .add {
+                //     background-color: rgba($bfDark, .8);
+                //     color: $bg;
+                // }
             }
 
             .mci-name {
@@ -1256,6 +1302,41 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
             background-size: calc(0.6 * var(--font-size)) auto;
             background-repeat: no-repeat;
             background-position: bottom center;
+        }
+    }
+
+    .gash-info {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: calc(.778 * var(--font-size));
+        font-weight: 400;
+        color: $bfDarkGray;
+
+        span {
+            font-size: calc(.778 * var(--font-size));
+            font-weight: 400;
+            color: $bfPrimary;
+        }
+    }
+
+    .btn-complete {
+        display: block;
+        width: 100%;
+        height: calc(2.333 * var(--font-size));
+        padding: calc(.5 * var(--font-size)) calc(1.333 * var(--font-size));
+        margin-top: calc(.444 * var(--font-size));
+        box-sizing: border-box;
+        font-size: calc(.889 * var(--font-size));
+        line-height: calc(1.222 * var(--font-size));
+        color: $bg;
+        background-color: $bfPrimary;
+        border-radius: calc(0.4 * var(--font-size));
+        border: none;
+        font-weight: 500;
+
+        &.disabled {
+            background-color: $bfLightGray;
         }
     }
 }
@@ -1400,6 +1481,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
             font-size: calc(0.825 * var(--font-size));
             display: flex;
             flex-wrap: wrap;
+            gap: calc(.889 * var(--font-size)) calc(.667 * var(--font-size));
 
             &,
             * {
@@ -1672,10 +1754,11 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
 
 // 黑洞任務 更換小卡
 .change-card {
-    width: calc(100% / 2);
-    padding: 0 calc(0.3 * var(--font-size));
-    margin-bottom: calc(1 * var(--font-size));
+    width: calc(100% / 2 - (.667 * var(--font-size)));
+    padding: calc(.333 * var(--font-size));
     box-sizing: border-box;
+    border: 1px solid $bfSoftWhite;
+    border-radius: calc(.444 * var(--font-size));
 
     label.change-box {
         // border-radius: calc(1 * var(--font-size));
@@ -1686,19 +1769,13 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
         padding: 0;
     }
 
-    input {
-        display: none;
-    }
-
     .mci-img {
         width: 100%;
         height: 0;
-        overflow: hidden;
         padding-top: 100%;
         margin: 0 0 calc(0.5 * var(--font-size));
-        background-color: $bfSoftWhite;
-        border-radius: calc(0.75 * var(--font-size));
         position: relative;
+        border-radius: calc(.444 * var(--font-size));
 
         &.square {
             padding-top: 100%;
@@ -1706,11 +1783,12 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
 
         img {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100% !important;
-            height: auto;
-            border: none !important;
+            top: 50%;
+            left: 50%;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: calc(.444 * var(--font-size));
+            transform: translateX(-50%) translateY(-50%);
         }
 
         .ic-checked {
@@ -1731,6 +1809,9 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
             &.used {
                 width: calc(3.2 * var(--font-size));
                 height: calc(1.5 * var(--font-size));
+                top: calc(.444 * var(--font-size));
+                left: 50%;
+                transform: translateX(-50%);
                 text-align: center;
                 color: $bg;
                 background-color: $bfPrimary;
@@ -1744,47 +1825,52 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
     }
 
     .Subhead2 {
-        display: block;
         width: 100%;
-        max-height: calc(2 * var(--font-size));
-        overflow: hidden;
-        padding: 0 calc(0.25 * var(--font-size));
         margin: 0 auto;
         box-sizing: border-box;
-        font-size: calc(0.8 * var(--font-size));
-        font-weight: bold;
-        color: $bfDark;
+        font-size: calc(.667 * var(--font-size)) !important;
+        font-weight: 400;
+        color: $bfMediumGray;
     }
 
     .Subhead {
         display: block;
         width: 100%;
         overflow: hidden;
-        padding: 0 calc(0.25 * var(--font-size));
         margin: 0 auto;
         box-sizing: border-box;
-        font-size: calc(0.8 * var(--font-size));
-        font-weight: bold;
-        color: $bfDark;
+        font-size: calc(.667 * var(--font-size)) !important;
+        font-weight: 400;
+        color: $bfMediumGray;
     }
 
-    input:checked {
-        &+label {
-            .mci-img img {
-                filter: brightness(.5);
-            }
 
-            .ic-checked {
-                opacity: 1;
-                background-image: url("./../img/icon/ic-checked-c-primary.svg");
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: calc(1.5 * var(--font-size));
-            }
 
-            .Subhead2,
-            .Subhead {
-                color: $bfPrimary;
+    input {
+        display: none;
+
+        &:checked {
+            &+label {
+                .mci-img {
+                    background-color: rgba($bfDark, 0.8);
+                }
+
+                .mci-img img {
+                    filter: brightness(.5);
+                }
+
+                .ic-checked {
+                    opacity: 1;
+                    background-image: url("./../img/icon/ic-checked-c-primary.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: calc(1.5 * var(--font-size));
+                }
+
+                .Subhead2,
+                .Subhead {
+                    color: $bfPrimary;
+                }
             }
         }
     }
@@ -1813,24 +1899,16 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
     justify-content: center;
     align-items: center;
     width: 80%;
-    height: 0;
     overflow: hidden;
-    padding-top: 94.4%;
     margin: 0 auto;
     margin-bottom: calc(0.875 * var(--font-size));
     background: $bfLightGray;
     border-radius: calc(0.75 * var(--font-size));
     text-align: center;
-    position: relative;
     z-index: 1;
 
     img {
         width: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
         margin: auto;
         object-fit: cover;
     }

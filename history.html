@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,26 +12,28 @@
     <link href="./css/reset.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
     <link href="./css/gash.css" rel="stylesheet">
-    <link href="./css/mission.min.css" rel="stylesheet">
+    <link href="./css/mission.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="anytix">
         <div class="main-content" id="app">
             <div class="mission-blackhole mission-content animated fadeIn">
                 <div class="mission-content-img">
-                    <img src="./img/mission/sanrio-main.jpg" alt="">
+                    <img src="./img/mission/sanrio-main.jpg">
                 </div>
                 <div class="mission-area">
-                    <p class="mission-content-info">{{missionInfo}}<span data-fancybox data-src="#notice">活動說明及注意事項</span></p>
+                    <p class="mission-content-info">{{missionInfo}}<span data-fancybox
+                            data-src="#notice">活動說明及注意事項</span></p>
                     <!-- 無tag樣式 -->
                     <template>
-                        <p class="mission-step-title"><span>Step1</span>選擇風格</p>
+                        <p class="mission-step-title">Step1 選擇風格</p>
                         <div class="mission-collection">
                             <template v-for="item in missionCollection">
-                                <div class="mission-collection-item row-3">
+                                <div class="mission-collection-item step1 row-3">
                                     <div class="mci-img history-unselected">
                                         <p>未選擇</p>
-                                        <img :src="item.img" alt="">
+                                        <img :src="item.img">
                                     </div>
                                 </div>
                             </template>
@@ -38,26 +41,26 @@
                     </template>
                     <!-- 有tag樣式 -->
                     <template>
-                        <p class="mission-step-title"><span>Step2</span>選擇{{title}}</p>
+                        <p class="mission-step-title">Step2 選擇{{title}}</p>
                         <div class="mission-collection">
                             <template v-for="item in missionCollection">
-                                <div class="mission-collection-item row-4">
+                                <div class="mission-collection-item">
                                     <div class="mci-tags">{{title}} {{item.number}}</div>
                                     <div class="mci-img history-unselected">
-                                        <p>未選擇</p>
-                                        <img :src="item.img" alt="">
+                                        <img :src="item.img">
+                                        <div v-show="item.img === ''" class="add">未選擇</div>
                                     </div>
                                 </div>
                             </template>
                         </div>
                     </template>
-<!------------ 活動說明及注意事項 popup ------------>
+                    <!------------ 活動說明及注意事項 popup ------------>
                     <div class="dialog notice-dialog no-close" id="notice" style="display: none;">
                         <div class="dialog-content-wrap">
                             <div class="notice-dialog-title">活動說明及注意事項</div>
                             <div class="dialog-scroll">
-                                <img src="./img/mission/notice-img.jpg" alt="" class="notice-img">
-                                <ol> 
+                                <img src="./img/mission/notice-img.jpg" class="notice-img">
+                                <ol>
                                     <li>其他未盡事宜，悉依中華民國相關法令辦理。樂點股份有限公司保留隨時修改、變更、終止本活動與替換其他等值贈品之權利。</li>
                                     <li>其他未盡事宜，悉依中華民國相關法令辦理。樂點股份有限公司保留隨時修改、變更、終止本活動與替換其他等值贈品之權利。</li>
                                     <li>其他未盡事宜，悉依中華民國相關法令辦理。樂點股份有限公司保留隨時修改、變更、終止本活動與替換其他等值贈品之權利。</li>
@@ -67,7 +70,9 @@
                                     <li>其他未盡事宜，悉依中華民國相關法令辦理。樂點股份有限公司保留隨時修改、變更、終止本活動與替換其他等值贈品之權利。</li>
                                     <li>其他未盡事宜，悉依中華民國相關法令辦理。</li>
                                 </ol>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, consequatur! Consequuntur vero dolor nostrum, nemo suscipit voluptatum quae numquam, tenetur optio expedita earum modi, laborum rerum sapiente voluptates enim dicta.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, consequatur!
+                                    Consequuntur vero dolor nostrum, nemo suscipit voluptatum quae numquam, tenetur
+                                    optio expedita earum modi, laborum rerum sapiente voluptates enim dicta.</p>
                             </div>
                         </div>
                         <button class="dialog-button" onclick="$.fancybox.close();">我知道了</button>
@@ -82,7 +87,7 @@
     <script src="js/custom.js"></script>
     <script src="./js/lottie.min.js"></script>
     <script>
-        var jQfn = function (){
+        var jQfn = function () {
             var animation = bodymovin.loadAnimation({
                 container: document.getElementById('dot-loading'),
                 // chrome 禁止直接讀取 local json，這邊要用 local server 才看的到
@@ -99,7 +104,7 @@
                 return {
                     status: 1,
                     missionInfo: '透過原子少年盲盒，抽中 浦俊素 10 個即可換得大獎，並有機會抽中超級好禮。透過原子少年盲盒，抽中透過原子少年盲盒，抽中 浦俊素 10 個即可換得大獎，並有機會抽中超級好禮。透過原子透過原子透過原子哈',
-                    title:'位置',
+                    title: '位置',
                     popupStatus: 1,
 
                     missionCollection: [
@@ -107,18 +112,18 @@
                             number: 1,
                             state: 'join',
                             img: './img/mission/sanrio-2.jpg',
-                        },{
+                        }, {
                             number: 2,
                             state: 'join',
-                            img: './img/mission/sanrio-2.jpg',
-                        },{
+                            img: './img/mission/sanrio-main.jpg',
+                        }, {
                             number: 3,
                             state: 'join',
                             img: '',
-                        },{
+                        }, {
                             number: 4,
                             state: 'join',
-                            img: './img/mission/sanrio-2.jpg',
+                            img: './img/mission/sanrio-1.jpg',
                         }
                     ],
                     popupCollection: [
@@ -127,32 +132,32 @@
                             inputId: 'exchange1',
                             img: './img/mission/sanrio-1.jpg',
                             name: '這是收藏品的名稱這是收藏品的名稱這是收藏這是收藏品的名稱這是收藏品的名稱這是收藏的名稱的名稱的名稱的',
-                        },{
+                        }, {
                             state: 0,
                             inputId: 'exchange2',
                             img: './img/mission/sanrio-5.jpg',
                             name: 'NameNameNameN',
-                        },{
+                        }, {
                             state: 0,
                             inputId: 'exchange3',
                             img: './img/mission/sanrio-4.jpg',
                             name: 'NameNameNameN',
-                        },{
+                        }, {
                             state: 0,
                             inputId: 'exchange4',
                             img: './img/mission/sanrio-5.jpg',
                             name: 'NameNameNameN',
-                        },{
+                        }, {
                             state: 0,
                             inputId: 'exchange5',
                             img: './img/mission/sanrio-6.jpg',
                             name: 'NameNameNameN',
-                        },{
+                        }, {
                             state: 0,
                             inputId: 'exchange6',
                             img: './img/mission/sanrio-1.jpg',
                             name: 'NameNameNameN',
-                        },{
+                        }, {
                             state: 0,
                             inputId: 'exchange7',
                             img: './img/mission/sanrio-2.jpg',
@@ -174,6 +179,7 @@
             }
         })
 
-      </script>
-  </body>
+    </script>
+</body>
+
 </html>

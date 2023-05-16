@@ -36,7 +36,7 @@
                             data-src="#notice">活動說明及注意事項</span></p>
                     <!-- 無tag樣式 -->
                     <template>
-                        <p class="mission-step-title"><span>Step1</span>選擇風格</p>
+                        <p class="mission-step-title">Step1 選擇風格</p>
                         <div class="mission-collection">
                             <template v-for="item in missionCollection">
                                 <div class="mission-collection-item row-3 step1" data-fancybox data-src="#exchangeList">
@@ -52,7 +52,7 @@
                     </template>
                     <!-- 有tag樣式 -->
                     <template>
-                        <p class="mission-step-title"><span>Step2</span>選擇{{title}}</p>
+                        <p class="mission-step-title">Step2 選擇{{title}}</p>
                         <div class="mission-collection">
                             <template v-for="item in missionCollection">
                                 <div class="mission-collection-item row-3" data-fancybox data-src="#exchangeList">
@@ -62,12 +62,15 @@
                                         <template v-if="item.state === 'join'" key="havecard">
                                             <div class="ic-fresh"></div>
                                         </template>
+                                        <template v-else>
+                                            <div class="add">+</div>
+                                        </template>
                                     </div>
                                 </div>
                             </template>
                         </div>
                     </template>
-                    <p class="mission-step-title"><span>Step3</span>GASH點數</p>
+                    <!-- <p class="mission-step-title">Step3 GASH點數</p>
                     <div class="mission-collection">
                         <div class="mission-collection-item row-3">
                             <div class="mci-img" data-fancybox data-src="#point1">
@@ -110,7 +113,12 @@
                             </div>
                             <span class="mci-name">GASH 50點<br>(進行中)</span>
                         </div>
-                    </div>
+                    </div> -->
+                    <p class="gash-info">蒐集完成後將扣除 <span>GASH50點</span> 完成任務！</p>
+                    <button class="btn-complete" data-fancybox data-src="#point5">
+                        點我完成任務
+                        <!-- 共有六種狀態 請看下方 popup#point1~6，扣點完成後按鈕文案變「查看紀錄」 -->
+                    </button>
                     <!------------ 更換小卡 popup ------------>
                     <div class="dialog notice-dialog no-close" id="exchangeList" style="display: none;">
                         <div class="dialog-content-wrap">
@@ -368,7 +376,7 @@
                         }, {
                             state: 0,
                             inputId: 'exchange4',
-                            img: './img/mission/sanrio-5.jpg',
+                            img: './img/mission/sanrio-main.jpg',
                             name: 'NameNameNameN',
                         }, {
                             state: 0,

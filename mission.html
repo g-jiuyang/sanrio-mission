@@ -88,7 +88,7 @@
                                                         class="mci-name">{{item.mciName}}</span>
                                                 </div>
                                             </template>
-                                            <div class="mission-collection-item">
+                                            <!-- <div class="mission-collection-item">
                                                 <div class="mci-img" data-fancybox data-src="#point1">
                                                     <div class="add">+</div>
                                                     <img src="img/mission/gashpoint.png">
@@ -134,7 +134,12 @@
                                                 </div>
                                                 <span class="mci-count">GASH點數</span>
                                                 <span class="mci-name">50點<br>(進行中)</span>
-                                            </div>
+                                            </div> -->
+                                            <p class="gash-info">蒐集完成後將扣除 <span>GASH50點</span> 完成任務！</p>
+                                            <button class="btn-complete disabled" data-fancybox data-src="#point1">
+                                                點我完成任務
+                                                <!-- 共有六種狀態 請看下方 popup#point1~6，扣點完成後按鈕文案變「查看紀錄」 -->
+                                            </button>
                                         </div>
                                         <a href="mission-content.html" class="btn-join"
                                             v-if="item.ip === 'sanrio'">參加任務</a>

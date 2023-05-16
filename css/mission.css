@@ -2625,17 +2625,17 @@
   height: 0;
   overflow: hidden;
   padding-top: 25%;
-  background-color: #999;
-  border-radius: calc(0.75 * var(--font-size));
+  border-radius: calc(0.667 * var(--font-size));
   position: relative;
 }
 .anytix .mission-history .history-wrap .history-status .history-status-list .mci-img img {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: auto;
-  border: none !important;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: calc(0.667 * var(--font-size));
+  transform: translateX(-50%) translateY(-50%);
 }
 .anytix .mission-history .history-wrap .history-status .history-status-list .mci-info {
   width: 72%;
@@ -2734,7 +2734,7 @@
   padding: calc(1 * var(--font-size)) 0 calc(0.6 * var(--font-size));
 }
 .anytix .mission-blackhole .blackhole-box {
-  padding: 0 calc(1.1111 * var(--font-size)) calc(10 * var(--font-size));
+  padding: 0 calc(1.1111 * var(--font-size)) calc(7 * var(--font-size));
 }
 .anytix .mission-blackhole .mission-info-img {
   display: flex;
@@ -2763,10 +2763,25 @@
   text-align: center;
   line-height: calc(1.2 * var(--font-size));
 }
+.anytix .mission-blackhole .mission-step-title {
+  font-size: calc(0.7778 * var(--font-size));
+  font-weight: 700;
+  color: #333;
+  margin-bottom: calc(0.111 * var(--font-size));
+}
+.anytix .mission-blackhole .mission-step-title span {
+  float: right;
+  font-size: calc(0.7778 * var(--font-size));
+  font-weight: 400;
+  color: #666;
+}
+.anytix .mission-blackhole .mission-step-title span.warning {
+  color: #ED5B4C;
+}
 .anytix .mission-blackhole .mission-collection {
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(0.7778 * var(--font-size));
+  margin: calc(0.7778 * var(--font-size)) 0 calc(0.8889 * var(--font-size));
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item {
   width: calc((100% - 0.889 * var(--font-size)) / 3);
@@ -2789,7 +2804,7 @@
   background-size: calc(0.8 * var(--font-size));
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: calc(0.222 * var(--font-size));
+  border-radius: calc(0.444 * var(--font-size));
   position: relative;
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item .mci-img.history-unselected {
@@ -2806,6 +2821,9 @@
   text-align: center;
   transform: translateY(-50%);
 }
+.anytix .mission-blackhole .mission-collection .mission-collection-item .mci-img.history-unselected .add {
+  font-size: calc(0.722 * var(--font-size));
+}
 .anytix .mission-blackhole .mission-collection .mission-collection-item .mci-img img {
   position: absolute;
   top: 50%;
@@ -2813,7 +2831,7 @@
   transform: translateX(-50%) translateY(-50%);
   max-width: 100%;
   max-height: 100%;
-  border-radius: calc(0.222 * var(--font-size));
+  border-radius: calc(0.444 * var(--font-size));
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item .mci-img .ic-fresh {
   width: calc(1.5 * var(--font-size));
@@ -2870,6 +2888,9 @@
   padding: 0;
   background: none;
 }
+.anytix .mission-blackhole .checkbox label:before {
+  background-color: transparent;
+}
 .anytix .mission-blackhole .checkbox span {
   font-size: calc(0.75 * var(--font-size));
   font-weight: bold;
@@ -2888,9 +2909,26 @@
   z-index: 1;
   border-radius: calc(0.889 * var(--font-size)) calc(0.889 * var(--font-size)) 0 0;
 }
+.anytix .mission-blackhole .flex-btn .gash-info {
+  display: block;
+  margin: 0 auto calc(0.444 * var(--font-size));
+  text-align: center;
+  font-size: calc(0.778 * var(--font-size));
+  font-weight: 400;
+  color: #666;
+}
+.anytix .mission-blackhole .flex-btn .gash-info span {
+  font-size: calc(0.778 * var(--font-size));
+  font-weight: 400;
+  color: #26d07c;
+}
 .anytix .mission-blackhole .flex-btn .btn-primary {
   width: calc(100% - 2.2222 * var(--font-size));
+  height: calc(2.4444 * var(--font-size));
   margin: calc(1 * var(--font-size)) auto;
+}
+.anytix .mission-blackhole .flex-btn .btn-primary.disabled {
+  background-color: #ddd;
 }
 .anytix .mission-blackhole .error-message {
   display: flex;
@@ -3077,10 +3115,6 @@
   width: calc(100% - 1.333 * var(--font-size));
   padding-top: calc(100% - 1.333 * var(--font-size));
 }
-.anytix .mission-content .mission-collection .mission-collection-item .mci-img .add {
-  background-color: rgba(51, 51, 51, 0.8);
-  color: #FFF;
-}
 .anytix .mission-content .mission-collection .mission-collection-item .mci-name {
   font-size: calc(0.667 * var(--font-size));
   margin-top: calc(0.222 * var(--font-size));
@@ -3105,6 +3139,37 @@
   background-size: calc(0.6 * var(--font-size)) auto;
   background-repeat: no-repeat;
   background-position: bottom center;
+}
+.anytix .mission-area .gash-info {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: calc(0.778 * var(--font-size));
+  font-weight: 400;
+  color: #666;
+}
+.anytix .mission-area .gash-info span {
+  font-size: calc(0.778 * var(--font-size));
+  font-weight: 400;
+  color: #26d07c;
+}
+.anytix .mission-area .btn-complete {
+  display: block;
+  width: 100%;
+  height: calc(2.333 * var(--font-size));
+  padding: calc(0.5 * var(--font-size)) calc(1.333 * var(--font-size));
+  margin-top: calc(0.444 * var(--font-size));
+  box-sizing: border-box;
+  font-size: calc(0.889 * var(--font-size));
+  line-height: calc(1.222 * var(--font-size));
+  color: #FFF;
+  background-color: #26d07c;
+  border-radius: calc(0.4 * var(--font-size));
+  border: none;
+  font-weight: 500;
+}
+.anytix .mission-area .btn-complete.disabled {
+  background-color: #ddd;
 }
 .anytix .mci-name {
   display: -webkit-box;
@@ -3212,6 +3277,7 @@
   font-size: calc(0.825 * var(--font-size));
   display: flex;
   flex-wrap: wrap;
+  gap: calc(0.889 * var(--font-size)) calc(0.667 * var(--font-size));
 }
 .anytix .notice-dialog.dialog .dialog-scroll,
 .anytix .notice-dialog.dialog .dialog-scroll * {
@@ -3428,38 +3494,35 @@
   z-index: 2;
 }
 .anytix .change-card {
-  width: 50%;
-  padding: 0 calc(0.3 * var(--font-size));
-  margin-bottom: calc(1 * var(--font-size));
+  width: calc(50% - 0.667 * var(--font-size));
+  padding: calc(0.333 * var(--font-size));
   box-sizing: border-box;
+  border: 1px solid #f4f4f4;
+  border-radius: calc(0.444 * var(--font-size));
 }
 .anytix .change-card label.change-box {
   margin-bottom: calc(0.5 * var(--font-size));
   padding: 0;
 }
-.anytix .change-card input {
-  display: none;
-}
 .anytix .change-card .mci-img {
   width: 100%;
   height: 0;
-  overflow: hidden;
   padding-top: 100%;
   margin: 0 0 calc(0.5 * var(--font-size));
-  background-color: #f4f4f4;
-  border-radius: calc(0.75 * var(--font-size));
   position: relative;
+  border-radius: calc(0.444 * var(--font-size));
 }
 .anytix .change-card .mci-img.square {
   padding-top: 100%;
 }
 .anytix .change-card .mci-img img {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: auto;
-  border: none !important;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: calc(0.444 * var(--font-size));
+  transform: translateX(-50%) translateY(-50%);
 }
 .anytix .change-card .mci-img .ic-checked {
   width: calc(1.5 * var(--font-size));
@@ -3478,6 +3541,9 @@
 .anytix .change-card .mci-img .ic-checked.used {
   width: calc(3.2 * var(--font-size));
   height: calc(1.5 * var(--font-size));
+  top: calc(0.444 * var(--font-size));
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   color: #FFF;
   background-color: #26d07c;
@@ -3488,27 +3554,28 @@
   opacity: 1;
 }
 .anytix .change-card .Subhead2 {
-  display: block;
   width: 100%;
-  max-height: calc(2 * var(--font-size));
-  overflow: hidden;
-  padding: 0 calc(0.25 * var(--font-size));
   margin: 0 auto;
   box-sizing: border-box;
-  font-size: calc(0.8 * var(--font-size));
-  font-weight: bold;
-  color: #333;
+  font-size: calc(0.667 * var(--font-size)) !important;
+  font-weight: 400;
+  color: #999;
 }
 .anytix .change-card .Subhead {
   display: block;
   width: 100%;
   overflow: hidden;
-  padding: 0 calc(0.25 * var(--font-size));
   margin: 0 auto;
   box-sizing: border-box;
-  font-size: calc(0.8 * var(--font-size));
-  font-weight: bold;
-  color: #333;
+  font-size: calc(0.667 * var(--font-size)) !important;
+  font-weight: 400;
+  color: #999;
+}
+.anytix .change-card input {
+  display: none;
+}
+.anytix .change-card input:checked + label .mci-img {
+  background-color: rgba(51, 51, 51, 0.8);
 }
 .anytix .change-card input:checked + label .mci-img img {
   filter: brightness(0.5);
@@ -3545,24 +3612,16 @@
   justify-content: center;
   align-items: center;
   width: 80%;
-  height: 0;
   overflow: hidden;
-  padding-top: 94.4%;
   margin: 0 auto;
   margin-bottom: calc(0.875 * var(--font-size));
   background: #ddd;
   border-radius: calc(0.75 * var(--font-size));
   text-align: center;
-  position: relative;
   z-index: 1;
 }
 .anytix .mission-prize-img img {
   width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   margin: auto;
   -o-object-fit: cover;
      object-fit: cover;

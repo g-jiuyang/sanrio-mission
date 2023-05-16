@@ -26,10 +26,11 @@
                 <div class="blackhole-box">
                     <div class="column ai-center">
                         <div class="mission-info-img"><img src="./img/mission/glassescat.jpg"></div>
-                        <p class="t-c Body4">原子少年人形公仔限量版一隻 20 字示意</p>
-                        <p class="txt">選擇即將兌換的收藏品</p>
-                        <p class="note">注意：兌換成功後，你的收藏品將被刪除，一但刪除後，將無法復原，請小心操作。</p>
+                        <p class="t-c Body4">原子少年人形公仔限量版一隻可 20 個字示意</p>
+                        <!-- <p class="txt">選擇即將兌換的收藏品</p>
+                        <p class="note">注意：兌換成功後，你的收藏品將被刪除，一但刪除後，將無法復原，請小心操作。</p> -->
                     </div>
+                    <p class="mission-step-title">宇宙熔爐 <span>此區完成任務後會保留收藏卡</span></p>
                     <div class="mission-collection">
                         <!-- 已加入小卡狀態  -->
                         <template v-for="blackhole in missionCollection" ket="havecard">
@@ -50,7 +51,10 @@
                                 <span class="mci-name">{{blackhole.mciName}}</span>
                             </div>
                         </template>
-                        <!-- 已加入小卡狀態  -->
+                    </div>
+                    <p class="mission-step-title">黑洞入口 <span class="warning">❗️此區完成任務後會銷毀收藏卡</span></p>
+                    <div class="mission-collection">
+                        <!-- 已擁有小卡 但尚未加入狀態  -->
                         <template v-for="blackhole in missionCollection" ket="nothing">
                             <div class="mission-collection-item" data-fancybox data-src="#exchangeList">
                                 <div class="mci-img">
@@ -59,33 +63,18 @@
                                 <span class="mci-name">{{blackhole.mciName}}</span>
                             </div>
                         </template>
-                        <div class="mission-collection-item" data-fancybox data-src="#gashpointN">
-                            <div class="mci-img">
-                                <div class="add">+</div>
-                            </div>
-                            <span class="mci-name">GASH 50點<br>(點數不足時)</span>
-                        </div>
-                        <div class="mission-collection-item" data-fancybox data-src="#gashpointY">
-                            <div class="mci-img">
-                                <img src="img/mission/gashpoint.png">
-                            </div>
-                            <span class="mci-name">GASH 50點<br>(點數足夠時)</span>
-                        </div>
                     </div>
                     <div class="checkbox">
                         <input id="agreement" type="checkbox" v-model="agree">
                         <label for="agreement">我已閱讀且同意<span data-fancybox data-src="#notice">活動說明及注意事項</span></label>
                     </div>
                     <div class="flex-btn">
-                        <button class="btn-primary mt-none mb-xxs block" data-fancybox data-src="#deduct-dialog"
-                            :disabled="!agree">
-                            <span>兌換獎勵</span>
+                        <p class="gash-info">蒐集完成後將扣除 <span>GASH50點</span> 完成任務！</p>
+                        <button class="btn-primary mt-none mb-xxs block" :class="{ 'disabled': !agree }" data-fancybox
+                            data-src="#point3">
+                            <span>點我完成任務</span>
                             <!-- chrome 禁止直接讀取 local json，這邊要用 local server 才看的到-->
-                        </button>
-                        <button class="btn-primary mt-none mb-xxs block" data-fancybox data-src="#ing-dialog"
-                            :disabled="!agree">
-                            <span>兌換獎勵 (扣點進行中)</span>
-                            <!-- chrome 禁止直接讀取 local json，這邊要用 local server 才看的到-->
+                            <!-- 共有四種狀態 請看下方 popup#point1~4 (1、2時按鈕反灰，3、4時按鈕亮燈) -->
                         </button>
                     </div>
                     <!------------ 更換小卡 popup ------------>
@@ -97,10 +86,10 @@
                                     <input type="radio" id="exchange1" value="" name="exchangeCard">
                                     <label class="change-box" for="exchange1">
                                         <div class="mci-img" data-ratio="1" data-size="blackhole-list"><img
-                                                src="./img/mission/history-collection-1.jpg">
+                                                src="./img/mission/sanrio-main.jpg">
                                             <div class="ic-checked"></div>
                                         </div>
-                                        <span class="Subhead2">Nelson - 典藏首發版 - 0001</span>
+                                        <span class="Subhead2">Nelson - 典藏首發版 - 0001 不管有幾行字都讓他全部秀出來全部秀出來</span>
                                     </label>
                                 </div>
                                 <div class="change-card">
@@ -127,7 +116,7 @@
                                     <input type="radio" id="exchange4" value="" name="exchangeCard">
                                     <label class="change-box" for="exchange4">
                                         <div class="mci-img" data-ratio="1" data-size="blackhole-list"><img
-                                                src="./img/mission/history-collection-4.jpg">
+                                                src="./img/mission/gashpoint.png">
                                             <div class="ic-checked"></div>
                                         </div>
                                         <span class="Subhead2">Nelson - 典藏首發版 - 0001</span>
@@ -188,9 +177,8 @@
                         <button class="dialog-button text-primary" onclick="$.fancybox.close();">確定變更</button>
                     </div>
                     <!------------ 扣點 popup ------------>
-                    <!-- ↓第一種：餘額✕ -->
-                    <div class="dialog point-dialog dialog-blackhole-point no-close" id="gashpointN"
-                        style="display: none;">
+                    <!-- ↓第一種：餘額✕ (按鈕反灰) -->
+                    <div class="dialog point-dialog dialog-blackhole-point no-close" id="point1" style="display: none;">
                         <div class="dialog-content-wrap">
                             <div class="point-dialog-title">點數錢包扣除</div>
                             <div class="dialog-scroll">
@@ -202,9 +190,8 @@
                         <button class="dialog-button submit" onclick="window.open('#')">立即儲值</button>
                         <button class="dialog-button cancel" onclick="$.fancybox.close();">我知道了</button>
                     </div>
-                    <!-- ↓第二種：餘額○ -->
-                    <div class="dialog point-dialog dialog-blackhole-point no-close" id="gashpointY"
-                        style="display: none;">
+                    <!-- ↓第二種：餘額○ (按鈕反灰) -->
+                    <div class="dialog point-dialog dialog-blackhole-point no-close" id="point2" style="display: none;">
                         <div class="dialog-content-wrap">
                             <div class="point-dialog-title">點數錢包扣除</div>
                             <div class="dialog-scroll">
@@ -215,8 +202,8 @@
                         </div>
                         <button class="dialog-button" onclick="$.fancybox.close();">我知道了</button>
                     </div>
-                    <!-- ↓扣點兌換 -->
-                    <div class="dialog point-dialog no-close" id="deduct-dialog" style="display: none;">
+                    <!-- ↓第三種：扣點兌換 (按鈕亮燈) -->
+                    <div class="dialog point-dialog no-close" id="point3" style="display: none;">
                         <div class="dialog-content-wrap">
                             <div class="point-dialog-title">點數錢包扣除</div>
                             <div class="dialog-scroll">
@@ -238,8 +225,8 @@
                         </button>
                         <button class="dialog-button cancel" @click="cancelclose">取消</button>
                     </div>
-                    <!-- ↓扣點進行中 -->
-                    <div class="dialog point-dialog no-close" id="ing-dialog" style="display: none;">
+                    <!-- ↓第四種：扣點進行中 (按鈕亮燈) -->
+                    <div class="dialog point-dialog no-close" id="point4" style="display: none;">
                         <div class="dialog-content-wrap">
                             <div class="point-dialog-title">點數錢包扣除</div>
                             <div class="dialog-scroll">
