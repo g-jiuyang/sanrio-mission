@@ -151,22 +151,23 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
             background-image: url("./../img/icon/ic_arrow-down_white.svg");
         }
     }
+
+    // &:after {
+    //     content: "";
+    //     position: absolute;
+    //     display: block;
+    //     width: 100%;
+    //     height: calc(1.5 * var(--font-size));
+    //     bottom: 0;
+    //     right: 0;
+    //     background-image: url("./../img/mission/mission-box_bg.svg");
+    //     background-position: top;
+    //     background-repeat: no-repeat;
+    //     background-size: 100% auto;
+    //     z-index: 1;
+    // }
 }
 
-// .page-title-wrap::after{
-//     content: "";
-//     position: absolute;
-//     display: block;
-//     width: 100%;
-//     height: calc(1.5 * var(--font-size));;
-//     bottom: 0;
-//     right: 0;
-//     background-image: url("./../img/mission/mission-box_bg.svg");
-//     background-position: top;
-//     background-repeat: no-repeat;
-//     background-size: 100% auto;
-//     z-index: 1;
-// }
 .mission-greeting {
     padding-top: calc(.7 * var(--font-size));
     padding-bottom: calc(.7 * var(--font-size));
@@ -463,54 +464,24 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
                 margin-right: 0;
             }
 
-            &:last-child {
-                .mci-img {
-                    background: transparent;
-                }
-            }
-
             .mci-img {
                 width: calc(100% - calc(0.889 * var(--font-size)));
                 margin: 0 auto;
-                height: 0;
-                overflow: hidden;
-                padding-top: calc(100% - calc(0.889 * var(--font-size)));
                 border-radius: calc(0.222 * var(--font-size));
-                position: relative;
 
                 img {
-                    position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translateX(-50%) translateY(-50%);
                     max-width: 100%;
                     max-height: 100%;
-                    border: none !important;
                     border-radius: calc(0.222 * var(--font-size));
                 }
 
                 .empty,
                 .add {
-                    position: absolute;
-                    background: rgba($bfDark, 0.8);
-                    top: 0;
-                    bottom: 0;
-                    left: 0rem;
-                    right: 0;
-                    margin: auto;
-                    z-index: 1;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    background: rgba($bfDark, .8);
                     color: white;
-                }
-
-                .empty {
-                    font-size: calc(0.7 * var(--font-size));
-                }
-
-                .add {
-                    font-size: calc(1.3333 * var(--font-size));
                 }
             }
 
@@ -562,21 +533,15 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
 
         .mci-img {
             width: 100%;
-            height: 0;
-            overflow: hidden;
-            padding-top: 100%;
             margin-bottom: calc(0.5 * var(--font-size));
             background: $bfMediumGray;
             border-radius: calc(0.75 * var(--font-size));
-            position: relative;
 
             img {
-                position: absolute;
                 top: 0;
                 left: 0;
                 width: 100% !important;
                 height: auto;
-                border: none !important;
             }
 
             .exchange {
@@ -659,14 +624,9 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
 
                 .mci-img {
                     width: 25%;
-                    height: 0;
-                    overflow: hidden;
-                    padding-top: 25%;
                     border-radius: calc(.667 * var(--font-size));
-                    position: relative;
 
                     img {
-                        position: absolute;
                         top: 50%;
                         left: 50%;
                         max-width: 100%;
@@ -875,16 +835,12 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
 
             .mci-img {
                 width: calc(100% - (1.556 * var(--font-size)));
-                height: 0;
-                overflow: hidden;
-                padding-top: calc(100% - (1.556 * var(--font-size)));
                 margin: 0 auto calc(.5 * var(--font-size));
                 background-image: url("./../img/icon/ic-add-gray.svg");
                 background-size: calc(.8 * var(--font-size));
                 background-position: center;
                 background-repeat: no-repeat;
                 border-radius: calc(.444 * var(--font-size));
-                position: relative;
 
                 &.history-unselected {
                     background-image: none;
@@ -907,7 +863,6 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
                 }
 
                 img {
-                    position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translateX(-50%) translateY(-50%);
@@ -1253,7 +1208,6 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
             .mci-img {
                 margin-bottom: 0;
                 width: calc(100% - (1.333 * var(--font-size)));
-                padding-top: calc(100% - (1.333 * var(--font-size)));
 
                 // .add {
                 //     background-color: rgba($bfDark, .8);
@@ -1270,7 +1224,6 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
             &.step1 {
                 .mci-img {
                     width: 100%;
-                    padding-top: 100%;
                 }
             }
         }
@@ -1351,7 +1304,43 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
 
 
 
+.mci-img {
+    overflow: hidden;
+    position: relative;
 
+    &:before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+    }
+
+    img {
+        position: absolute;
+        border: none !important;
+    }
+
+    .empty,
+    .add {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .empty {
+        font-size: calc(0.7 * var(--font-size));
+    }
+
+    .add {
+        font-size: calc(1.3333 * var(--font-size));
+    }
+}
 
 .mci-name {
     display: -webkit-box;
@@ -1771,18 +1760,10 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
 
     .mci-img {
         width: 100%;
-        height: 0;
-        padding-top: 100%;
         margin: 0 0 calc(0.5 * var(--font-size));
-        position: relative;
         border-radius: calc(.444 * var(--font-size));
 
-        &.square {
-            padding-top: 100%;
-        }
-
         img {
-            position: absolute;
             top: 50%;
             left: 50%;
             max-width: 100%;
@@ -1852,11 +1833,11 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
         &:checked {
             &+label {
                 .mci-img {
-                    background-color: rgba($bfDark, 0.8);
-                }
+                    background-color: rgba($bfDark, .8);
 
-                .mci-img img {
-                    filter: brightness(.5);
+                    img {
+                        filter: brightness(.5);
+                    }
                 }
 
                 .ic-checked {
@@ -1921,197 +1902,3 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, 0.3) 17.7%, rgba(57, 91,
 .active div {
     color: $bfSecondaryB;
 }
-
-
-
-
-
-// ==== 先隱藏任務一的內容 ====
-// .mission-wrap {
-//     .text-dark.caption2-M {
-//         line-height: 1.25;
-//     }
-// }
-// .mission-expand {
-//     display: flex;
-//     align-items: flex-start;
-//     span {
-//         margin-right: calc(0.25 * var(--font-size));
-//         line-height: 1.3;
-//     }
-//     img {
-//         width: calc(1.1 * var(--font-size));
-//         transition: .15s;
-//         transform: rotate(0);
-//     }
-//     &[data-expand] {
-//         img {
-//             transform: rotate(180deg);
-//         }
-//     }
-// }
-// // 進度條 (目前沒用到)
-// .progress {
-//     position: relative;
-//     padding-left: calc(0.25 * var(--font-size));
-//     padding-right: calc(0.25 * var(--font-size));
-//     padding-bottom: calc(1.5 * var(--font-size));
-//     margin-bottom: calc(1.5 * var(--font-size));
-//     .bar {
-//         width: 100%;
-//         background: $barColor;
-//         height: calc(0.5 * var(--font-size));
-//         border-radius: calc(1 * var(--font-size));
-//         overflow: hidden;
-//         position: relative;
-//         &::after {
-//             content: "";
-//             display: block;
-//             top: 0;
-//             left: 0;
-//             bottom: 0;
-//             height: 100%;
-//             border-radius: calc(1 * var(--font-size));
-//             background: $bfPrimary;
-//             z-index: 1;
-//         }
-//     }
-//     .milestone {
-//         position: absolute;
-//         top: calc(-0.3 * var(--font-size));
-//         display: flex;
-//         flex-direction: column;
-//         margin-left: calc(-0.25 * var(--font-size));
-//         transition: 0.2s;
-//         .milestone-circle {
-//             left: 0;
-//             height: calc(0.5 * var(--font-size));
-//             background: $barColor;
-//             width: calc(0.5 * var(--font-size));
-//             border-radius: calc(1 * var(--font-size));
-//             border-width: calc(0.3 * var(--font-size));
-//             border-style: solid;
-//             border-color: $bfGray;
-//         }
-//         .milestone-text {
-//             position: absolute;
-//             left: calc(-1 * var(--font-size));
-//             right: calc(-1 * var(--font-size));
-//             text-align: center;
-//             bottom: calc((-0.8 - 0.75) * var(--font-size));
-//             font-size: calc(0.8 * var(--font-size));
-//             white-space: nowrap;
-//         }
-//         &[data-status="done"] {
-//             .milestone-circle {
-//                 height: calc(1.5 * var(--font-size));
-//                 width: calc(1.5 * var(--font-size));
-//                 background-color: $bfPrimary;
-//                 background-image: url("./../img/icon/ic-check-white.png");
-//                 background-position: center;
-//                 background-size: calc(1 * var(--font-size));
-//                 background-repeat: no-repeat;
-//                 border-width: 0;
-//                 box-shadow: 0 0 0 calc(0.25 * var(--font-size)) transparentize($bfPrimary, 0.85);
-//                 margin-top: calc(-0.2 * var(--font-size));
-//             }
-//         }
-//     }
-
-//     @for $i from 1 to 21 {
-//         .milestone[data-pos="#{$i*5}"] {
-//             left: ($i - 1) * 5%;
-//         }
-//         .bar[data-current="#{$i*5}"]::after {
-//             width: $i * 5%;
-//         }
-//     }
-//     &[data-status="history"] {
-//         .bar {
-//             &::after {
-//                 background: $bfMediumGray;
-//             }
-//         }
-//         .milestone {
-//             &[data-status="done"] {
-//                 .milestone-circle {
-//                     background-color: $bfMediumGray;
-//                     box-shadow: 0 0 0 calc(0.25 * var(--font-size)) transparentize($bfMediumGray, 0.85);
-//                 }
-//             }
-//         }
-//     }
-// }
-// .mission-detail-wrap {
-//     max-height: 0;
-//     padding-top: calc(0 * var(--font-size));
-//     transition: .5s ease;
-//     overflow: hidden;
-//     &[data-expand="true"] {
-//         padding-top: calc(1.75 * var(--font-size));
-//         max-height: calc(682 * var(--font-size));
-//     }
-// }
-// .mission-detail {
-//     display: flex;
-//     margin-bottom: calc(.75 * var(--font-size));
-// }
-// .mission-detail-img {
-//     position: relative;
-//     width: calc(3.5 * var(--font-size));
-//     height: calc(3.5 * var(--font-size));
-//     background: $bfMediumGray;
-//     flex-shrink: 0;
-//     border-radius: calc(0.375 * var(--font-size));
-//     margin-right: calc(0.5 * var(--font-size));
-//     overflow: hidden;
-//     img {
-//         position: absolute;
-//         top: 0;
-//         bottom: 0;
-//         left: 0;
-//         right: 0;
-//         margin: auto;
-//         object-fit: cover;
-//     }
-// }
-// .mission-detail-info {
-//     .title {
-//         font-size: calc(0.825 * var(--font-size));
-//         font-weight: bold;
-//         color: $bfDark;
-//     }
-//     .desc {
-//         font-size: calc(0.75 * var(--font-size));
-//         color: $bfMediumGray;
-//     }
-// }
-// .mission-detail-status {
-//     display: flex;
-//     justify-content: space-between;
-//     span {
-//         font-size: calc(0.625 * var(--font-size));
-//     }
-//     .completed {
-//         color: $bfPrimary;
-//         font-size: calc(0.75 * var(--font-size));
-//         margin-right: calc(.5 * var(--font-size));
-//         vertical-align: top;
-//         @include missionFontFamily;
-//         &:before {
-//             content: '';
-//             width: calc(0.9375 * var(--font-size));
-//             height: calc(0.9375 * var(--font-size));
-//             border-radius: calc(0.9375 * var(--font-size));
-//             box-shadow: 0 0 0 calc(0.125 * var(--font-size)) transparentize($bfMediumGray, 0.85);
-//             margin-right: calc(0.25 * var(--font-size));
-//             margin-bottom: calc(-0.125 * var(--font-size));
-//             display: inline-block;
-//             background-color: $bfPrimary;
-//             background-image: url("./../img/icon/ic-check-white.png");
-//             background-position: center;
-//             background-repeat: no-repeat;
-//             background-size: calc(0.75 * var(--font-size));
-//         }
-//     }
-// }
