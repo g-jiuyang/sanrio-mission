@@ -28,7 +28,7 @@
                             <div class="tags">未完成</div>
                         </template>
                         <template v-if="status === 1" key="finish">
-                            <div class="tags">已完成</div>
+                            <div class="tags finish">已完成</div>
                         </template>
                         <p>活動日期結束前都可變更選擇</p>
                     </div>
@@ -328,7 +328,7 @@
             data() {
                 return {
                     btnloading: false,
-                    status: 1,
+                    status: 0,
                     missionInfo: '透過原子少年盲盒，抽中 浦俊素 10 個即可換得大獎，並有機會抽中超級好禮。透過原子少年盲盒，抽中透過原子少年盲盒，抽中 浦俊素 10 個即可換得大獎，並有機會抽中超級好禮。透過原子透過原子透過原子哈',
                     title: '位置',
                     popupStatus: 1,
