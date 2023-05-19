@@ -3025,12 +3025,14 @@
   background-image: url("./../img/icon/ic-undone-dark.svg");
   background-color: #f4f4f4;
   background-size: calc(0.55 * var(--font-size)) auto;
+  border: 1px solid #ddd;
   border-radius: calc((90/18) * var(--font-size));
   background-repeat: no-repeat;
   background-position: center left calc(0.5 * var(--font-size));
 }
 .anytix .mission-content .mission-content-status .tags.finish {
   color: #26d07c;
+  border-color: #E6FAF4;
   background-color: #E6FAF4;
   background-image: url("./../img/icon/ic-finish-primary.svg");
 }
