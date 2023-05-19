@@ -8,50 +8,70 @@ $size: (
   "none": 0,
 );
 
-@each $name, $size in $size {
+
+@mixin size($factor: map-get($size, 18), $prop: font-size) {
+  #{$prop}: calc((#{$factor}/18) * var(--font-size));
+}
+
+
+@each $name,
+$size in $size {
   .p-#{$name} {
     padding: $size !important;
   }
+
   .px-#{$name} {
     padding-right: $size !important;
     padding-left: $size !important;
   }
+
   .py-#{$name} {
     padding-top: $size !important;
     padding-bottom: $size !important;
   }
+
   .pr-#{$name} {
     padding-right: $size !important;
   }
+
   .pb-#{$name} {
     padding-bottom: $size !important;
   }
+
   .pt-#{$name} {
     padding-top: $size !important;
   }
+
   .pl-#{$name} {
     padding-left: $size !important;
   }
+
   .m-#{$name} {
     margin: $size !important;
   }
+
   .mx-#{$name} {
     margin-left: $size !important;
     margin-right: $size !important;
   }
+
   .my-#{$name} {
     margin-top: $size !important;
     margin-bottom: $size !important;
   }
+
   .mr-#{$name} {
     margin-right: $size !important;
   }
+
   .mb-#{$name} {
     margin-bottom: $size !important;
   }
+
   .mt-#{$name} {
     margin-top: $size !important;
   }
+
   .ml-#{$name} {
     margin-left: $size !important;
   }
@@ -64,12 +84,15 @@ $size: (
 .mt-a {
   margin-top: auto !important;
 }
+
 .ml-a {
   margin-left: auto !important;
 }
+
 .mr-a {
   margin-right: auto !important;
 }
+
 .mb-a {
   margin-bottom: auto !important;
 }
@@ -77,21 +100,21 @@ $size: (
 $shadowcolor: #ccc;
 
 @mixin shadow1($color: $shadowcolor) {
-  box-shadow: 0 1px calc( 0.3125 * var(--font-size) ) 0 rgba($color, 0.2),
-   0 calc( 0.1875 * var(--font-size) ) 1px calc( -0.125 * var(--font-size) ) rgba($color, 0.12),
-   0 calc( 0.125 * var(--font-size) ) calc( 0.125 * var(--font-size) ) 0 rgba($color, 0.14);
+  box-shadow: 0 1px calc(0.3125 * var(--font-size)) 0 rgba($color, 0.2),
+    0 calc(0.1875 * var(--font-size)) 1px calc(-0.125 * var(--font-size)) rgba($color, 0.12),
+    0 calc(0.125 * var(--font-size)) calc(0.125 * var(--font-size)) 0 rgba($color, 0.14);
 }
 
 @mixin shadow2($color: $shadowcolor) {
-  box-shadow: 0 calc( 0.125 * var(--font-size) ) calc( 0.25 * var(--font-size) ) -1px rgba($color, 0.2), 
-  0 1px calc( 0.625 * var(--font-size) ) 0 rgba($color, 0.12), 
-  0 calc( 0.25 * var(--font-size) ) calc( 0.3125 * var(--font-size) ) 0 rgba($color, 0.14);
+  box-shadow: 0 calc(0.125 * var(--font-size)) calc(0.25 * var(--font-size)) -1px rgba($color, 0.2),
+    0 1px calc(0.625 * var(--font-size)) 0 rgba($color, 0.12),
+    0 calc(0.25 * var(--font-size)) calc(0.3125 * var(--font-size)) 0 rgba($color, 0.14);
 }
 
 @mixin shadow3($color: $shadowcolor) {
-  box-shadow: 0 calc( 0.1875 * var(--font-size) ) calc( 0.3125 * var(--font-size) ) -1px rgba($color, 0.2),
-   0 1px calc( 1.125 * var(--font-size) ) 0 rgba($color, 0.12),
-   0 calc( 0.375 * var(--font-size) ) calc( 0.625 * var(--font-size) ) 0 rgba($color, 0.14);
+  box-shadow: 0 calc(0.1875 * var(--font-size)) calc(0.3125 * var(--font-size)) -1px rgba($color, 0.2),
+    0 1px calc(1.125 * var(--font-size)) 0 rgba($color, 0.12),
+    0 calc(0.375 * var(--font-size)) calc(0.625 * var(--font-size)) 0 rgba($color, 0.14);
 }
 
 * {
@@ -118,6 +141,7 @@ $shadowcolor: #ccc;
 .full-width {
   width: 100%;
 }
+
 .b-to-e {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -134,6 +158,7 @@ img {
   opacity: 0;
   transition: 0.2s $bezire;
 }
+
 .fade-in.show {
   height: auto;
   opacity: 1;
@@ -146,6 +171,7 @@ img {
   }
 
 }
+
 @for $i from 1 to 6 {
   .grow-#{$i} {
     flex-grow: $i;
@@ -156,7 +182,12 @@ img {
   background: $bfWhite;
 }
 
-$border: ("right", "top", "bottom", "left");
+$border: (
+  "right",
+  "top",
+  "bottom",
+  "left"
+);
 
 @each $name in $border {
   .divider-#{$name} {
@@ -186,9 +217,11 @@ $border: ("right", "top", "bottom", "left");
 .po-r {
   position: relative !important;
 }
+
 .po-a {
   position: absolute !important;
 }
+
 .po-f {
   position: fixed !important;
 }
@@ -196,9 +229,11 @@ $border: ("right", "top", "bottom", "left");
 .z1 {
   z-index: 1;
 }
+
 .bottom {
   bottom: 0 !important;
 }
+
 .top {
   top: 0 !important;
 }
@@ -210,6 +245,7 @@ $border: ("right", "top", "bottom", "left");
 .right {
   right: 0 !important;
 }
+
 .center {
   top: 0;
   bottom: 0;
@@ -221,6 +257,7 @@ $border: ("right", "top", "bottom", "left");
 .d-flex {
   display: flex !important;
 }
+
 .d-block {
   display: block !important;
 }
@@ -232,15 +269,19 @@ $border: ("right", "top", "bottom", "left");
 .f-wrap {
   flex-wrap: wrap;
 }
+
 .f-n-shrink {
   flex-shrink: 0 !important;
 }
+
 .f-shrink {
   flex-shrink: 1 !important;
 }
+
 .f-grow {
   flex-grow: 1;
 }
+
 .column {
   display: flex !important;
   flex-direction: column !important;
@@ -249,9 +290,11 @@ $border: ("right", "top", "bottom", "left");
 .jc-center {
   justify-content: center !important;
 }
+
 .jc-between {
   justify-content: space-between !important;
 }
+
 .jc-around {
   justify-content: space-around !important;
 }
@@ -263,6 +306,7 @@ $border: ("right", "top", "bottom", "left");
 .ai-start {
   align-items: flex-start !important;
 }
+
 .ai-end {
   align-items: flex-end !important;
 }
@@ -274,7 +318,7 @@ $border: ("right", "top", "bottom", "left");
   display: inline-block;
   vertical-align: middle;
 
-  img{
+  img {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -284,53 +328,68 @@ $border: ("right", "top", "bottom", "left");
     min-width: 100%;
     min-height: 100%;
   }
+
   &[data-ratio="4-3"] {
     width: 100%;
     padding-top: 75%;
   }
+
   &[data-ratio="1"] {
     width: 100%;
     padding-top: 100%;
+
     &[data-size="blackhole-list"] {
       width: calc(2.75*var(--font-size));
       padding-top: calc(2.75*var(--font-size));
     }
+
     &[data-size="lg"] {
       width: calc(3.25*var(--font-size));
-      padding-top:  calc(3.25*var(--font-size));
+      padding-top: calc(3.25*var(--font-size));
     }
+
     &[data-size="xl"] {
       width: calc(5.25*var(--font-size));
       padding-top: calc(5.25*var(--font-size));
     }
+
     &[data-size="lg"] {
       width: calc(3.875*var(--font-size));
       padding-top: calc(3.875*var(--font-size));
     }
+
     &[data-size="md"] {
       width: calc(1.875*var(--font-size));
       padding-top: calc(1.875*var(--font-size));
     }
+
     &[data-size="sm"] {
       width: calc(1*var(--font-size));
       padding-top: calc(1*var(--font-size));
     }
-    
+
   }
 }
+
 .round-lg {
   border-radius: calc(1.5*var(--font-size)) !important;
   overflow: hidden;
 }
-.round,.round-md {
+
+.round,
+.round-md {
   border-radius: calc(1*var(--font-size)) !important;
   overflow: hidden;
 }
-.round-2,.round-sm {
+
+.round-2,
+.round-sm {
   border-radius: calc(.5*var(--font-size)) !important;
   overflow: hidden;
 }
-.round-4,.round-xs {
+
+.round-4,
+.round-xs {
   border-radius: calc(.25*var(--font-size)) !important;
   overflow: hidden;
 }
@@ -347,7 +406,7 @@ $border: ("right", "top", "bottom", "left");
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding: 0 calc( 1.25 * var(--font-size) );
+  padding: 0 calc(1.25 * var(--font-size));
   box-sizing: border-box;
 }
 
@@ -361,50 +420,54 @@ $border: ("right", "top", "bottom", "left");
 .row {
   display: flex;
   margin: 0;
-  & > * + * {
+
+  &>*+* {
     margin-left: calc(0.5*var(--font-size));
   }
 }
 
 // 背景色
 $text-color: (
-    // "black": $bfBlack,
-    // "dark": $bfDark,
-    // "bluedark": $bfBlueDark,
-    // "darkgray": $bfDarkGray,
-    // "mediumgray ": $bfMediumGray,
-    "gray": $bfGray,
-    "lightgray": $bfLightGray,
-    "slightlygray": $bfSlightlyGray,
-    "softwhite": $bfSoftWhite,
-    "bluesoftwhite": $bfBlueSoftWhite,
-    "white": $bfWhite,
-    // "darkprimary": $bfDarkPrimary,
-    "primary": $bfPrimary,
-    // "lightprimary": $bfLightPrimary,
-    // "darksecondarya": $bfDarkSecondaryA,
-    // "secondarya": $bfSecondaryA,
-    // "lightsecondarya": $bfLightSecondaryA,
-    // "secondaryb": $bfSecondaryB,
-    "warning": $bfWarning,
-    "daner": $bfDanger,
-    "cuntom-gray-1": $slightlyLightGray,
-    "cuntom-gray-2": $veryLightGray,
+  // "black": $bfBlack,
+  // "dark": $bfDark,
+  // "bluedark": $bfBlueDark,
+  // "darkgray": $bfDarkGray,
+  // "mediumgray ": $bfMediumGray,
+  "gray": $bfGray,
+  "lightgray": $bfLightGray,
+  "slightlygray": $bfSlightlyGray,
+  "softwhite": $bfSoftWhite,
+  "bluesoftwhite": $bfBlueSoftWhite,
+  "white": $bfWhite,
+  // "darkprimary": $bfDarkPrimary,
+  "primary": $bfPrimary,
+  // "lightprimary": $bfLightPrimary,
+  // "darksecondarya": $bfDarkSecondaryA,
+  // "secondarya": $bfSecondaryA,
+  // "lightsecondarya": $bfLightSecondaryA,
+  // "secondaryb": $bfSecondaryB,
+  "warning": $bfWarning,
+  "daner": $bfDanger,
+  "cuntom-gray-1": $slightlyLightGray,
+  "cuntom-gray-2": $veryLightGray,
 );
 
-@each $name, $color in $text-color {
-    .bg-#{$name} {
-      background-color: $color !important;
-    }
-    .border-#{$name} {
-      border:  calc(.07*var(--font-size)) solid $color !important;
-    }
+@each $name,
+$color in $text-color {
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+
+  .border-#{$name} {
+    border: calc(.07*var(--font-size)) solid $color !important;
+  }
 }
 
 @keyframes fadeIn {
-  0% { 
+  0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }

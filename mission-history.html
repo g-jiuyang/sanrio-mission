@@ -48,7 +48,7 @@
                                             <a :href="item.type === 'detail' ? item.link : null">
                                                 <div class="history-status-list">
                                                     <div class="mci-img"><img :src="item.mciImg"></div>
-                                                    <div class="mci-info mci-mission">
+                                                    <div class="mci-info">
                                                         <h3 class="mission-title">{{item.title}}</h3>
                                                         <p class="mci-date">開始時間：{{item.dateStart}}</p>
                                                         <p class="mci-date">結束時間：{{item.dateEnd}}</p>
@@ -56,7 +56,10 @@
                                                     <template v-if="item.type === 'detail'" key="historyDetail">
                                                         <div class="ic-detail"></div>
                                                     </template>
-                                                    <div class="status">{{item.status}}</div>
+                                                    <div class="status"
+                                                        :class="[ item.status === '已完成' ? 'finish' : '' ]">
+                                                        {{item.status}}
+                                                    </div>
                                                 </div>
                                             </a>
                                         </div>
@@ -89,7 +92,12 @@
                                             </div>
                                             <div class="blackhole-collection" style="display:none;">
                                                 <template v-for="item in blackholeCollection">
-                                                    <div class="mci-card"><img :src="item.mciCard"></div>
+                                                    <div class="mission-collection-item">
+                                                        <div class="mci-img"><img :src="item.mciCard">
+                                                            <div class="ic-fresh"></div>
+                                                        </div>
+                                                        <span class="mci-name" v-html="item.mciName"></span>
+                                                    </div>
                                                 </template>
                                             </div>
                                         </div>
@@ -180,14 +188,31 @@
                         blackholeCollection: [
                             {
                                 mciCard: './img/mission/history-collection-1.jpg',
-                            }, {
+                                mciName: '標題最多可顯示兩行超過就會隱藏',
+                            },
+                            {
                                 mciCard: './img/mission/history-collection-2.jpg',
-                            }, {
+                                mciName: '標題最多可顯示兩行超過就會隱藏',
+                            },
+                            {
+                                mciCard: './img/mission/sanrio-main.jpg',
+                                mciName: '標題最多可顯示兩行',
+                            },
+                            {
                                 mciCard: './img/mission/history-collection-3.jpg',
-                            }, {
+                                mciName: '標題最多顯示兩行',
+                            },
+                            {
                                 mciCard: './img/mission/history-collection-4.jpg',
-                            }, {
-                                mciCard: './img/mission/history-collection-2.jpg',
+                                mciName: '標題最多顯示兩行',
+                            },
+                            {
+                                mciCard: './img/mission/sanrio-main.jpg',
+                                mciName: '標題標題',
+                            },
+                            {
+                                mciCard: './img/mission/gashpoint.png',
+                                mciName: 'GASH<br>50點',
                             },
                         ],
                     }

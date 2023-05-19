@@ -1020,15 +1020,18 @@
   border-radius: calc(1.5 * var(--font-size)) !important;
   overflow: hidden;
 }
-.anytix .round, .anytix .round-md {
+.anytix .round,
+.anytix .round-md {
   border-radius: calc(1 * var(--font-size)) !important;
   overflow: hidden;
 }
-.anytix .round-2, .anytix .round-sm {
+.anytix .round-2,
+.anytix .round-sm {
   border-radius: calc(0.5 * var(--font-size)) !important;
   overflow: hidden;
 }
-.anytix .round-4, .anytix .round-xs {
+.anytix .round-4,
+.anytix .round-xs {
   border-radius: calc(0.25 * var(--font-size)) !important;
   overflow: hidden;
 }
@@ -2135,35 +2138,35 @@
   width: calc(100% - 1.5 * var(--font-size));
   overflow: hidden;
   margin: 0 auto;
-  padding: calc(0.7 * var(--font-size));
+  padding: calc((12/18) * var(--font-size));
   box-sizing: border-box;
   background-color: #FFF;
   border-left: calc(0.6 * var(--font-size)) #FF9500 solid;
-  border-radius: calc(0.7 * var(--font-size));
+  border-radius: calc((12/18) * var(--font-size));
   box-shadow: 0px 4px 20px rgba(158, 158, 158, 0.15);
   position: fixed;
-  top: calc(1 * var(--font-size));
+  top: calc((18/18) * var(--font-size));
   left: 0;
   right: 0;
   z-index: 99999;
 }
 .anytix .mission .error-message .icon {
   width: calc(1.5 * var(--font-size));
-  margin-top: calc(0.1 * var(--font-size));
-  margin-right: calc(0.2 * var(--font-size));
+  margin-top: calc((2/18) * var(--font-size));
+  margin-right: calc((4/18) * var(--font-size));
 }
 .anytix .mission .error-message .icon img {
   display: block;
 }
 .anytix .mission .error-message p {
   width: calc(100% - 2.3 * var(--font-size));
-  font-size: calc(0.8 * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   font-weight: 500;
   color: #333;
   line-height: normal;
 }
 .anytix .mission .error-message .error-hide {
-  width: calc(0.8 * var(--font-size));
+  width: calc((14/18) * var(--font-size));
 }
 .anytix .mission-history,
 .anytix .mission-blackhole {
@@ -2180,8 +2183,8 @@
 }
 .anytix .mission-history .page-title-wrap,
 .anytix .mission-blackhole .page-title-wrap {
-  padding-top: calc(0.3 * var(--font-size));
-  padding-bottom: calc(0.3 * var(--font-size));
+  padding-top: calc((6/18) * var(--font-size));
+  padding-bottom: calc((6/18) * var(--font-size));
   margin-bottom: 0;
 }
 .anytix .mission-history .mission-box,
@@ -2198,17 +2201,17 @@
 .anytix .page-title-wrap .history-link,
 .anytix .page-title-wrap .previous-link {
   position: absolute;
-  right: calc(0.25 * var(--font-size));
-  top: calc(0.5 * var(--font-size));
+  right: calc((5/18) * var(--font-size));
+  top: calc((9/18) * var(--font-size));
   display: inline-block;
-  width: calc(3 * var(--font-size));
-  height: calc(3 * var(--font-size));
+  width: calc((54/18) * var(--font-size));
+  height: calc((54/18) * var(--font-size));
   line-height: 1.5;
   vertical-align: middle;
   background-image: url("./../img/icon/ic-history-dark.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: calc(1.5625 * var(--font-size));
+  background-size: calc((28/18) * var(--font-size));
 }
 .anytix .page-title-wrap .previous-link {
   position: relative;
@@ -2224,19 +2227,18 @@
   background-image: url("./../img/icon/ic_arrow-down_white.svg");
 }
 .anytix .mission-greeting {
-  padding-top: calc(0.7 * var(--font-size));
-  padding-bottom: calc(0.7 * var(--font-size));
-  padding-right: calc(4.5 * var(--font-size));
-  padding-left: calc(0.5 * var(--font-size));
+  padding: calc((13/18) * var(--font-size));
+  padding-right: calc((80/18) * var(--font-size));
+  padding-left: calc((9/18) * var(--font-size));
   color: #333;
   font-weight: normal;
   flex-grow: 0;
-  font-size: calc(1.25 * var(--font-size));
+  font-size: calc((22/18) * var(--font-size));
   font-weight: 500;
   background-image: url("./../img/mission/theme-bg-deco.svg");
-  background-position: right calc(0 * var(--font-size)) bottom calc(0 * var(--font-size));
+  background-position: right 0 bottom 0;
   background-repeat: no-repeat;
-  background-size: calc(3.4 * var(--font-size));
+  background-size: calc((60/18) * var(--font-size));
 }
 .anytix .mission-greeting span,
 .anytix .mission-greeting p {
@@ -2245,24 +2247,24 @@
   font-size: inherit;
   display: block;
   line-height: 1.25;
-  margin-bottom: calc(0.6875 * var(--font-size));
+  margin-bottom: calc((12/18) * var(--font-size));
 }
 .anytix .mission-greeting .mission-greeting-star {
   display: inline-block;
 }
 .anytix .mission-box {
-  padding-top: calc(1 * var(--font-size));
+  padding-top: calc((18/18) * var(--font-size));
   background-color: #FFF;
 }
 .anytix .mission-box .mission-tabs {
   padding: 0 calc(0.85 * var(--font-size));
-  margin-bottom: calc(1.25 * var(--font-size));
+  margin-bottom: calc((22/18) * var(--font-size));
   border-bottom: 2px #f4f4f4 solid;
 }
 .anytix .mission-box .mission-tabs .mission-tab-item {
   display: inline-block;
   padding: calc(0.25 * var(--font-size)) calc(0.5 * var(--font-size)) calc(0.5 * var(--font-size));
-  font-size: calc(1 * var(--font-size));
+  font-size: calc((18/18) * var(--font-size));
   color: #ccc;
   position: relative;
   bottom: -2px;
@@ -2278,13 +2280,13 @@
   min-height: 75vh;
 }
 .anytix .mission-area p.mission-txt {
-  margin-bottom: calc(1.7 * var(--font-size));
-  font-size: calc(0.8 * var(--font-size));
+  margin-bottom: calc((30/18) * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   color: #666;
 }
 .anytix .mission-area p.mission-txt span {
-  padding-left: calc(0.2 * var(--font-size));
-  font-size: calc(0.8 * var(--font-size));
+  padding-left: calc((4/18) * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   font-weight: bold;
   color: #26d07c;
   text-decoration: underline;
@@ -2311,22 +2313,22 @@
   transform: translateY(-50%);
 }
 .anytix .nothing-board.ic-popup img {
-  width: calc(6 * var(--font-size));
+  width: calc((108/18) * var(--font-size));
 }
 .anytix .nothing-board img {
-  width: calc(4 * var(--font-size));
+  width: calc((72/18) * var(--font-size));
   height: auto;
-  margin-bottom: calc(0.7 * var(--font-size));
+  margin-bottom: calc((13/18) * var(--font-size));
 }
 .anytix .nothing-board p {
-  font-size: calc(0.8 * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   color: #666;
 }
 .anytix .task-tabs {
   display: block;
   overflow-x: scroll;
   overflow-y: hidden;
-  margin-bottom: calc(0.6 * var(--font-size));
+  margin-bottom: calc((11/18) * var(--font-size));
 }
 .anytix .task-tabs::-webkit-scrollbar {
   display: none;
@@ -2341,11 +2343,11 @@
   box-sizing: border-box;
   padding: calc(0.1 * var(--font-size)) calc(0.4 * var(--font-size));
   margin: 0 calc(0.4 * var(--font-size)) 0 0;
-  font-size: calc(0.8 * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   color: #666;
   text-overflow: ellipsis;
   border: 1px #eee solid;
-  border-radius: calc(0.4 * var(--font-size));
+  border-radius: calc((8/18) * var(--font-size));
 }
 .anytix .task-tabs ul .chip-tab-item:last-child {
   margin-right: 0;
@@ -2356,52 +2358,57 @@
   background-color: #E6FAF4;
 }
 .anytix .mission-wrap {
-  padding: calc(1.1 * var(--font-size));
+  padding: calc((20/18) * var(--font-size));
   background: #f7f7f7;
-  border-radius: calc(0.66 * var(--font-size));
-  margin-bottom: calc(0.75 * var(--font-size));
+  border-radius: calc((12/18) * var(--font-size));
+  margin-bottom: calc((13/18) * var(--font-size));
   position: relative;
 }
 .anytix .mission-wrap .tags {
-  padding: calc(0.15 * var(--font-size)) calc(0.65 * var(--font-size)) calc(0.15 * var(--font-size)) calc(1.2 * var(--font-size));
-  font-size: calc(0.65 * var(--font-size));
+  padding: calc(0.3 * var(--font-size)) calc(0.6 * var(--font-size)) calc(0.3 * var(--font-size)) calc(1.5 * var(--font-size));
+  font-size: calc((12/18) * var(--font-size));
   color: #666;
   font-weight: 500;
   background-image: url("./../img/icon/ic-undone-dark.svg");
   background-color: #f4f4f4;
   background-size: calc(0.55 * var(--font-size)) auto;
-  border-radius: calc(5 * var(--font-size));
+  font-size: calc((12/18) * var(--font-size));
+  line-height: 1.4;
+  border-radius: calc((90/18) * var(--font-size));
+  border: 1px solid #ddd;
   background-repeat: no-repeat;
   background-position: center left calc(0.5 * var(--font-size));
   position: absolute;
-  top: calc(0.75 * var(--font-size));
-  right: calc(0.75 * var(--font-size));
+  top: calc((14/18) * var(--font-size));
+  right: calc((14/18) * var(--font-size));
 }
 .anytix .mission-wrap .tags.finish {
   color: #26d07c;
   background-color: #E6FAF4;
   background-image: url("./../img/icon/ic-finish-primary.svg");
+  border-color: #E6FAF4;
 }
 .anytix .mission-wrap .mission-category {
-  margin-bottom: calc(0.725 * var(--font-size));
-  font-size: calc(0.725 * var(--font-size));
+  margin-bottom: calc((13/18) * var(--font-size));
+  font-size: calc((13/18) * var(--font-size));
   color: #999;
 }
 .anytix .mission-wrap .mission-title {
-  margin-bottom: calc(1 * var(--font-size));
-  font-size: calc(0.95 * var(--font-size));
+  color: #333;
+  margin-bottom: calc((18/18) * var(--font-size));
+  font-size: calc((17/18) * var(--font-size));
 }
 .anytix .mission-wrap .mission-info {
   display: flex;
-  margin-bottom: calc(1 * var(--font-size));
+  margin-bottom: calc((18/18) * var(--font-size));
   justify-content: space-between;
 }
 .anytix .mission-wrap .mission-info .mission-info-desc {
   width: 65%;
   text-align: justify;
   color: #666;
-  font-size: calc(0.75 * var(--font-size));
-  line-height: 1.66667;
+  font-size: calc((14/18) * var(--font-size));
+  line-height: 1.6;
 }
 .anytix .mission-wrap .mission-info .mission-info-img {
   width: 30%;
@@ -2409,19 +2416,19 @@
 }
 .anytix .mission-wrap .mission-info .mission-info-img img {
   width: 100%;
-  border-radius: calc(0.75 * var(--font-size));
+  border-radius: calc((14/18) * var(--font-size));
 }
 .anytix .mission-wrap .mission-get {
   display: inline-block;
-  margin-bottom: calc(0.75 * var(--font-size));
-  font-size: calc(0.75 * var(--font-size));
+  margin-bottom: calc((14/18) * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   font-weight: bold;
   color: #26d07c !important;
   text-decoration: underline;
 }
 .anytix .mission-wrap .text-secondaryb {
-  margin-bottom: calc(0.5 * var(--font-size));
-  font-size: calc(0.75 * var(--font-size));
+  margin-bottom: calc((9/18) * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   font-weight: bold;
   color: #2886E2;
 }
@@ -2430,12 +2437,12 @@
   justify-content: space-between;
 }
 .anytix .mission-wrap .mission-other .mission-date {
-  font-size: calc(0.75 * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   color: #666;
 }
 .anytix .mission-wrap .mission-other .open {
-  padding-right: calc(1 * var(--font-size));
-  font-size: calc(0.75 * var(--font-size));
+  padding-right: calc((18/18) * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   color: #333;
   display: flex;
   align-items: center;
@@ -2446,7 +2453,7 @@
   cursor: pointer;
 }
 .anytix .mission-wrap .mission-other .open img {
-  padding-left: calc(0.5 * var(--font-size));
+  padding-left: calc((9/18) * var(--font-size));
 }
 .anytix .mission-wrap .mission-other .open.expand {
   background-image: url("./../img/icon/ic_arrow-upup_dark.svg");
@@ -2455,25 +2462,25 @@
   display: none;
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(1 * var(--font-size));
+  margin-top: calc((18/18) * var(--font-size));
 }
 .anytix .mission-wrap .mission-collection .mission-collection-item {
-  width: calc((100% - 0.888 * var(--font-size)) / 3);
-  margin-right: calc(0.444 * var(--font-size));
-  margin-bottom: calc(0.889 * var(--font-size));
+  width: calc((100% - 0.89 * var(--font-size)) / 3);
+  margin-right: calc((8/18) * var(--font-size));
+  margin-bottom: calc((16/18) * var(--font-size));
   box-sizing: border-box;
   position: relative;
   background-color: #FFF;
-  padding: calc(0.444 * var(--font-size)) calc(0.222 * var(--font-size));
-  border-radius: calc(0.444 * var(--font-size));
+  padding: calc(0.44 * var(--font-size)) calc(0.22 * var(--font-size));
+  border-radius: calc((8/18) * var(--font-size));
 }
 .anytix .mission-wrap .mission-collection .mission-collection-item:nth-child(3n) {
   margin-right: 0;
 }
 .anytix .mission-wrap .mission-collection .mission-collection-item .mci-img {
-  width: calc(100% - 0.889 * var(--font-size));
+  width: calc(100% - 0.89 * var(--font-size));
   margin: 0 auto;
-  border-radius: calc(0.222 * var(--font-size));
+  border-radius: calc((8/18) * var(--font-size));
 }
 .anytix .mission-wrap .mission-collection .mission-collection-item .mci-img img {
   top: 50%;
@@ -2481,7 +2488,7 @@
   transform: translateX(-50%) translateY(-50%);
   max-width: 100%;
   max-height: 100%;
-  border-radius: calc(0.222 * var(--font-size));
+  border-radius: calc((8/18) * var(--font-size));
 }
 .anytix .mission-wrap .mission-collection .mission-collection-item .mci-img .empty,
 .anytix .mission-wrap .mission-collection .mission-collection-item .mci-img .add {
@@ -2492,7 +2499,7 @@
   color: #333;
   display: table;
   margin: 0 auto;
-  font-size: calc(0.8 * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   text-align: center;
 }
 .anytix .mission-wrap .mission-collection .mission-collection-item .mci-name {
@@ -2501,14 +2508,14 @@
 .anytix .mission-wrap .btn-join {
   display: block;
   width: 100%;
-  padding: calc(0.5 * var(--font-size)) 0;
-  margin-top: calc(1.1 * var(--font-size));
+  padding: calc((9/18) * var(--font-size));
+  margin-top: calc((20/18) * var(--font-size));
   box-sizing: border-box;
-  font-size: calc(0.85 * var(--font-size));
+  font-size: calc((15/18) * var(--font-size));
   color: #FFF !important;
   text-align: center;
   background-color: #26d07c;
-  border-radius: calc(0.4 * var(--font-size));
+  border-radius: calc((8/18) * var(--font-size));
 }
 .anytix .blackhole-list {
   display: flex;
@@ -2516,18 +2523,18 @@
 }
 .anytix .blackhole-list .blackhole-wrap {
   width: calc(50% - 0.33 * var(--font-size));
-  margin-bottom: calc(1.25 * var(--font-size));
-  box-sizing: border-box;
   margin-right: calc(0.66 * var(--font-size));
+  margin-bottom: calc((22/18) * var(--font-size));
+  box-sizing: border-box;
 }
 .anytix .blackhole-list .blackhole-wrap:nth-child(2n) {
   margin-right: 0;
 }
 .anytix .blackhole-list .blackhole-wrap .mci-img {
   width: 100%;
-  margin-bottom: calc(0.5 * var(--font-size));
+  margin-bottom: calc((9/18) * var(--font-size));
   background: #999;
-  border-radius: calc(0.75 * var(--font-size));
+  border-radius: calc((14/18) * var(--font-size));
 }
 .anytix .blackhole-list .blackhole-wrap .mci-img img {
   top: 0;
@@ -2537,14 +2544,14 @@
 }
 .anytix .blackhole-list .blackhole-wrap .mci-img .exchange {
   padding: calc(0.1 * var(--font-size)) calc(0.7 * var(--font-size));
-  font-size: calc(0.65 * var(--font-size));
+  font-size: calc((12/18) * var(--font-size));
   font-weight: 500;
   color: #FFF;
-  border-radius: calc(3 * var(--font-size));
+  border-radius: calc((54/18) * var(--font-size));
   background-color: #26d07c;
   position: absolute;
-  bottom: calc(0.6 * var(--font-size));
-  left: calc(0.5 * var(--font-size));
+  bottom: calc((11/18) * var(--font-size));
+  left: calc((9/18) * var(--font-size));
 }
 .anytix .blackhole-list .blackhole-wrap .mci-img .blackhole-finish {
   display: flex;
@@ -2558,17 +2565,17 @@
   left: 0;
 }
 .anytix .blackhole-list .blackhole-wrap .mci-img .blackhole-finish p {
-  font-size: calc(0.8 * var(--font-size));
+  font-size: calc((15/18) * var(--font-size));
   font-weight: 500;
   color: #FFF;
 }
 .anytix .blackhole-list .blackhole-wrap .blackhole-title {
-  font-size: calc(0.75 * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   color: #333;
   text-align: center;
 }
 .anytix .blackhole-list .blackhole-wrap .blackhole-dateline {
-  font-size: calc(0.6 * var(--font-size));
+  font-size: calc((11/18) * var(--font-size));
   color: #666;
   text-align: center;
 }
@@ -2579,7 +2586,10 @@
   display: block;
 }
 .anytix .mission-history .history-wrap .history-status {
-  margin-bottom: calc(1 * var(--font-size));
+  margin-bottom: calc((12/18) * var(--font-size));
+  background-color: #f9f9f9;
+  padding: calc(0.56 * var(--font-size)) calc(0.67 * var(--font-size));
+  border-radius: calc((8/18) * var(--font-size));
 }
 .anytix .mission-history .history-wrap .history-status .history-status-list {
   width: 100%;
@@ -2590,63 +2600,66 @@
   position: relative;
 }
 .anytix .mission-history .history-wrap .history-status .history-status-list .mci-img {
-  width: 25%;
-  border-radius: calc(0.667 * var(--font-size));
+  flex: 25%;
+  max-width: 25%;
+  height: 25%;
+  border-radius: calc((8/18) * var(--font-size));
 }
 .anytix .mission-history .history-wrap .history-status .history-status-list .mci-img img {
   top: 50%;
   left: 50%;
   max-width: 100%;
   max-height: 100%;
-  border-radius: calc(0.667 * var(--font-size));
+  border-radius: calc((8/18) * var(--font-size));
   transform: translateX(-50%) translateY(-50%);
 }
 .anytix .mission-history .history-wrap .history-status .history-status-list .mci-info {
-  width: 72%;
+  flex: 60%;
   margin-left: 3%;
-}
-.anytix .mission-history .history-wrap .history-status .history-status-list .mci-info.mci-mission {
-  width: 60%;
 }
 .anytix .mission-history .history-wrap .history-status .history-status-list .mci-info .mission-title {
   display: -webkit-box;
   width: 100%;
   overflow: hidden;
-  margin-bottom: calc(0.5 * var(--font-size));
-  font-size: calc(0.8 * var(--font-size));
+  margin-bottom: calc((9/18) * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  color: #333;
 }
 .anytix .mission-history .history-wrap .history-status .history-status-list .mci-info .mci-date {
-  font-size: calc(0.725 * var(--font-size));
+  font-size: calc((13/18) * var(--font-size));
   color: #999;
 }
 .anytix .mission-history .history-wrap .history-status .history-status-list .status {
-  padding: calc(0.1 * var(--font-size)) calc(0.5 * var(--font-size));
-  font-size: calc(0.65 * var(--font-size));
+  padding: calc(0.22 * var(--font-size)) calc(0.67 * var(--font-size));
+  font-size: calc((12/18) * var(--font-size));
+  line-height: calc((14/18) * var(--font-size));
   font-weight: 500;
   color: #FFF;
   background-color: #ccc;
-  border-radius: calc(3 * var(--font-size));
+  border-radius: calc((54/18) * var(--font-size));
   position: absolute;
   bottom: 5px;
   right: 0;
+  line-height: 1.4;
+}
+.anytix .mission-history .history-wrap .history-status .history-status-list .status.finish {
+  color: #26d07c;
+  background-color: #E6FAF4;
 }
 .anytix .mission-history .history-wrap .history-status .history-status-list .ic-detail {
-  display: inline-block;
-  width: calc(1.4 * var(--font-size));
-  height: calc(1.4 * var(--font-size));
+  flex: 1;
+  width: calc((25/18) * var(--font-size));
+  height: calc((25/18) * var(--font-size));
   background-image: url("./../img/icon/ic-detail.svg");
   background-repeat: no-repeat;
   background-size: calc(1 * var(--font-size)) auto;
   background-position: center;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 .anytix .mission-history .history-wrap .history-status .open {
-  padding-right: calc(0.7 * var(--font-size));
-  font-size: calc(0.725 * var(--font-size));
+  padding-right: calc((13/18) * var(--font-size));
+  font-size: calc((13/18) * var(--font-size));
   font-weight: 500;
   color: #26d07c;
   position: absolute;
@@ -2661,35 +2674,37 @@
   cursor: pointer;
 }
 .anytix .mission-history .history-wrap .history-status .open img {
-  margin-left: calc(0.2 * var(--font-size));
+  margin-left: calc((4/18) * var(--font-size));
 }
 .anytix .mission-history .history-wrap .history-status .open.expand {
   background-image: url("./../img/icon/ic_arrow-upup_primary.svg");
 }
 .anytix .mission-history .history-wrap .blackhole-collection {
-  width: 73%;
-  margin-left: 27%;
-  margin-top: calc(1 * var(--font-size));
-  margin-bottom: calc(1.25 * var(--font-size));
   display: flex;
   flex-wrap: wrap;
+  gap: calc(0.67 * var(--font-size)) calc(0.22 * var(--font-size));
+  padding-top: calc((10/18) * var(--font-size));
 }
-.anytix .mission-history .history-wrap .blackhole-collection .mci-card {
-  width: calc(25% - 0.4 * var(--font-size));
-  height: 0;
-  padding-top: calc(25% - 0.4 * var(--font-size));
-  margin: 0 calc(0.2 * var(--font-size)) calc(0.4 * var(--font-size));
-  overflow: hidden;
-  background-color: #999;
-  border-radius: calc(0.75 * var(--font-size));
-  position: relative;
+.anytix .mission-history .history-wrap .blackhole-collection .mission-collection-item {
+  flex: calc((100% - 0.67 * var(--font-size)) / 4);
+  max-width: calc((100% - 0.67 * var(--font-size)) / 4);
+  background-color: #FFF;
+  border-radius: calc((8/18) * var(--font-size));
+  padding: calc(0.4 * var(--font-size)) calc(0.3 * var(--font-size));
 }
-.anytix .mission-history .history-wrap .blackhole-collection .mci-card img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: auto;
+.anytix .mission-history .history-wrap .blackhole-collection .mission-collection-item .mci-img {
+  margin-bottom: calc((4/18) * var(--font-size));
+}
+.anytix .mission-history .history-wrap .blackhole-collection .mission-collection-item .mci-img img {
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  max-height: 100%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: calc((8/18) * var(--font-size));
+}
+.anytix .mission-history .history-wrap .blackhole-collection .mission-collection-item .mci-name {
+  font-size: calc((12/18) * var(--font-size));
 }
 .anytix .mission-blackhole {
   background-color: #f4f4f4;
@@ -2698,7 +2713,7 @@
   padding: calc(1 * var(--font-size)) 0 calc(0.6 * var(--font-size));
 }
 .anytix .mission-blackhole .blackhole-box {
-  padding: 0 calc(1.1111 * var(--font-size)) calc(7 * var(--font-size));
+  padding: 0 calc(1.11 * var(--font-size)) calc(7 * var(--font-size));
 }
 .anytix .mission-blackhole .mission-info-img {
   display: flex;
@@ -2709,33 +2724,33 @@
 .anytix .mission-blackhole .mission-info-img img {
   max-width: 100%;
   max-height: 100%;
-  border-radius: calc(0.6667 * var(--font-size));
+  border-radius: calc((12/18) * var(--font-size));
 }
 .anytix .mission-blackhole .Body4 {
-  margin: calc(0.889 * var(--font-size)) 0 calc(2 * var(--font-size));
+  margin: calc(0.89 * var(--font-size)) 0 calc(2 * var(--font-size));
   color: #333;
 }
 .anytix .mission-blackhole .txt {
-  font-size: calc(0.9 * var(--font-size));
+  font-size: calc((16/18) * var(--font-size));
   font-weight: 500;
   color: #333;
 }
 .anytix .mission-blackhole .note {
   padding: calc(0.75 * var(--font-size)) calc(2 * var(--font-size)) calc(1 * var(--font-size));
-  font-size: calc(0.75 * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   color: #ED5B4C;
   text-align: center;
-  line-height: calc(1.2 * var(--font-size));
+  line-height: 1.6;
 }
 .anytix .mission-blackhole .mission-step-title {
-  font-size: calc(0.7778 * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   font-weight: 700;
   color: #333;
-  margin-bottom: calc(0.111 * var(--font-size));
+  margin-bottom: calc((2/18) * var(--font-size));
 }
 .anytix .mission-blackhole .mission-step-title span {
   float: right;
-  font-size: calc(0.7778 * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   font-weight: 400;
   color: #666;
 }
@@ -2745,27 +2760,27 @@
 .anytix .mission-blackhole .mission-collection {
   display: flex;
   flex-wrap: wrap;
-  margin: calc(0.7778 * var(--font-size)) 0 calc(0.8889 * var(--font-size));
+  margin: calc(0.78 * var(--font-size)) 0 calc(0.89 * var(--font-size));
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item {
-  width: calc((100% - 0.889 * var(--font-size)) / 3);
-  margin: 0 calc(0.444 * var(--font-size)) calc(0.889 * var(--font-size)) 0;
-  padding: calc(0.444 * var(--font-size)) calc(0.222 * var(--font-size));
+  width: calc((100% - 0.89 * var(--font-size)) / 3);
+  margin: 0 calc(0.44 * var(--font-size)) calc(0.89 * var(--font-size)) 0;
+  padding: calc(0.44 * var(--font-size)) calc(0.22 * var(--font-size));
   text-align: center;
   background-color: #FFF;
-  border-radius: calc(0.444 * var(--font-size));
+  border-radius: calc((8/18) * var(--font-size));
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item:nth-child(3n) {
   margin-right: 0;
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item .mci-img {
-  width: calc(100% - 1.556 * var(--font-size));
+  width: calc(100% - 1.56 * var(--font-size));
   margin: 0 auto calc(0.5 * var(--font-size));
   background-image: url("./../img/icon/ic-add-gray.svg");
-  background-size: calc(0.8 * var(--font-size));
+  background-size: calc((14/18) * var(--font-size));
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: calc(0.444 * var(--font-size));
+  border-radius: calc((8/18) * var(--font-size));
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item .mci-img.history-unselected {
   background-image: none;
@@ -2776,13 +2791,13 @@
   left: 0;
   right: 0;
   margin: auto;
-  font-size: calc(0.6 * var(--font-size));
+  font-size: calc((11/18) * var(--font-size));
   color: #999;
   text-align: center;
   transform: translateY(-50%);
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item .mci-img.history-unselected .add {
-  font-size: calc(0.722 * var(--font-size));
+  font-size: calc((13/18) * var(--font-size));
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item .mci-img img {
   top: 50%;
@@ -2790,15 +2805,15 @@
   transform: translateX(-50%) translateY(-50%);
   max-width: 100%;
   max-height: 100%;
-  border-radius: calc(0.444 * var(--font-size));
+  border-radius: calc((8/18) * var(--font-size));
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item .mci-img .ic-fresh {
-  width: calc(1.5 * var(--font-size));
-  height: calc(1.5 * var(--font-size));
+  width: calc((28/18) * var(--font-size));
+  height: calc((28/18) * var(--font-size));
   background-image: url("./../img/icon/ic-fresh-c-primary.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: calc(1.5 * var(--font-size));
+  background-size: calc((28/18) * var(--font-size));
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2820,24 +2835,24 @@
   z-index: 1;
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item .mci-img .empty {
-  font-size: calc(0.722 * var(--font-size));
+  font-size: calc((13/18) * var(--font-size));
   color: #FFF;
   background: rgba(51, 51, 51, 0.8);
   font-weight: 400;
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item .mci-img .add {
-  font-size: calc(1.3333 * var(--font-size));
+  font-size: calc((24/18) * var(--font-size));
   color: #666;
   background: #f4f4f4;
   font-weight: 500;
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item .mci-count {
   color: #333;
-  font-size: calc(0.8 * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   font-weight: 500;
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item .mci-name {
-  font-size: calc(0.7222 * var(--font-size));
+  font-size: calc((13/18) * var(--font-size));
 }
 .anytix .mission-blackhole .checkbox {
   display: table;
@@ -2851,7 +2866,7 @@
   background-color: transparent;
 }
 .anytix .mission-blackhole .checkbox span {
-  font-size: calc(0.75 * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   font-weight: bold;
   color: #26d07c;
   text-decoration: underline;
@@ -2866,24 +2881,24 @@
   left: 0;
   box-shadow: 0px 4px 20px rgba(158, 158, 158, 0.15);
   z-index: 1;
-  border-radius: calc(0.889 * var(--font-size)) calc(0.889 * var(--font-size)) 0 0;
+  border-radius: calc(0.89 * var(--font-size)) calc(0.89 * var(--font-size)) 0 0;
 }
 .anytix .mission-blackhole .flex-btn .gash-info {
   display: block;
-  margin: 0 auto calc(0.444 * var(--font-size));
+  margin: 0 auto calc(0.44 * var(--font-size));
   text-align: center;
-  font-size: calc(0.778 * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   font-weight: 400;
   color: #666;
 }
 .anytix .mission-blackhole .flex-btn .gash-info span {
-  font-size: calc(0.778 * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   font-weight: 400;
   color: #26d07c;
 }
 .anytix .mission-blackhole .flex-btn .btn-primary {
-  width: calc(100% - 2.2222 * var(--font-size));
-  height: calc(2.4444 * var(--font-size));
+  width: calc(100% - 2.22 * var(--font-size));
+  height: calc((44/18) * var(--font-size));
   margin: calc(1 * var(--font-size)) auto;
 }
 .anytix .mission-blackhole .flex-btn .btn-primary.disabled {
@@ -2894,35 +2909,35 @@
   width: calc(100% - 1.5 * var(--font-size));
   overflow: hidden;
   margin: 0 auto;
-  padding: calc(0.7 * var(--font-size));
+  padding: calc((13/18) * var(--font-size));
   box-sizing: border-box;
   background-color: #FFF;
   border-left: calc(0.6 * var(--font-size)) #FF9500 solid;
-  border-radius: calc(0.7 * var(--font-size));
+  border-radius: calc((13/18) * var(--font-size));
   box-shadow: 0px 4px 20px rgba(158, 158, 158, 0.15);
   position: fixed;
-  top: calc(1 * var(--font-size));
+  top: calc((18/18) * var(--font-size));
   left: 0;
   right: 0;
   z-index: 1;
 }
 .anytix .mission-blackhole .error-message .icon {
-  width: calc(1.5 * var(--font-size));
-  margin-top: calc(0.1 * var(--font-size));
-  margin-right: calc(0.2 * var(--font-size));
+  width: calc((28/18) * var(--font-size));
+  margin-top: calc((2/18) * var(--font-size));
+  margin-right: calc((4/18) * var(--font-size));
 }
 .anytix .mission-blackhole .error-message .icon img {
   display: block;
 }
 .anytix .mission-blackhole .error-message p {
   width: calc(100% - 2.3 * var(--font-size));
-  font-size: calc(0.8 * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   font-weight: 500;
   color: #333;
   line-height: normal;
 }
 .anytix .mission-blackhole .error-message .error-hide {
-  width: calc(0.8 * var(--font-size));
+  width: calc((14/18) * var(--font-size));
 }
 .anytix .mission-blackhole .success-message {
   display: flex;
@@ -2930,11 +2945,11 @@
   width: calc(100% - 1.5 * var(--font-size));
   overflow: hidden;
   margin: 0 auto;
-  padding: calc(0.7 * var(--font-size));
+  padding: calc((13/18) * var(--font-size));
   box-sizing: border-box;
   background-color: #FFF;
   border-left: calc(0.6 * var(--font-size)) #26d07c solid;
-  border-radius: calc(0.7 * var(--font-size));
+  border-radius: calc((13/18) * var(--font-size));
   box-shadow: 0px 4px 20px rgba(158, 158, 158, 0.15);
   position: fixed;
   top: calc(1 * var(--font-size));
@@ -2943,21 +2958,21 @@
   z-index: 1;
 }
 .anytix .mission-blackhole .success-message .icon {
-  width: calc(1.5 * var(--font-size));
-  margin-right: calc(0.2 * var(--font-size));
+  width: calc((28/18) * var(--font-size));
+  margin-right: calc((4/18) * var(--font-size));
 }
 .anytix .mission-blackhole .success-message .icon img {
   display: block;
 }
 .anytix .mission-blackhole .success-message p {
   width: calc(100% - 2.3 * var(--font-size));
-  font-size: calc(0.8 * var(--font-size));
+  font-size: calc((14/18) * var(--font-size));
   font-weight: 500;
   color: #333;
   line-height: normal;
 }
 .anytix .mission-blackhole .success-message .success-hide {
-  width: calc(0.8 * var(--font-size));
+  width: calc((14/18) * var(--font-size));
 }
 .anytix .mission-content {
   background-color: #f4f4f4;
@@ -2968,7 +2983,7 @@
   overflow: hidden;
   box-sizing: border-box;
   padding-top: 56%;
-  margin-bottom: calc(1.3 * var(--font-size));
+  margin-bottom: calc((23/18) * var(--font-size));
   position: relative;
 }
 .anytix .mission-content .mission-content-img img {
@@ -3038,14 +3053,14 @@
   margin-bottom: calc(1.2 * var(--font-size));
 }
 .anytix .mission-content .mission-collection .mission-collection-item {
-  padding: calc(0.444 * var(--font-size));
+  padding: calc(0.44 * var(--font-size));
 }
 .anytix .mission-content .mission-collection .mission-collection-item.row-3 {
-  width: calc((100% - 1.333 * var(--font-size)) / 3);
-  margin-right: calc(0.667 * var(--font-size));
+  width: calc((100% - 1.33 * var(--font-size)) / 3);
+  margin-right: calc(0.67 * var(--font-size));
 }
 .anytix .mission-content .mission-collection .mission-collection-item.row-3:nth-child(4n) {
-  margin-right: calc(0.667 * var(--font-size));
+  margin-right: calc(0.67 * var(--font-size));
 }
 .anytix .mission-content .mission-collection .mission-collection-item.row-3:nth-child(3n) {
   margin-right: 0;
@@ -3064,18 +3079,18 @@
   border-radius: calc(0.3 * var(--font-size));
 }
 .anytix .mission-content .mission-collection .mission-collection-item .mci-tags {
-  font-size: calc(0.667 * var(--font-size));
+  font-size: calc(0.67 * var(--font-size));
   color: #999;
   line-height: 1.4;
-  margin-bottom: calc(0.222 * var(--font-size));
+  margin-bottom: calc(0.22 * var(--font-size));
 }
 .anytix .mission-content .mission-collection .mission-collection-item .mci-img {
   margin-bottom: 0;
-  width: calc(100% - 1.333 * var(--font-size));
+  width: calc(100% - 1.33 * var(--font-size));
 }
 .anytix .mission-content .mission-collection .mission-collection-item .mci-name {
-  font-size: calc(0.667 * var(--font-size));
-  margin-top: calc(0.222 * var(--font-size));
+  font-size: calc(0.67 * var(--font-size));
+  margin-top: calc(0.22 * var(--font-size));
   padding: 0;
 }
 .anytix .mission-content .mission-collection .mission-collection-item.step1 .mci-img {
@@ -3101,24 +3116,24 @@
   display: block;
   margin: 0 auto;
   text-align: center;
-  font-size: calc(0.778 * var(--font-size));
+  font-size: calc(0.78 * var(--font-size));
   font-weight: 400;
   color: #666;
 }
 .anytix .mission-area .gash-info span {
-  font-size: calc(0.778 * var(--font-size));
+  font-size: calc(0.78 * var(--font-size));
   font-weight: 400;
   color: #26d07c;
 }
 .anytix .mission-area .btn-complete {
   display: block;
   width: 100%;
-  height: calc(2.333 * var(--font-size));
-  padding: calc(0.5 * var(--font-size)) calc(1.333 * var(--font-size));
-  margin-top: calc(0.444 * var(--font-size));
+  height: calc(2.33 * var(--font-size));
+  padding: calc(0.5 * var(--font-size)) calc(1.33 * var(--font-size));
+  margin-top: calc(0.44 * var(--font-size));
   box-sizing: border-box;
-  font-size: calc(0.889 * var(--font-size));
-  line-height: calc(1.222 * var(--font-size));
+  font-size: calc(0.89 * var(--font-size));
+  line-height: calc(1.22 * var(--font-size));
   color: #FFF;
   background-color: #26d07c;
   border-radius: calc(0.4 * var(--font-size));
@@ -3158,7 +3173,7 @@
   font-size: calc(0.7 * var(--font-size));
 }
 .anytix .mci-img .add {
-  font-size: calc(1.3333 * var(--font-size));
+  font-size: calc(1.33 * var(--font-size));
 }
 .anytix .mci-name {
   display: -webkit-box;
@@ -3171,7 +3186,7 @@
   -webkit-box-orient: vertical;
   white-space: pre-wrap;
   text-align: center;
-  font-size: calc(0.7222 * var(--font-size));
+  font-size: calc(0.72 * var(--font-size));
   color: #999;
   line-height: 1.5;
 }
@@ -3182,9 +3197,9 @@
   font-size: calc(0.75 * var(--font-size));
   color: #2886E2;
   background: rgba(40, 134, 226, 0.1);
-  padding: calc(0.325 * var(--font-size));
-  margin-bottom: calc(0.3125 * var(--font-size));
-  border-radius: calc(0.3125 * var(--font-size));
+  padding: calc(0.33 * var(--font-size));
+  margin-bottom: calc(0.3 * var(--font-size));
+  border-radius: calc(0.3 * var(--font-size));
   border: unset;
   outline: unset;
 }
@@ -3247,7 +3262,7 @@
 .anytix .notice-dialog.dialog .notice-dialog-title {
   padding-bottom: calc(1.2 * var(--font-size));
   line-height: 1.6;
-  font-size: calc(0.9375 * var(--font-size));
+  font-size: calc(0.94 * var(--font-size));
 }
 .anytix .notice-dialog.dialog .dialog-content-wrap {
   display: flex;
@@ -3263,14 +3278,14 @@
   height: 100%;
   overflow: auto;
   padding: 0 calc(0.5 * var(--font-size));
-  font-size: calc(0.825 * var(--font-size));
+  font-size: calc(0.83 * var(--font-size));
   display: flex;
   flex-wrap: wrap;
-  gap: calc(0.889 * var(--font-size)) calc(0.667 * var(--font-size));
+  gap: calc(0.89 * var(--font-size)) calc(0.67 * var(--font-size));
 }
 .anytix .notice-dialog.dialog .dialog-scroll,
 .anytix .notice-dialog.dialog .dialog-scroll * {
-  font-size: calc(0.825 * var(--font-size));
+  font-size: calc(0.83 * var(--font-size));
   font-family: "Abel", "PingFangTC", "Microsoft JhengHei";
 }
 .anytix .notice-dialog.dialog .dialog-scroll + .dialog-button {
@@ -3302,7 +3317,7 @@
   outline: unset;
   border: unset;
   color: #26d07c;
-  font-size: calc(0.9375 * var(--font-size));
+  font-size: calc(0.94 * var(--font-size));
 }
 .anytix .notice-dialog.dialog .dialog-button:active, .anytix .notice-dialog.dialog .dialog-button:focus, .anytix .notice-dialog.dialog .dialog-button:hover {
   outline: inherit;
@@ -3317,7 +3332,7 @@
   display: flex;
   flex-direction: column;
   max-height: calc(33.25 * var(--font-size));
-  padding: calc(0.7778 * var(--font-size)) calc(1.3333 * var(--font-size)) calc(1.1111 * var(--font-size));
+  padding: calc(0.78 * var(--font-size)) calc(1.33 * var(--font-size)) calc(1.11 * var(--font-size));
 }
 .anytix .point-dialog.dialog .dialog-content-wrap {
   display: flex;
@@ -3329,38 +3344,38 @@
 }
 .anytix .point-dialog.dialog .point-dialog-title {
   margin-bottom: calc(2 * var(--font-size));
-  line-height: calc(1.3333 * var(--font-size));
-  font-size: calc(0.8333 * var(--font-size));
+  line-height: calc(1.33 * var(--font-size));
+  font-size: calc(0.83 * var(--font-size));
   font-weight: 500;
 }
 .anytix .point-dialog.dialog .point-dialog-desc {
-  font-size: calc(0.8333 * var(--font-size));
-  line-height: calc(1.1111 * var(--font-size));
+  font-size: calc(0.83 * var(--font-size));
+  line-height: calc(1.11 * var(--font-size));
   color: #666;
   text-align: left;
 }
 .anytix .point-dialog.dialog h2 {
   font-family: "PingFang TC", "Noto Sans TC", sans-serif;
   text-align: center;
-  font-size: calc(1.889 * var(--font-size));
-  line-height: calc(2.6667 * var(--font-size));
+  font-size: calc(1.89 * var(--font-size));
+  line-height: calc(2.67 * var(--font-size));
   color: #FF9500;
-  margin: calc(1.3333 * var(--font-size)) auto;
+  margin: calc(1.33 * var(--font-size)) auto;
 }
 .anytix .point-dialog.dialog h6 {
   font-family: "PingFang TC", "Noto Sans TC", sans-serif;
-  font-size: calc(0.7778 * var(--font-size));
-  line-height: calc(1.1111 * var(--font-size));
+  font-size: calc(0.78 * var(--font-size));
+  line-height: calc(1.11 * var(--font-size));
   color: #666;
 }
 .anytix .point-dialog.dialog h6 span {
   color: #FF9500;
 }
 .anytix .point-dialog.dialog .point-dialog-notice {
-  border-radius: calc(0.6667 * var(--font-size));
-  padding: calc(0.6667 * var(--font-size));
-  font-size: calc(0.7778 * var(--font-size));
-  margin: calc(1.3333 * var(--font-size)) 0 calc(0.6667 * var(--font-size));
+  border-radius: calc(0.67 * var(--font-size));
+  padding: calc(0.67 * var(--font-size));
+  font-size: calc(0.78 * var(--font-size));
+  margin: calc(1.33 * var(--font-size)) 0 calc(0.67 * var(--font-size));
 }
 .anytix .point-dialog.dialog .point-dialog-notice.notice-collection {
   background-color: rgba(38, 208, 124, 0.15);
@@ -3372,7 +3387,7 @@
 }
 .anytix .point-dialog.dialog .point-dialog-notice.notice-warning {
   padding: 0;
-  margin: calc(1.3333 * var(--font-size)) 0;
+  margin: calc(1.33 * var(--font-size)) 0;
   color: #2886E2;
   font-weight: 700;
 }
@@ -3383,7 +3398,7 @@
 .anytix .point-dialog.dialog .point-dialog-notice.notice-record dl {
   display: flex;
   flex-wrap: wrap;
-  gap: calc(0.5556 * var(--font-size));
+  gap: calc(0.56 * var(--font-size));
 }
 .anytix .point-dialog.dialog .point-dialog-notice.notice-record dl dt {
   flex: 100%;
@@ -3408,20 +3423,20 @@
   display: block;
   width: 100%;
   padding: 0;
-  margin-top: calc(1.3333 * var(--font-size));
+  margin-top: calc(1.33 * var(--font-size));
   background: unset;
   outline: unset;
   border: unset;
   color: #26d07c;
-  font-size: calc(0.8333 * var(--font-size));
-  line-height: calc(1.3333 * var(--font-size));
+  font-size: calc(0.83 * var(--font-size));
+  line-height: calc(1.33 * var(--font-size));
 }
 .anytix .point-dialog.dialog .dialog-button.submit, .anytix .point-dialog.dialog .dialog-button.cancel {
-  border-radius: calc(0.4444 * var(--font-size));
-  font-size: calc(0.889 * var(--font-size));
-  padding: calc(0.5556 * var(--font-size));
-  margin-top: calc(0.6667 * var(--font-size));
-  line-height: calc(1.2222 * var(--font-size));
+  border-radius: calc(0.44 * var(--font-size));
+  font-size: calc(0.89 * var(--font-size));
+  padding: calc(0.56 * var(--font-size));
+  margin-top: calc(0.67 * var(--font-size));
+  line-height: calc(1.22 * var(--font-size));
 }
 .anytix .point-dialog.dialog .dialog-button.submit {
   background-color: #26d07c;
@@ -3443,7 +3458,7 @@
   transform: scale(1.6) translateY(1px);
 }
 .anytix .point-dialog.dialog-blackhole-point h6 {
-  margin-bottom: calc(0.6667 * var(--font-size));
+  margin-bottom: calc(0.67 * var(--font-size));
 }
 .anytix .black-hole {
   padding: 0 calc(1.875 * var(--font-size));
@@ -3483,11 +3498,11 @@
   z-index: 2;
 }
 .anytix .change-card {
-  width: calc(50% - 0.667 * var(--font-size));
-  padding: calc(0.333 * var(--font-size));
+  width: calc(50% - 0.67 * var(--font-size));
+  padding: calc(0.33 * var(--font-size));
   box-sizing: border-box;
   border: 1px solid #f4f4f4;
-  border-radius: calc(0.444 * var(--font-size));
+  border-radius: calc(0.44 * var(--font-size));
 }
 .anytix .change-card label.change-box {
   margin-bottom: calc(0.5 * var(--font-size));
@@ -3496,14 +3511,14 @@
 .anytix .change-card .mci-img {
   width: 100%;
   margin: 0 0 calc(0.5 * var(--font-size));
-  border-radius: calc(0.444 * var(--font-size));
+  border-radius: calc(0.44 * var(--font-size));
 }
 .anytix .change-card .mci-img img {
   top: 50%;
   left: 50%;
   max-width: 100%;
   max-height: 100%;
-  border-radius: calc(0.444 * var(--font-size));
+  border-radius: calc(0.44 * var(--font-size));
   transform: translateX(-50%) translateY(-50%);
 }
 .anytix .change-card .mci-img .ic-checked {
@@ -3523,7 +3538,7 @@
 .anytix .change-card .mci-img .ic-checked.used {
   width: calc(3.2 * var(--font-size));
   height: calc(1.5 * var(--font-size));
-  top: calc(0.444 * var(--font-size));
+  top: calc(0.44 * var(--font-size));
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -3539,7 +3554,7 @@
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  font-size: calc(0.667 * var(--font-size)) !important;
+  font-size: calc(0.67 * var(--font-size)) !important;
   font-weight: 400;
   color: #999;
 }
@@ -3549,7 +3564,7 @@
   overflow: hidden;
   margin: 0 auto;
   box-sizing: border-box;
-  font-size: calc(0.667 * var(--font-size)) !important;
+  font-size: calc(0.67 * var(--font-size)) !important;
   font-weight: 400;
   color: #999;
 }
@@ -3596,7 +3611,7 @@
   width: 80%;
   overflow: hidden;
   margin: 0 auto;
-  margin-bottom: calc(0.875 * var(--font-size));
+  margin-bottom: calc(0.88 * var(--font-size));
   background: #ddd;
   border-radius: calc(0.75 * var(--font-size));
   text-align: center;
