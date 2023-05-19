@@ -2715,6 +2715,11 @@
 .anytix .mission-blackhole .blackhole-box {
   padding: 0 calc(1.11 * var(--font-size)) calc(7 * var(--font-size));
 }
+.anytix .mission-blackhole .blackhole-box .ai-center {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: calc((32/18) * var(--font-size));
+  margin-bottom: calc((32/18) * var(--font-size));
+}
 .anytix .mission-blackhole .mission-info-img {
   display: flex;
   align-items: flex-start;
@@ -2727,8 +2732,15 @@
   border-radius: calc((12/18) * var(--font-size));
 }
 .anytix .mission-blackhole .Body4 {
-  margin: calc(0.89 * var(--font-size)) 0 calc(2 * var(--font-size));
+  margin: calc(0.89 * var(--font-size)) 0 calc(0.89 * var(--font-size));
   color: #333;
+}
+.anytix .mission-blackhole .mission-get {
+  display: inline-block;
+  font-size: calc((14/18) * var(--font-size));
+  font-weight: bold;
+  color: #26d07c !important;
+  text-decoration: underline;
 }
 .anytix .mission-blackhole .txt {
   font-size: calc((16/18) * var(--font-size));

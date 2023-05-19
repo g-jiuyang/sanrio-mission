@@ -798,6 +798,12 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
 
     .blackhole-box {
         padding: 0 calc(1.11 * var(--font-size)) calc(7 * var(--font-size));
+
+        .ai-center {
+            border-bottom: 1px solid $bfLightGray;
+            @include size(32, padding-bottom);
+            @include size(32, margin-bottom);
+        }
     }
 
     .mission-info-img {
@@ -814,8 +820,16 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
     }
 
     .Body4 {
-        margin: calc(.89 * var(--font-size)) 0 calc(2 * var(--font-size));
+        margin: calc(.89 * var(--font-size)) 0 calc(.89 * var(--font-size));
         color: $bfDark;
+    }
+
+    .mission-get {
+        display: inline-block;
+        @include size(14);
+        font-weight: bold;
+        color: $bfPrimary !important;
+        text-decoration: underline;
     }
 
     .txt {
