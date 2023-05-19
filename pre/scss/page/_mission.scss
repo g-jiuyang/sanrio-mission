@@ -477,7 +477,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
                 img {
                     top: 50%;
                     left: 50%;
-                    transform: translateX(-50%) translateY(-50%);
+                    transform: translate(-50%, -50%);
                     max-width: 100%;
                     max-height: 100%;
                     @include size(8, border-radius);
@@ -642,7 +642,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
                         max-width: 100%;
                         max-height: 100%;
                         @include size(8, border-radius);
-                        transform: translateX(-50%) translateY(-50%);
+                        transform: translate(-50%, -50%);
                     }
                 }
 
@@ -745,7 +745,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
                         left: 50%;
                         max-width: 100%;
                         max-height: 100%;
-                        transform: translateX(-50%) translateY(-50%);
+                        transform: translate(-50%, -50%);
                         @include size(8, border-radius);
                     }
                 }
@@ -913,7 +913,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
                 img {
                     top: 50%;
                     left: 50%;
-                    transform: translateX(-50%) translateY(-50%);
+                    transform: translate(-50%, -50%);
                     max-width: 100%;
                     max-height: 100%;
                     @include size(8, border-radius);
@@ -1301,7 +1301,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
         span {
             display: block;
             padding: calc(.5 * var(--font-size)) 0 calc(1 * var(--font-size));
-            font-size: calc(.8 * var(--font-size));
+            @include size(14);
             background-image: url("./../img/icon/ic_arrow-downdown_gray.svg");
             background-size: calc(.6 * var(--font-size)) auto;
             background-repeat: no-repeat;
@@ -1313,12 +1313,12 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
         display: block;
         margin: 0 auto;
         text-align: center;
-        font-size: calc(.78 * var(--font-size));
+        @include size(14);
         font-weight: 400;
         color: $bfDarkGray;
 
         span {
-            font-size: calc(.78 * var(--font-size));
+            @include size(14);
             font-weight: 400;
             color: $bfPrimary;
         }
@@ -1327,15 +1327,15 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
     .btn-complete {
         display: block;
         width: 100%;
-        height: calc(2.33 * var(--font-size));
+        @include size(42, height);
         padding: calc(.5 * var(--font-size)) calc(1.33 * var(--font-size));
-        margin-top: calc(.44 * var(--font-size));
+        @include size(8, margin-top);
         box-sizing: border-box;
-        font-size: calc(.89 * var(--font-size));
-        line-height: calc(1.22 * var(--font-size));
+        @include size(16);
+        line-height: 1.4;
         color: $bg;
         background-color: $bfPrimary;
-        border-radius: calc(.4 * var(--font-size));
+        @include size(8, border-radius);
         border: none;
         font-weight: 500;
 
@@ -1385,11 +1385,11 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
     }
 
     .empty {
-        font-size: calc(.7 * var(--font-size));
+        @include size(13);
     }
 
     .add {
-        font-size: calc(1.33 * var(--font-size));
+        @include size(24);
     }
 }
 
@@ -1404,7 +1404,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
     -webkit-box-orient: vertical;
     white-space: pre-wrap;
     text-align: center;
-    font-size: calc(.72 * var(--font-size));
+    @include size(13);
     color: $bfMediumGray;
     line-height: 1.5;
 }
@@ -1414,18 +1414,18 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: calc(.75 * var(--font-size));
+    @include size(14);
     color: $bfSecondaryB;
     background: transparentize($bfSecondaryB, .9);
-    padding: calc(.33 * var(--font-size));
-    margin-bottom: calc(.3 * var(--font-size));
-    border-radius: calc(.3 * var(--font-size));
+    @include size(6, padding);
+    @include size(6, margin-bottom);
+    @include size(6, border-radius);
     border: unset;
     outline: unset;
 
     img {
-        width: calc(1 * var(--font-size));
-        margin-right: calc(.25 * var(--font-size));
+        @include size(18, width);
+        @include size(4, margin-right);
     }
 }
 
@@ -1447,7 +1447,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
 
     ul {
         text-align: center;
-        padding-bottom: 20px;
+        @include size(20, padding-bottom);
         display: flex;
         gap: 7px;
 
@@ -1496,9 +1496,9 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
         }
 
         .notice-dialog-title {
-            padding-bottom: calc(1.2 * var(--font-size));
+            @include size(22, padding-bottom);
             line-height: 1.6;
-            font-size: calc(.94 * var(--font-size));
+            @include size(17);
         }
 
         .dialog-content-wrap {
@@ -1518,14 +1518,14 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
             height: 100%;
             overflow: auto;
             padding: 0 calc(.5 * var(--font-size));
-            font-size: calc(.83 * var(--font-size));
+            @include size(15);
             display: flex;
             flex-wrap: wrap;
             gap: calc(.89 * var(--font-size)) calc(.67 * var(--font-size));
 
             &,
             * {
-                font-size: calc(.83 * var(--font-size));
+                @include size(15);
                 @include missionFontFamily;
             }
 
@@ -1540,8 +1540,8 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
                     right: 0;
                     margin: auto;
                     display: block;
-                    height: calc(3 * var(--font-size));
-                    margin-top: calc(-3 * var(--font-size));
+                    @include size(54, height);
+                    @include size(-54, margin-top);
                     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 100%);
                 }
             }
@@ -1550,7 +1550,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
                 display: block;
                 width: 100%;
                 height: auto;
-                margin-bottom: calc(1.2 * var(--font-size));
+                @include size(22, margin-bottom);
             }
         }
 
@@ -1563,7 +1563,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
             outline: unset;
             border: unset;
             color: $bfPrimary;
-            font-size: calc(.94 * var(--font-size));
+            @include size(17);
 
             &:active,
             &:focus,
@@ -1600,15 +1600,15 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
         }
 
         .point-dialog-title {
-            margin-bottom: calc(2 * var(--font-size));
-            line-height: calc(1.33 * var(--font-size));
-            font-size: calc(.83 * var(--font-size));
+            @include size(36, margin-bottom);
+            @include size(15);
+            line-height: 1.6;
             font-weight: 500;
         }
 
         .point-dialog-desc {
-            font-size: calc(.83 * var(--font-size));
-            line-height: calc(1.11 * var(--font-size));
+            @include size(15);
+            @include size(20, line-height);
             color: $bfDarkGray;
             text-align: left;
         }
@@ -1616,16 +1616,16 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
         h2 {
             font-family: 'PingFang TC', 'Noto Sans TC', sans-serif;
             text-align: center;
-            font-size: calc(1.89 * var(--font-size));
-            line-height: calc(2.67 * var(--font-size));
+            @include size(34);
+            line-height: 1.4;
             color: $bfSecondaryA;
             margin: calc(1.33 * var(--font-size)) auto;
         }
 
         h6 {
             font-family: 'PingFang TC', 'Noto Sans TC', sans-serif;
-            font-size: calc(.78 * var(--font-size));
-            line-height: calc(1.11 * var(--font-size));
+            @include size(14);
+            line-height: 1.4;
             color: $bfDarkGray;
 
             span {
@@ -1634,9 +1634,9 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
         }
 
         .point-dialog-notice {
-            border-radius: calc(.67 * var(--font-size));
-            padding: calc(.67 * var(--font-size));
-            font-size: calc(.78 * var(--font-size));
+            @include size(12, border-radius);
+            @include size(12, padding);
+            @include size(14);
             margin: calc(1.33 * var(--font-size)) 0 calc(.67 * var(--font-size));
 
             &.notice-collection {
@@ -1663,7 +1663,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
                 dl {
                     display: flex;
                     flex-wrap: wrap;
-                    gap: calc(.56 * var(--font-size));
+                    @include size(10, gap);
 
                     dt {
                         flex: 100%;
@@ -1683,7 +1683,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
             }
 
             span {
-                font-size: calc(.75 * var(--font-size));
+                @include size(14);
                 font-weight: bold;
                 color: $bfPrimary;
                 text-decoration: underline;
@@ -1695,21 +1695,21 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
             display: block;
             width: 100%;
             padding: 0;
-            margin-top: calc(1.33 * var(--font-size));
+            @include size(24, margin-top);
             background: unset;
             outline: unset;
             border: unset;
             color: $bfPrimary;
-            font-size: calc(.83 * var(--font-size));
-            line-height: calc(1.33 * var(--font-size));
+            @include size(15);
+            line-height: 1.6;
 
             &.submit,
             &.cancel {
-                border-radius: calc(.44 * var(--font-size));
-                font-size: calc(.89 * var(--font-size));
-                padding: calc(.56 * var(--font-size));
-                margin-top: calc(.67 * var(--font-size));
-                line-height: calc(1.22 * var(--font-size));
+                @include size(8, border-radius);
+                @include size(16);
+                line-height: 1.4;
+                @include size(10, padding);
+                @include size(12, margin-top);
             }
 
             &.submit {
@@ -1732,14 +1732,14 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
             }
 
             .btn-loading {
-                height: calc(1.2 * var(--font-size));
+                @include size(22, height);
                 transform: scale(1.6) translateY(1px);
             }
         }
 
         &-blackhole-point {
             h6 {
-                margin-bottom: calc(.67 * var(--font-size));
+                @include size(12, margin-bottom);
             }
         }
     }
@@ -1748,41 +1748,41 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
 // 黑洞任務
 .black-hole {
     padding: 0 calc(1.875 * var(--font-size));
-    padding-bottom: calc(7.5 * var(--font-size));
+    @include size(136, padding-bottom);
     align-items: center;
 
     .mission-collection-item {
-        padding-bottom: calc(1.25 * var(--font-size));
+        @include size(22, padding-bottom);
     }
 
     .mci-img {
-        border-radius: calc(1 * var(--font-size));
+        @include size(18, border-radius);
     }
 
     .page-title-wrap {
         padding: 0;
-        padding-top: calc(.5 * var(--font-size));
+        @include size(9, padding-top);
         position: relative;
 
         h2 {
             text-align: center;
             flex-grow: 1;
             padding: calc(1 * var(--font-size)) 0;
-            margin-left: calc(-2.5 * var(--font-size));
+            @include size(-44, margin-left);
         }
     }
 }
 
 // 警語
 .hint {
-    font-size: calc(.75 * var(--font-size));
+    @include size(14);
 
     &[data-type="danger"] {
         color: $bfDanger;
-        padding-left: calc(1.25 * var(--font-size));
+        @include size(22);
         background-image: url("./../img/icon/ic-info-s-danger.svg");
         background-repeat: no-repeat;
-        background-size: calc(1 * var(--font-size));
+        @include size(18, background-size);
         background-position: top calc(.35 * var(--font-size)) left 0;
     }
 }
@@ -1798,40 +1798,40 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
     padding: calc(.33 * var(--font-size));
     box-sizing: border-box;
     border: 1px solid $bfSoftWhite;
-    border-radius: calc(.44 * var(--font-size));
+    @include size(8, border-radius);
 
     label.change-box {
         // border-radius: calc(1 * var(--font-size));
         // border-style: solid;
         // border-width: calc(.063 * var(--font-size));
         // border-color: $bfSoftWhite;
-        margin-bottom: calc(.5 * var(--font-size));
+        @include size(9, margin-bottom);
         padding: 0;
     }
 
     .mci-img {
         width: 100%;
         margin: 0 0 calc(.5 * var(--font-size));
-        border-radius: calc(.44 * var(--font-size));
+        @include size(8, border-radius);
 
         img {
             top: 50%;
             left: 50%;
             max-width: 100%;
             max-height: 100%;
-            border-radius: calc(.44 * var(--font-size));
-            transform: translateX(-50%) translateY(-50%);
+            @include size(8, border-radius);
+            transform: translate(-50%, -50%);
         }
 
         .ic-checked {
-            width: calc(1.5 * var(--font-size));
-            height: calc(1.5 * var(--font-size));
+            @include size(28, width);
+            @include size(28, height);
             display: block;
-            border-radius: calc(3 * var(--font-size));
+            @include size(54, border-radius);
             background-color: $bfSoftWhite;
             position: absolute;
-            bottom: calc(.5 * var(--font-size));
-            left: calc(.5 * var(--font-size));
+            @include size(9, bottom);
+            @include size(9, left);
             opacity: 0;
 
             &.selection {
@@ -1839,9 +1839,9 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
             }
 
             &.used {
-                width: calc(3.2 * var(--font-size));
-                height: calc(1.5 * var(--font-size));
-                top: calc(.44 * var(--font-size));
+                @include size(58, width);
+                @include size(28, height);
+                @include size(8, top);
                 left: 50%;
                 transform: translateX(-50%);
                 text-align: center;
@@ -1896,7 +1896,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
                     background-image: url("./../img/icon/ic-checked-c-primary.svg");
                     background-repeat: no-repeat;
                     background-position: center;
-                    background-size: calc(1.5 * var(--font-size));
+                    @include size(28, background-size);
                 }
 
                 .Subhead2,
@@ -1909,16 +1909,16 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
 
     .selection {
         display: block;
-        width: calc(1.5 * var(--font-size));
-        height: calc(1.5 * var(--font-size));
-        border-radius: calc(1.25 * var(--font-size));
+        @include size(28, width);
+        @include size(28, height);
+        @include size(22, border-radius);
         position: absolute;
-        bottom: calc(.5 * var(--font-size));
-        left: calc(.5 * var(--font-size));
+        @include size(9, bottom);
+        @include size(9, left);
         background-image: url("./../img/icon/ic-checked-c-primary.svg");
         background-repeat: no-repeat;
         background-position: center;
-        background-size: calc(1.5 * var(--font-size));
+        @include size(28, background-size);
     }
 }
 
@@ -1933,9 +1933,9 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
     width: 80%;
     overflow: hidden;
     margin: 0 auto;
-    margin-bottom: calc(.88 * var(--font-size));
+    @include size(16, margin-bottom);
     background: $bfLightGray;
-    border-radius: calc(.75 * var(--font-size));
+    @include size(14, border-radius);
     text-align: center;
     z-index: 1;
 
