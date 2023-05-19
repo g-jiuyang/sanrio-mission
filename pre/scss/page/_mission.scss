@@ -1137,21 +1137,22 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        margin-bottom: calc(.4 * var(--font-size));
+        @include size(7, margin-bottom);
 
         .tags {
             display: inline-block;
             // width: 70px;
             padding: calc(.15 * var(--font-size)) calc(.65 * var(--font-size)) calc(.15 * var(--font-size)) calc(1.2 * var(--font-size));
-            margin-right: calc(.5 * var(--font-size));
+            @include size(9, margin-right);
             box-sizing: border-box;
-            font-size: calc(.65 * var(--font-size));
+            @include size(12);
+            @include size(17, line-height);
             color: $bfDarkGray;
             font-weight: 500;
             background-image: url("./../img/icon/ic-undone-dark.svg");
             background-color: $bfSoftWhite;
             background-size: calc(.55 * var(--font-size)) auto;
-            border-radius: calc(5 * var(--font-size));
+            @include size(90, border-radius);
             background-repeat: no-repeat;
             background-position: center left calc(.5 * var(--font-size));
 
@@ -1163,20 +1164,20 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
         }
 
         p {
-            font-size: calc(.66 * var(--font-size));
+            @include size(12);
             color: $bfDarkGray;
         }
     }
 
     .mission-content-info {
-        margin-bottom: calc(2.2 * var(--font-size));
-        font-size: calc(.8 * var(--font-size));
+        @include size(40, margin-bottom);
+        @include size(14);
         color: $bfDark;
 
         span {
             display: table;
-            margin-top: calc(.4 * var(--font-size));
-            font-size: calc(.8 * var(--font-size));
+            @include size(7, margin-top);
+            @include size(14);
             font-weight: bold;
             color: $bfPrimary;
             text-decoration: underline;
@@ -1197,18 +1198,14 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
     }
 
     .mission-collection {
-        margin-bottom: calc(1.2 * var(--font-size));
+        @include size(22, margin-bottom);
 
         .mission-collection-item {
-            padding: calc(.44 * var(--font-size));
+            @include size(8, padding);
 
             &.row-3 {
                 width: calc((100% - calc(1.33 * var(--font-size))) / 3);
-                margin-right: calc(.67 * var(--font-size));
-
-                &:nth-child(4n) {
-                    margin-right: calc(.67 * var(--font-size));
-                }
+                margin-right: calc(.66 * var(--font-size));
 
                 &:nth-child(3n) {
                     margin-right: 0;
@@ -1216,27 +1213,31 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
             }
 
             &.row-4 {
+                &:nth-child(3n) {
+                    margin-right: calc(.66 * var(--font-size));
+                }
+
                 &:nth-child(4n) {
                     margin-right: 0;
                 }
 
                 .mci-tags {
                     padding: calc(.1 * var(--font-size)) 0;
-                    margin-bottom: calc(.2 * var(--font-size));
-                    font-size: calc(.6 * var(--font-size));
+                    @include size(4, margin-bottom);
+                    @include size(11);
                     font-weight: 500;
                     color: $bfDarkGray;
                     text-align: center;
                     background-color: $bfSoftWhite;
-                    border-radius: calc(.3 * var(--font-size));
+                    @include size(5, border-radius);
                 }
             }
 
             .mci-tags {
-                font-size: calc(.67 * var(--font-size));
+                @include size(12);
                 color: $bfMediumGray;
                 line-height: 1.4;
-                margin-bottom: calc(.22 * var(--font-size));
+                @include size(4, margin-bottom);
             }
 
             .mci-img {
@@ -1250,8 +1251,8 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
             }
 
             .mci-name {
-                font-size: calc(.67 * var(--font-size));
-                margin-top: calc(.22 * var(--font-size));
+                @include size(12);
+                @include size(4, margin-top);
                 padding: 0;
             }
 
