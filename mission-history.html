@@ -50,15 +50,16 @@
                                                     <div class="mci-img"><img :src="item.mciImg"></div>
                                                     <div class="mci-info">
                                                         <h3 class="mission-title">{{item.title}}</h3>
+                                                        <template v-if="item.type === 'detail'" key="historyDetail">
+                                                            <div class="ic-detail"></div>
+                                                        </template>
                                                         <p class="mci-date">開始時間：{{item.dateStart}}</p>
                                                         <p class="mci-date">結束時間：{{item.dateEnd}}</p>
-                                                    </div>
-                                                    <template v-if="item.type === 'detail'" key="historyDetail">
-                                                        <div class="ic-detail"></div>
-                                                    </template>
-                                                    <div class="status"
-                                                        :class="[ item.status === '已完成' ? 'finish' : '' ]">
-                                                        {{item.status}}
+                                                        <div class="status">
+                                                            <span :class="[ item.status === '已完成' ? 'finish' : '' ]">
+                                                                {{item.status}}
+                                                            </span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </a>
@@ -212,7 +213,7 @@
                             },
                             {
                                 mciCard: './img/mission/gashpoint.png',
-                                mciName: 'GASH<br>50點',
+                                mciName: 'GASH <span>50 點</span>',
                             },
                         ],
                     }

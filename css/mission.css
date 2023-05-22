@@ -2636,13 +2636,22 @@
 }
 .anytix .mission-history .history-wrap .history-status .history-status-list .mci-info .mission-title {
   display: -webkit-box;
-  flex: 100%;
+  flex: calc(100% - 1.3888888889 * var(--font-size));
   overflow: hidden;
   margin-bottom: calc((9/18) * var(--font-size));
   font-size: calc((14/18) * var(--font-size));
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   color: #333;
+}
+.anytix .mission-history .history-wrap .history-status .history-status-list .mci-info .ic-detail {
+  flex: calc(1.3888888889 * var(--font-size));
+  width: calc((25/18) * var(--font-size));
+  height: calc((25/18) * var(--font-size));
+  background-image: url("./../img/icon/ic-detail.svg");
+  background-repeat: no-repeat;
+  background-size: calc(1 * var(--font-size)) auto;
+  background-position: center;
 }
 .anytix .mission-history .history-wrap .history-status .history-status-list .mci-info .mci-date {
   font-size: calc((13/18) * var(--font-size));
@@ -2659,6 +2668,17 @@
   min-width: max-content;
 }
 .anytix .mission-history .history-wrap .history-status .history-status-list .status {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+.anytix .mission-history .history-wrap .history-status .history-status-list .status span {
+  display: inline-flex;
+  align-items: center;
+  margin-left: calc((8/18) * var(--font-size));
+  line-height: 1.4;
   padding: calc(0.22 * var(--font-size)) calc(0.67 * var(--font-size));
   font-size: calc((12/18) * var(--font-size));
   line-height: calc((14/18) * var(--font-size));
@@ -2666,23 +2686,10 @@
   color: #FFF;
   background-color: #ccc;
   border-radius: calc((54/18) * var(--font-size));
-  position: absolute;
-  bottom: 5px;
-  right: 0;
-  line-height: 1.4;
 }
-.anytix .mission-history .history-wrap .history-status .history-status-list .status.finish {
+.anytix .mission-history .history-wrap .history-status .history-status-list .status span.finish {
   color: #26d07c;
   background-color: #E6FAF4;
-}
-.anytix .mission-history .history-wrap .history-status .history-status-list .ic-detail {
-  flex: 1;
-  width: calc((25/18) * var(--font-size));
-  height: calc((25/18) * var(--font-size));
-  background-image: url("./../img/icon/ic-detail.svg");
-  background-repeat: no-repeat;
-  background-size: calc(1 * var(--font-size)) auto;
-  background-position: center;
 }
 .anytix .mission-history .history-wrap .history-status .open {
   padding-right: calc((13/18) * var(--font-size));
@@ -2732,6 +2739,10 @@
 }
 .anytix .mission-history .history-wrap .blackhole-collection .mission-collection-item .mci-name {
   font-size: calc((12/18) * var(--font-size));
+}
+.anytix .mission-history .history-wrap .blackhole-collection .mission-collection-item .mci-name span {
+  font-size: calc((12/18) * var(--font-size));
+  display: inline-block;
 }
 .anytix .mission-blackhole {
   background-color: #f4f4f4;

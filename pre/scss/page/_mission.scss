@@ -667,13 +667,23 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
 
                     .mission-title {
                         display: -webkit-box;
-                        flex: 100%;
+                        flex: calc(100% - ((25/18) * var(--font-size)));
                         overflow: hidden;
                         @include size(9, margin-bottom);
                         @include size(14);
                         -webkit-box-orient: vertical;
                         -webkit-line-clamp: 2;
                         color: $bfDark;
+                    }
+
+                    .ic-detail {
+                        flex: calc((25/18) * var(--font-size));
+                        @include size(25, width);
+                        @include size(25, height);
+                        background-image: url("./../img/icon/ic-detail.svg");
+                        background-repeat: no-repeat;
+                        background-size: calc(1 * var(--font-size)) auto;
+                        background-position: center;
                     }
 
                     .mci-date {
@@ -692,32 +702,29 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
                 }
 
                 .status {
-                    padding: calc(.22 * var(--font-size)) calc(.67 * var(--font-size));
-                    @include size(12);
-                    @include size(14, line-height);
-                    font-weight: 500;
-                    color: $bfWhite;
-                    background-color: $bfGray;
-                    @include size(54, border-radius);
-                    position: absolute;
-                    bottom: 5px;
-                    right: 0;
-                    line-height: 1.4;
-
-                    &.finish {
-                        color: $bfPrimary;
-                        background-color: #E6FAF4;
-                    }
-                }
-
-                .ic-detail {
                     flex: 1;
-                    @include size(25, width);
-                    @include size(25, height);
-                    background-image: url("./../img/icon/ic-detail.svg");
-                    background-repeat: no-repeat;
-                    background-size: calc(1 * var(--font-size)) auto;
-                    background-position: center;
+                    display: flex;
+                    justify-content: flex-end;
+                    min-width: max-content;
+
+                    span {
+                        display: inline-flex;
+                        align-items: center;
+                        @include size(8, margin-left);
+                        line-height: 1.4;
+                        padding: calc(.22 * var(--font-size)) calc(.67 * var(--font-size));
+                        @include size(12);
+                        @include size(14, line-height);
+                        font-weight: 500;
+                        color: $bfWhite;
+                        background-color: $bfGray;
+                        @include size(54, border-radius);
+
+                        &.finish {
+                            color: $bfPrimary;
+                            background-color: #E6FAF4;
+                        }
+                    }
                 }
             }
 
@@ -776,6 +783,11 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
 
                 .mci-name {
                     @include size(12);
+
+                    span {
+                        @include size(12);
+                        display: inline-block;
+                    }
                 }
             }
 
