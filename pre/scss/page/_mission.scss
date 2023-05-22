@@ -525,28 +525,29 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
 .blackhole-list {
     display: flex;
     flex-wrap: wrap;
+    gap: calc(.67 * var(--font-size)) calc(.44 * var(--font-size));
 
     .blackhole-wrap {
-        width: calc(100% / 2 - calc(.33 * var(--font-size)));
-        margin-right: calc(.66 * var(--font-size));
-        @include size(22, margin-bottom);
+        flex: calc(50% - (.22 * var(--font-size)));
+        max-width: calc(50% - (.22 * var(--font-size)));
         box-sizing: border-box;
-
-        &:nth-child(2n) {
-            margin-right: 0;
-        }
+        border: 1px solid $bfSoftWhite;
+        @include size(12, border-radius);
+        @include size(8, padding);
+        position: relative;
 
         .mci-img {
             width: 100%;
             @include size(9, margin-bottom);
-            background: $bfMediumGray;
-            @include size(14, border-radius);
+            @include size(12, border-radius);
 
             img {
-                top: 0;
-                left: 0;
-                width: 100% !important;
-                height: auto;
+                top: 50%;
+                left: 50%;
+                max-width: 100% !important;
+                max-height: 100%;
+                transform: translate(-50%, -50%);
+                @include size(12, border-radius);
             }
 
             .exchange {
@@ -557,8 +558,9 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
                 @include size(54, border-radius);
                 background-color: $bfPrimary;
                 position: absolute;
-                @include size(11, bottom);
-                @include size(9, left);
+                @include size(12, bottom);
+                left: 50%;
+                transform: translateX(-50%);
             }
 
             .blackhole-finish {
@@ -567,7 +569,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
                 justify-content: center;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0, 0, 0, .4);
+                background-color: rgba($bfDark, .8);
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -584,12 +586,23 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
             @include size(14);
             color: $bfDark;
             text-align: center;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            @include size(28, margin-bottom);
         }
 
         .blackhole-dateline {
             @include size(11);
             color: $bfDarkGray;
             text-align: center;
+            position: absolute;
+            @include size(8, bottom);
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: max-content;
         }
 
     }
@@ -649,10 +662,12 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
                 .mci-info {
                     flex: 60%;
                     margin-left: 3%;
+                    display: flex;
+                    flex-wrap: wrap;
 
                     .mission-title {
                         display: -webkit-box;
-                        width: 100%;
+                        flex: 100%;
                         overflow: hidden;
                         @include size(9, margin-bottom);
                         @include size(14);
@@ -664,6 +679,15 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
                     .mci-date {
                         @include size(13);
                         color: $bfMediumGray;
+                        flex: 1;
+                        min-width: max-content;
+                    }
+
+                    .open {
+                        flex: 20%;
+                        justify-content: flex-end;
+                        position: relative;
+                        min-width: max-content;
                     }
                 }
 
@@ -899,8 +923,8 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
                         left: 0;
                         right: 0;
                         margin: auto;
-                        @include size(11);
-                        color: $bfMediumGray;
+                        @include size(13);
+                        color: $bfDarkGray;
                         text-align: center;
                         transform: translateY(-50%);
                     }

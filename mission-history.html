@@ -87,8 +87,8 @@
                                                     <h3 class="mission-title">{{item.title}}</h3>
                                                     <p class="mci-date">開始時間：{{item.dateStart}}</p>
                                                     <p class="mci-date">兌換時間：{{item.dateEnd}}</p>
+                                                    <div class="open">兌換紀錄</div>
                                                 </div>
-                                                <div class="open">兌換紀錄</div>
                                             </div>
                                             <div class="blackhole-collection" style="display:none;">
                                                 <template v-for="item in blackholeCollection">
@@ -249,14 +249,13 @@
                 $(".blackhole-collection").css("display", "none");
 
                 $(".open").click(function () {
-                    console.log('open');
                     $(this).toggleClass("expand");
                     if ($(this).hasClass("expand")) {
                         $(this).text("兌換紀錄");
-                        $(this).parent().siblings(".blackhole-collection").slideDown("slow");
+                        $(this).parent().parent().siblings(".blackhole-collection").slideDown("slow");
                     } else {
                         $(this).text("兌換紀錄");
-                        $(this).parent().siblings(".blackhole-collection").slideUp("slow");
+                        $(this).parent().parent().siblings(".blackhole-collection").slideUp("slow");
                     };
                 });
             });
