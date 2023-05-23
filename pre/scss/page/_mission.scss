@@ -595,7 +595,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
         }
 
         .blackhole-dateline {
-            @include size(11);
+            @include size(12);
             color: $bfDarkGray;
             text-align: center;
             position: absolute;

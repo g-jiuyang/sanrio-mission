@@ -2584,7 +2584,7 @@
   margin-bottom: calc((28/18) * var(--font-size));
 }
 .anytix .blackhole-list .blackhole-wrap .blackhole-dateline {
-  font-size: calc((11/18) * var(--font-size));
+  font-size: calc((12/18) * var(--font-size));
   color: #666;
   text-align: center;
   position: absolute;
