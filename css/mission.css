@@ -2907,7 +2907,7 @@
 }
 .anytix .mission-blackhole .checkbox {
   display: table;
-  margin: calc(0.75 * var(--font-size)) auto;
+  margin: calc(0.75 * var(--font-size)) auto calc(2 * var(--font-size));
 }
 .anytix .mission-blackhole .checkbox label {
   padding: 0;
@@ -3371,7 +3371,8 @@
   outline: unset;
   border: unset;
   color: #26d07c;
-  font-size: calc((17/18) * var(--font-size));
+  font-size: calc((15/18) * var(--font-size));
+  font-weight: 500;
 }
 .anytix .notice-dialog.dialog .dialog-button:active, .anytix .notice-dialog.dialog .dialog-button:focus, .anytix .notice-dialog.dialog .dialog-button:hover {
   outline: inherit;
@@ -3552,8 +3553,8 @@
   z-index: 2;
 }
 .anytix .change-card {
-  width: calc(50% - 0.67 * var(--font-size));
-  padding: calc(0.33 * var(--font-size));
+  width: calc(50% - 0.34 * var(--font-size));
+  padding: calc((8/18) * var(--font-size));
   box-sizing: border-box;
   border: 1px solid #f4f4f4;
   border-radius: calc((8/18) * var(--font-size));
@@ -3561,6 +3562,7 @@
 .anytix .change-card label.change-box {
   margin-bottom: calc((9/18) * var(--font-size));
   padding: 0;
+  height: 100%;
 }
 .anytix .change-card .mci-img {
   width: 100%;
@@ -3593,6 +3595,7 @@
   width: calc((58/18) * var(--font-size));
   height: calc((28/18) * var(--font-size));
   bottom: calc((8/18) * var(--font-size));
+  top: auto;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -3611,6 +3614,8 @@
   font-size: calc(0.67 * var(--font-size)) !important;
   font-weight: 400;
   color: #999;
+  display: inline-block;
+  text-align: center;
 }
 .anytix .change-card .Subhead {
   display: block;

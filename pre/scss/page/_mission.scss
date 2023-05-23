@@ -1014,7 +1014,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
 
     .checkbox {
         display: table;
-        margin: calc(.75 * var(--font-size)) auto;
+        margin: calc(.75 * var(--font-size)) auto calc(2 * var(--font-size));
 
         label {
             padding: 0;
@@ -1600,7 +1600,8 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
             outline: unset;
             border: unset;
             color: $bfPrimary;
-            @include size(17);
+            @include size(15);
+            font-weight: 500;
 
             &:active,
             &:focus,
@@ -1831,8 +1832,8 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
 
 // 黑洞任務 更換小卡
 .change-card {
-    width: calc(100% / 2 - (.67 * var(--font-size)));
-    padding: calc(.33 * var(--font-size));
+    width: calc(100% / 2 - (.34 * var(--font-size)));
+    @include size(8, padding);
     box-sizing: border-box;
     border: 1px solid $bfSoftWhite;
     @include size(8, border-radius);
@@ -1844,6 +1845,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
         // border-color: $bfSoftWhite;
         @include size(9, margin-bottom);
         padding: 0;
+        height: 100%;
     }
 
     .mci-img {
@@ -1879,6 +1881,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
                 @include size(58, width);
                 @include size(28, height);
                 @include size(8, bottom);
+                top: auto;
                 left: 50%;
                 transform: translateX(-50%);
                 text-align: center;
@@ -1900,6 +1903,8 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
         font-size: calc(.67 * var(--font-size)) !important;
         font-weight: 400;
         color: $bfMediumGray;
+        display: inline-block;
+        text-align: center;
     }
 
     .Subhead {
