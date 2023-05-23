@@ -965,7 +965,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
                     @include size(28, background-size);
                     position: absolute;
                     bottom: 0;
-                    left: 0;
+                    right: 0;
                     z-index: 1;
                 }
 
@@ -1867,8 +1867,8 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
             @include size(54, border-radius);
             background-color: $bfSoftWhite;
             position: absolute;
-            @include size(9, bottom);
-            @include size(9, left);
+            @include size(9, top);
+            @include size(9, right);
             opacity: 0;
 
             &.selection {
@@ -1878,7 +1878,7 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
             &.used {
                 @include size(58, width);
                 @include size(28, height);
-                @include size(8, top);
+                @include size(8, bottom);
                 left: 50%;
                 transform: translateX(-50%);
                 text-align: center;

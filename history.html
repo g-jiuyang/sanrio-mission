@@ -12,7 +12,7 @@
     <link href="./css/reset.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
     <link href="./css/gash.css" rel="stylesheet">
-    <link href="./css/mission.css" rel="stylesheet">
+    <link href="./css/mission.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -23,8 +23,9 @@
                     <img src="./img/mission/sanrio-main.jpg">
                 </div>
                 <div class="mission-area">
-                    <p class="mission-content-info">{{missionInfo}}<span data-fancybox
-                            data-src="#notice">活動說明及注意事項</span></p>
+                    <p class="mission-content-info">{{missionInfo}}
+                        <span data-fancybox data-src="#notice">活動說明及注意事項</span>
+                    </p>
                     <!-- 無tag樣式 -->
                     <template>
                         <p class="mission-step-title">Step1 選擇風格</p>
@@ -70,9 +71,11 @@
                                     <li>其他未盡事宜，悉依中華民國相關法令辦理。樂點股份有限公司保留隨時修改、變更、終止本活動與替換其他等值贈品之權利。</li>
                                     <li>其他未盡事宜，悉依中華民國相關法令辦理。</li>
                                 </ol>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, consequatur!
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, consequatur!
                                     Consequuntur vero dolor nostrum, nemo suscipit voluptatum quae numquam, tenetur
-                                    optio expedita earum modi, laborum rerum sapiente voluptates enim dicta.</p>
+                                    optio expedita earum modi, laborum rerum sapiente voluptates enim dicta.
+                                </p>
                             </div>
                         </div>
                         <button class="dialog-button" onclick="$.fancybox.close();">我知道了</button>

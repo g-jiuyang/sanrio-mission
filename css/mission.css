@@ -2867,7 +2867,7 @@
   background-size: calc((28/18) * var(--font-size));
   position: absolute;
   bottom: 0;
-  left: 0;
+  right: 0;
   z-index: 1;
 }
 .anytix .mission-blackhole .mission-collection .mission-collection-item .mci-img .empty,
@@ -3582,8 +3582,8 @@
   border-radius: calc((54/18) * var(--font-size));
   background-color: #f4f4f4;
   position: absolute;
-  bottom: calc((9/18) * var(--font-size));
-  left: calc((9/18) * var(--font-size));
+  top: calc((9/18) * var(--font-size));
+  right: calc((9/18) * var(--font-size));
   opacity: 0;
 }
 .anytix .change-card .mci-img .ic-checked.selection {
@@ -3592,7 +3592,7 @@
 .anytix .change-card .mci-img .ic-checked.used {
   width: calc((58/18) * var(--font-size));
   height: calc((28/18) * var(--font-size));
-  top: calc((8/18) * var(--font-size));
+  bottom: calc((8/18) * var(--font-size));
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
