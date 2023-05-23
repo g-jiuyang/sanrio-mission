@@ -341,9 +341,9 @@
                 exchange: function () {
                     vm.btnloading = true;
                     window.setTimeout(function () {
-                        $.fancybox.close($('#point3'), {
-                            touch: false
-                        });
+                        vm.agree = false;
+                        vm.agreededuct = false;
+                        $.fancybox.close();
                         $.fancybox.open($('#exchangeSuccess'), {
                             touch: false
                         });
