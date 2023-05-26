@@ -3688,3 +3688,21 @@
 .anytix .active div {
   color: #2886E2;
 }
+.anytix .btn-primary:hover {
+  background-color: aqua !important;
+}
+.anytix .btn-primary:hover:after {
+  content: ":hover";
+}
+.anytix .btn-primary:active {
+  background-color: pink !important;
+}
+.anytix .btn-primary:active:after {
+  content: ":active";
+}
+.anytix .btn-primary:focus {
+  background-color: palevioletred !important;
+}
+.anytix .btn-primary:focus:after {
+  content: ":focus";
+}
