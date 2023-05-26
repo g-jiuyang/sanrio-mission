@@ -115,9 +115,24 @@
                         </div>
                     </div> -->
                     <p class="gash-info">蒐集完成後將扣除 <span>GASH50點</span> 完成任務！</p>
+                    <button class="btn-complete disabled" data-fancybox data-src="#point1">
+                        點我完成任務 (收藏品✕，餘額✕)
+                        <!-- 共有六種狀態 請看下方 popup#point1~6，扣點完成後按鈕文案變「查看扣點紀錄」，收藏品尚未收集完成時按鈕反灰，加 .disabled -->
+                    </button>
+                    <button class="btn-complete disabled" data-fancybox data-src="#point2">
+                        點我完成任務 (收藏品✕，餘額○)
+                    </button>
+                    <button class="btn-complete" data-fancybox data-src="#point3">
+                        點我完成任務 (收藏品○，餘額✕)
+                    </button>
+                    <button class="btn-complete" data-fancybox data-src="#point4">
+                        點我完成任務 (收藏品○，餘額○)
+                    </button>
                     <button class="btn-complete" data-fancybox data-src="#point5">
-                        點我完成任務
-                        <!-- 共有六種狀態 請看下方 popup#point1~6，扣點完成後按鈕文案變「查看紀錄」 -->
+                        點我完成任務 (扣點進行中)
+                    </button>
+                    <button class="btn-complete" data-fancybox data-src="#point6">
+                        查看扣點紀錄 (扣點完成)
                     </button>
                     <!------------ 更換小卡 popup ------------>
                     <div class="dialog notice-dialog no-close" id="exchangeList" style="display: none;">
@@ -170,8 +185,21 @@
                         <button class="dialog-button submit" onclick="window.open('#')">立即儲值</button>
                         <button class="dialog-button cancel" onclick="$.fancybox.close();">我知道了</button>
                     </div>
-                    <!-- ↓第二種：收藏品○，餘額✕ -->
+                    <!-- ↓第二種：收藏品✕，餘額○ -->
                     <div class="dialog point-dialog no-close" id="point2" style="display: none;">
+                        <div class="dialog-content-wrap">
+                            <div class="point-dialog-title">點數錢包扣除</div>
+                            <div class="dialog-scroll">
+                                <p class="point-dialog-desc">參與此項任務，您將扣除GASH點數</p>
+                                <h2>50點</h2>
+                                <h6>目前剩餘 GASH 點數：3,115 點</h6>
+                                <div class="point-dialog-notice notice-collection">請先完成收藏品的收集，再進行GASH扣點完成任務！</div>
+                            </div>
+                        </div>
+                        <button class="dialog-button" onclick="$.fancybox.close();">我知道了</button>
+                    </div>
+                    <!-- ↓第三種：收藏品○，餘額✕ -->
+                    <div class="dialog point-dialog no-close" id="point3" style="display: none;">
                         <div class="dialog-content-wrap">
                             <div class="point-dialog-title">點數錢包扣除</div>
                             <div class="dialog-scroll">
@@ -183,19 +211,6 @@
                         </div>
                         <button class="dialog-button submit" onclick="window.open('#')">立即儲值</button>
                         <button class="dialog-button cancel" onclick="$.fancybox.close();">我知道了</button>
-                    </div>
-                    <!-- ↓第三種：收藏品✕，餘額○ -->
-                    <div class="dialog point-dialog no-close" id="point3" style="display: none;">
-                        <div class="dialog-content-wrap">
-                            <div class="point-dialog-title">點數錢包扣除</div>
-                            <div class="dialog-scroll">
-                                <p class="point-dialog-desc">參與此項任務，您將扣除GASH點數</p>
-                                <h2>50點</h2>
-                                <h6>目前剩餘 GASH 點數：3,115 點</h6>
-                                <div class="point-dialog-notice notice-collection">請先完成收藏品的收集，再進行GASH扣點完成任務！</div>
-                            </div>
-                        </div>
-                        <button class="dialog-button" onclick="$.fancybox.close();">我知道了</button>
                     </div>
                     <!-- ↓第四種：收藏品○，餘額○ -->
                     <div class="dialog point-dialog no-close" id="point4" style="display: none;">
@@ -220,27 +235,8 @@
                         </button>
                         <button class="dialog-button cancel" @click="cancelclose">取消</button>
                     </div>
-                    <!-- ↓第五種：扣點紀錄 -->
+                    <!-- ↓第五種：扣點進行中 -->
                     <div class="dialog point-dialog no-close" id="point5" style="display: none;">
-                        <div class="dialog-content-wrap">
-                            <div class="point-dialog-title">點數錢包扣除</div>
-                            <div class="dialog-scroll">
-                                <p class="point-dialog-desc">參與此項任務，您已扣除GASH點數</p>
-                                <h2>50點</h2>
-                                <div class="point-dialog-notice notice-record">
-                                    <dl>
-                                        <dt>訂單編號</dt>
-                                        <dd>2023041721009399888399</dd>
-                                        <dt>訂單成立時間</dt>
-                                        <dd>2023/04/01 23:34:56</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="dialog-button" onclick="$.fancybox.close();">我知道了</button>
-                    </div>
-                    <!-- ↓第六種：扣點進行中 -->
-                    <div class="dialog point-dialog no-close" id="point6" style="display: none;">
                         <div class="dialog-content-wrap">
                             <div class="point-dialog-title">點數錢包扣除</div>
                             <div class="dialog-scroll">
@@ -252,6 +248,25 @@
                                         <dd>2023041721009399888399</dd>
                                         <dt>訂單成立時間</dt>
                                         <dd>扣點進行中，請於10分鐘後再次確認</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="dialog-button" onclick="$.fancybox.close();">我知道了</button>
+                    </div>
+                    <!-- ↓第六種：扣點紀錄 -->
+                    <div class="dialog point-dialog no-close" id="point6" style="display: none;">
+                        <div class="dialog-content-wrap">
+                            <div class="point-dialog-title">點數錢包扣除</div>
+                            <div class="dialog-scroll">
+                                <p class="point-dialog-desc">參與此項任務，您已扣除GASH點數</p>
+                                <h2>50點</h2>
+                                <div class="point-dialog-notice notice-record">
+                                    <dl>
+                                        <dt>訂單編號</dt>
+                                        <dd>2023041721009399888399</dd>
+                                        <dt>訂單成立時間</dt>
+                                        <dd>2023/04/01 23:34:56</dd>
                                     </dl>
                                 </div>
                             </div>
