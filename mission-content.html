@@ -168,7 +168,7 @@
                                 </template>
                             </div>
                         </div>
-                        <button class="dialog-button text-primary" onclick="$.fancybox.close();">確定變更</button>
+                        <button class="dialog-button text-primary" @click="changeConfirm">確定變更</button>
                     </div>
                     <!------------ 扣點 popup ------------>
                     <!-- ↓第一種：收藏品✕，餘額✕ -->
@@ -280,7 +280,7 @@
                         <p>儲存失敗，請稍後再試或洽客服詢問。<br>錯誤代碼：2sdsw</p>
                         <span class="error-hide" id="error-hide"><img src="./img/icon/ic-close-s-dark.png"></span>
                     </div>
-                    <div class="success-message" id="success-message">
+                    <div class="success-message" id="success-message" style="display: none;">
                         <span class="icon"><img src="./img/icon/ic-info-s-secb_g.svg"></span>
                         <p>儲存成功</p>
                         <span class="success-hide" id="success-hide"><img src="./img/icon/ic-close-s-dark.png"></span>
@@ -436,29 +436,29 @@
                         vm.agree = false;
                         $("#error-message").slideDown();
                     }, 3200);
-                    window.setTimeout(function () {
-                        $("#error-message").slideUp();
-                    }, 6000);
                 },
                 cancelclose: function () {
                     vm.agree = false;
                     $.fancybox.close();
+                },
+                changeConfirm: function () {
+                    $.fancybox.close();
+                    $("#success-message").slideDown();
+                    window.setTimeout(function () {
+                        $("#success-message").slideUp();
+                    }, 3000);
                 }
             }
         })
-        // 領取失敗訊息
+        // 訊息關閉按鈕
         $(function () {
-            $(".mission-info-img").click(function () {
-                $("#error-message").slideDown();
-            });
-            $("#error-hide").click(function () {
-                $("#error-message").hide();
-            });
-            $(".mission-info-img").click(function () {
-                $("#success-message").slideDown();
-            });
             $("#success-hide").click(function () {
                 $("#success-message").hide();
+            });
+        });
+        $(function () {
+            $("#error-hide").click(function () {
+                $("#error-message").hide();
             });
         });
     </script>

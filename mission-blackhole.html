@@ -243,18 +243,23 @@
                                 <p class="point-dialog-desc">參與此項任務，您將扣除GASH點數</p>
                                 <h2>50點</h2>
                                 <h6>目前剩餘 GASH 點數：3,115 點</h6>
-                                <div class="point-dialog-notice notice-warning">*點數扣除後將先行扣除點數，並於活動日結束當下才結算獎勵</div>
+                                <div class="point-dialog-notice notice-warning">*確認扣除後，將消耗GASH點數與收藏品，並獲得獎勵</div>
                                 <div class="checkbox">
                                     <input id="agreededuct" type="checkbox" v-model="agreededuct">
                                     <label for="agreededuct">
-                                        我明白點擊「確認扣除」後將扣除點數與收藏品，且無法返回
+                                        我明白點擊「確認扣除」後將扣除點數，且無法返回
                                     </label>
                                 </div>
                             </div>
                         </div>
-                        <button class="dialog-button submit" id="show-error" :disabled="!agreededuct" @click="exchange">
+                        <button class="dialog-button submit" id="show-error" :disabled="!agreededuct" @click="deduct">
                             <div class="btn-loading" id="dot-loading" v-show="btnloading"></div>
-                            <span v-show="!btnloading">確認扣除</span>
+                            <span v-show="!btnloading">確認扣除 (失敗)</span>
+                        </button>
+                        <button class="dialog-button submit" :disabled="!agreededuct" @click="exchange">
+                            <!-- <div class="btn-loading" id="dot-loading" v-show="btnloading"></div>
+                            <span v-show="!btnloading">確認扣除 (成功)</span> -->
+                            <span>確認扣除 (成功)</span>
                         </button>
                         <button class="dialog-button cancel" @click="cancelclose">取消</button>
                     </div>
@@ -370,12 +375,23 @@
                 })
             },
             methods: {
+                deduct: function () {
+                    vm.btnloading = true;
+                    window.setTimeout(function () {
+                        $.fancybox.close();
+                        vm.agreededuct = false;
+                    }, 3000);
+                    window.setTimeout(function () {
+                        vm.btnloading = false;
+                        vm.agree = false;
+                        $("#error-message").slideDown();
+                    }, 3200);
+                },
                 exchange: function () {
                     vm.btnloading = true;
                     window.setTimeout(function () {
-                        vm.agree = false;
-                        vm.agreededuct = false;
                         $.fancybox.close();
+                        vm.agreededuct = false;
                         $.fancybox.open($('#exchangeSuccess'), {
                             touch: false
                         });
