@@ -1603,13 +1603,6 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
             @include size(15);
             font-weight: 500;
 
-            &:active,
-            &:focus,
-            &:hover {
-                outline: inherit;
-                border: inherit;
-            }
-
             &[disabled="disabled"] {
                 color: $bfLightGray !important;
                 cursor: not-allowed;
@@ -1758,10 +1751,6 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
                     background-color: $bfLightGray !important;
                     color: $bfWhite !important;
                     cursor: not-allowed;
-                }
-
-                &:focus {
-                    background-color: $bfDarkPrimary;
                 }
             }
 
@@ -1994,32 +1983,4 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
 
 .active div {
     color: $bfSecondaryB;
-}
-
-
-
-.btn-primary {
-    &:hover {
-        background-color: aqua !important;
-
-        &:after {
-            content: ':hover';
-        }
-    }
-
-    &:active {
-        background-color: pink !important;
-
-        &:after {
-            content: ':active';
-        }
-    }
-
-    &:focus {
-        background-color: palevioletred !important;
-
-        &:after {
-            content: ':focus';
-        }
-    }
 }

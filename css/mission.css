@@ -1167,11 +1167,6 @@
   padding-top: calc(1 * var(--font-size));
   margin: calc(0 * var(--font-size)) calc(0.25 * var(--font-size)) 0 calc(0 * var(--font-size));
 }
-.anytix .btn-primary:focus, .anytix .btn-primary:hover, .anytix .btn-primary:active {
-  background: #00923e;
-  border-color: #00923e;
-  outline: unset;
-}
 .anytix .btn-primary.small {
   padding: calc(0.3 * var(--font-size)) calc(0.75 * var(--font-size));
   border-radius: calc(0.75 * var(--font-size));
@@ -1191,7 +1186,8 @@
   justify-content: center;
   position: relative;
 }
-.anytix .btn-primary.circle .img, .anytix .btn-primary.circle .material-icons {
+.anytix .btn-primary.circle .img,
+.anytix .btn-primary.circle .material-icons {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1232,10 +1228,6 @@
   font-weight: 500;
   box-shadow: unset;
 }
-.anytix .btn-primary.outline:focus, .anytix .btn-primary.outline:hover, .anytix .btn-primary.outline:active {
-  background-color: unset;
-  color: #00923e;
-}
 .anytix .btn-primary.text {
   padding: calc(0.3 * var(--font-size)) calc(0.75 * var(--font-size));
   margin: calc(0.5 * var(--font-size)) calc(0.25 * var(--font-size));
@@ -1244,11 +1236,6 @@
   border: unset;
   color: #00923e;
   box-shadow: unset;
-}
-.anytix .btn-primary.text:focus, .anytix .btn-primary.text:hover, .anytix .btn-primary.text:active {
-  border: unset;
-  background-color: unset;
-  color: #00923e;
 }
 .anytix .btn-icon {
   width: calc(2.5 * var(--font-size));
@@ -1304,11 +1291,6 @@
   color: #FFF;
   cursor: not-allowed;
   box-shadow: unset;
-}
-.anytix .btn-primary.disabled:focus, .anytix .btn-primary.disabled:hover, .anytix .btn-primary.disabled:active, .anytix .btn-primary[disabled=disabled]:focus, .anytix .btn-primary[disabled=disabled]:hover, .anytix .btn-primary[disabled=disabled]:active {
-  background-color: #ddd;
-  border-color: #ddd;
-  color: #FFF;
 }
 .anytix .btn-primary.outline.disabled, .anytix .btn-primary.outline[disabled=disabled] {
   background-color: unset;
@@ -3374,10 +3356,6 @@
   font-size: calc((15/18) * var(--font-size));
   font-weight: 500;
 }
-.anytix .notice-dialog.dialog .dialog-button:active, .anytix .notice-dialog.dialog .dialog-button:focus, .anytix .notice-dialog.dialog .dialog-button:hover {
-  outline: inherit;
-  border: inherit;
-}
 .anytix .notice-dialog.dialog .dialog-button[disabled=disabled] {
   color: #ddd !important;
   cursor: not-allowed;
@@ -3501,9 +3479,6 @@
   background-color: #ddd !important;
   color: #FFF !important;
   cursor: not-allowed;
-}
-.anytix .point-dialog.dialog .dialog-button.submit:focus {
-  background-color: #00923e;
 }
 .anytix .point-dialog.dialog .dialog-button.cancel {
   border: 1px solid #26d07c;
@@ -3687,22 +3662,4 @@
 }
 .anytix .active div {
   color: #2886E2;
-}
-.anytix .btn-primary:hover {
-  background-color: aqua !important;
-}
-.anytix .btn-primary:hover:after {
-  content: ":hover";
-}
-.anytix .btn-primary:active {
-  background-color: pink !important;
-}
-.anytix .btn-primary:active:after {
-  content: ":active";
-}
-.anytix .btn-primary:focus {
-  background-color: palevioletred !important;
-}
-.anytix .btn-primary:focus:after {
-  content: ":focus";
 }
