@@ -1298,21 +1298,11 @@
   color: #ddd;
   cursor: not-allowed;
 }
-.anytix .btn-primary.outline.disabled:focus, .anytix .btn-primary.outline.disabled:hover, .anytix .btn-primary.outline.disabled:active, .anytix .btn-primary.outline[disabled=disabled]:focus, .anytix .btn-primary.outline[disabled=disabled]:hover, .anytix .btn-primary.outline[disabled=disabled]:active {
-  background-color: unset;
-  border-color: #ddd;
-  color: #ddd;
-}
 .anytix .btn-primary.text.disabled, .anytix .btn-primary.text[disabled=disabled] {
   background-color: unset;
   border: unset;
   color: #ddd;
   cursor: not-allowed;
-}
-.anytix .btn-primary.text.disabled:focus, .anytix .btn-primary.text.disabled:hover, .anytix .btn-primary.text.disabled:active, .anytix .btn-primary.text[disabled=disabled]:focus, .anytix .btn-primary.text[disabled=disabled]:hover, .anytix .btn-primary.text[disabled=disabled]:active {
-  background-color: unset;
-  border: unset;
-  color: #ddd;
 }
 .anytix .material-icons.disabled {
   color: rgba(0, 0, 0, 0.3);
@@ -3213,8 +3203,8 @@
 }
 .anytix .mci-name {
   display: -webkit-box;
-  width: 100%;
-  padding: 0 calc(0.25 * var(--font-size));
+  width: calc(100% - 0.5 * var(--font-size));
+  margin: 0 calc(0.25 * var(--font-size));
   box-sizing: border-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3311,7 +3301,7 @@
   -webkit-overflow-scrolling: auto;
   flex-grow: 0;
   width: 100%;
-  height: 100%;
+  max-height: 100%;
   overflow: auto;
   padding: 0 calc(0.5 * var(--font-size));
   font-size: calc((15/18) * var(--font-size));

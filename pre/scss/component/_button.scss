@@ -237,13 +237,13 @@ button {
             color: $bfLightGray;
             cursor: not-allowed;
 
-            &:focus,
-            &:hover,
-            &:active {
-                background-color: unset;
-                border-color: $bfLightGray;
-                color: $bfLightGray;
-            }
+            // &:focus,
+            // &:hover,
+            // &:active {
+            //     background-color: unset;
+            //     border-color: $bfLightGray;
+            //     color: $bfLightGray;
+            // }
         }
     }
 
@@ -256,13 +256,13 @@ button {
             color: $bfLightGray;
             cursor: not-allowed;
 
-            &:focus,
-            &:hover,
-            &:active {
-                background-color: unset;
-                border: unset;
-                color: $bfLightGray;
-            }
+            // &:focus,
+            // &:hover,
+            // &:active {
+            //     background-color: unset;
+            //     border: unset;
+            //     color: $bfLightGray;
+            // }
         }
     }
 }
