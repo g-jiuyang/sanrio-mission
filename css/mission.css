@@ -3203,8 +3203,8 @@
 }
 .anytix .mci-name {
   display: -webkit-box;
-  width: calc(100% - 0.5 * var(--font-size));
-  margin: 0 calc(0.25 * var(--font-size));
+  width: 100%;
+  padding: 0 calc(0.25 * var(--font-size));
   box-sizing: border-box;
   overflow: hidden;
   text-overflow: ellipsis;
