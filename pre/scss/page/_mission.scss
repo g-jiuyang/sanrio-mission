@@ -11,6 +11,10 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
     font-family: "Abel", "PingFangTC", "Microsoft JhengHei";
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .line {
     position: fixed;
     width: 1px;
@@ -1432,8 +1436,8 @@ $missionbg-3: radial-gradient(circle, rgba(57, 91, 214, .3) 17.7%, rgba(57, 91, 
 
 .mci-name {
     display: -webkit-box;
-    width: calc(100% - (.5 * var(--font-size)));
-    margin: 0 calc(.25 * var(--font-size));
+    width: 100%;
+    padding: 0 calc(.25 * var(--font-size));
     box-sizing: border-box;
     overflow: hidden;
     text-overflow: ellipsis;

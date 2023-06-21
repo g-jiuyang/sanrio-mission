@@ -2082,6 +2082,9 @@
   background: #ccc;
   align-self: flex-end;
 }
+.anytix * {
+  box-sizing: border-box;
+}
 .anytix .line {
   position: fixed;
   width: 1px;
